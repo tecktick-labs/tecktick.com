@@ -18,11 +18,11 @@ export function Hero() {
           </h1>
           <p className="lead">{t('hero.lead')}</p>
           <div className="hero-actions">
-            <Link className="btn btn-dark" to="/#contact">
+            <Link className="btn btn-dark" to="/contact">
               {t('hero.ctaPrimary')}
               <Icon name="arrow" className="btn-icon" />
             </Link>
-            <Link className="btn btn-ghost" to="/#products">
+            <Link className="btn btn-ghost" to="/products">
               <span className="play-dot">
                 <Icon name="play" />
               </span>

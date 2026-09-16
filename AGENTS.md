@@ -76,16 +76,42 @@ Site `react-router-dom` ile çalışır:
 | Rota | Sayfa |
 | --- | --- |
 | `/` | Ana sayfa (`src/pages/Home.tsx`) |
+| `/products` | Tüm ürünler (`src/pages/ProductsPage.tsx`) |
 | `/products/:productId` | Ürün sayfası (`src/pages/ProductPage.tsx`) |
+| `/services` | Hizmetler (`src/pages/ServicesPage.tsx`) |
+| `/about` | Hakkımızda (`src/pages/AboutPage.tsx`) |
+| `/insights` | Çalışma notları (`src/pages/InsightsPage.tsx`) |
+| `/contact` | İletişim ve form (`src/pages/ContactPage.tsx`) |
 | diğer | Ana sayfaya yönlenir |
 
 `productId`, `src/data/site.ts` içindeki ürün `id` alanıdır. Netlify
 yönlendirmesi (`netlify.toml`) tüm yolları `index.html`'e verir, bu satır
 silinmemelidir.
 
-Site içi bağlantılarda `<a href="#products">` **kullanılmaz**; ürün
-sayfasındayken çalışmaz. Doğrusu `<Link to="/#products">` biçimidir ve
-kaydırmayı `main.tsx` içindeki `ScrollManager` yapar.
+Her menü sekmesi kendi sayfasını açar. Bölüme kaydıran `#hash`
+bağlantıları **kullanılmaz**: ana sayfadayken bütün hash sekmeleri aynı anda
+seçili görünüyordu ve gereksiz bir ara adımdı. Site içi bağlantılar
+`<Link to="/services">` biçiminde yazılır, menüde `NavLink` ile aktif sayfa
+vurgulanır ve `main.tsx` içindeki `ScrollManager` her geçişte sayfayı başa
+alır.
+
+Ana sayfa bu sayfaların özetini gösterir; her bölümün başlığındaki bağlantı
+ilgili sayfaya gider.
+
+### 6. İletişim formu
+Form **Netlify Forms** üzerinden çalışır ve iki parçası vardır:
+
+1. `index.html` içindeki gizli statik form (Netlify derleme sırasında burayı
+   tarar). Alan adları React formuyla birebir aynı olmalıdır.
+2. `ContactPage` içindeki gerçek form; gönderimi `fetch` ile kök adrese
+   `application/x-www-form-urlencoded` olarak yollar.
+
+Yeni bir alan eklerken **her iki forma da** eklenmelidir, yoksa Netlify o
+alanı kaydetmez. Form yalnızca yayındaki Netlify sitesinde çalışır; yerel
+geliştirmede gönderim başarısız olur ve kullanıcıya e-posta adresi gösterilir.
+
+İletişim bilgileri (`contactEmail`, `contactPhone`) `src/data/site.ts`
+içindedir, metin değil veri oldukları için çeviri dosyalarında tutulmaz.
 
 Ürün sayfasının içeriği `productPages.items.<key>` altındadır.
 `overview.p1` ve `overview.p2` her ürün için zorunludur. Ek bölümler
@@ -94,7 +120,7 @@ kaydırmayı `main.tsx` içindeki `ScrollManager` yapar.
 kaydına bakın. Böylece her ürün sayfası açılır, içerik derinliği ürüne göre
 değişir.
 
-### 6. Eksik görseller kırık göstermez
+### 7. Eksik görseller kırık göstermez
 Ürün ikonu `ProductIcon` bileşeninden geçer: kayıtta ikon yoksa **veya**
 dosya yüklenemezse otomatik olarak yer tutucuya düşer. Bu yüzden henüz
 yüklenmemiş bir görselin yolu veriye yazılabilir.
@@ -103,7 +129,7 @@ Proje görselleri `src/assets/` altında durur ve veri dosyasına `import`
 edilir (örnek: `src/assets/bks-logo.png` → Barbaros: Kızıl Sakal). Böylece
 Vite dosyayı işler ve eksik dosya derlemede hata verir.
 
-### 7. Görsel yer tutucuları
+### 8. Görsel yer tutucuları
 Gerçek görseller henüz yok. Görsel alanları `mock-image` sınıfıyla CSS
 yer tutucusuna düşer (`mock-office`, `mock-globe`, `mock-gradient`,
 `mock-thumb`). Gerçek görsel geldiğinde bu `div` bir `img` ile değiştirilir;
@@ -116,7 +142,8 @@ index.html            <html lang="tr">, meta etiketleri (varsayılan Türkçe)
 logo.png              tek marka varlığı
 src/
   main.tsx            Router, App, <html lang> / başlık senkronu, ScrollManager
-  pages/              Home, ProductPage
+  pages/              Home, ProductsPage, ProductPage, ServicesPage,
+                      AboutPage, InsightsPage, ContactPage
   i18n.ts             i18next kurulumu, dil algılama, localStorage
   locales/tr.json     çeviriler (varsayılan)
   locales/en.json     çeviriler

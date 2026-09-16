@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { Icon } from './Icons'
 import { Wordmark } from './Logo'
 import { approachSteps } from '../data/site'
 
@@ -34,7 +36,10 @@ export function Approach() {
             ))}
           </ol>
         </div>
-        <i className="rule rule-mint" />
+        <Link className="text-link" to="/about">
+          {t('aboutPage.kicker')}
+          <Icon name="arrow" className="btn-icon" />
+        </Link>
       </article>
 
       <article className="approach-vision">

@@ -12,6 +12,11 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Home } from './pages/Home'
 import { ProductPage } from './pages/ProductPage'
+import { ProductsPage } from './pages/ProductsPage'
+import { ContactPage } from './pages/ContactPage'
+import { ServicesPage } from './pages/ServicesPage'
+import { AboutPage } from './pages/AboutPage'
+import { InsightsPage } from './pages/InsightsPage'
 import './i18n'
 import './styles.css'
 
@@ -29,20 +34,13 @@ function useDocumentLanguage() {
   }, [language, t])
 }
 
-/** Sayfa değişiminde başa, hash varsa ilgili bölüme kaydırır. */
+/** Her sayfa geçişinde içerik baştan başlar. */
 function ScrollManager() {
-  const { pathname, hash, key } = useLocation()
+  const { pathname } = useLocation()
 
   useEffect(() => {
-    if (hash) {
-      const target = document.querySelector(hash)
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        return
-      }
-    }
     window.scrollTo({ top: 0, left: 0 })
-  }, [pathname, hash, key])
+  }, [pathname])
 
   return null
 }
@@ -57,7 +55,12 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:productId" element={<ProductPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/insights" element={<InsightsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

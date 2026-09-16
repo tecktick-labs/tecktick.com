@@ -14,7 +14,7 @@ export function Services() {
           <h2 className="multiline">{t('services.title')}</h2>
         </div>
         <p className="intro-text">{t('services.text')}</p>
-        <Link className="text-link" to="/#products">
+        <Link className="text-link" to="/services">
           {t('common.discoverServices')}
           <Icon name="arrow" className="btn-icon" />
         </Link>

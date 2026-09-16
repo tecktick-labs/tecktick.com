@@ -372,6 +372,11 @@ span.product-icon::after,
   color: var(--ink);
 }
 
+.nav a.is-active {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
 .nav-cta {
   display: none;
 }
@@ -777,6 +782,13 @@ span.product-icon::after,
 
 .section-head {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.section-head-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .intro-text {
@@ -1328,6 +1340,10 @@ span.product-icon::after,
   line-height: 1.6;
 }
 
+.footer:has(.cta) .footer-bottom {
+  padding-top: 20px;
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -1336,7 +1352,7 @@ span.product-icon::after,
   flex-wrap: wrap;
   width: var(--shell);
   margin: 0 auto;
-  padding: 20px 0 calc(24px + env(safe-area-inset-bottom, 0px));
+  padding: 30px 0 calc(24px + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1601,9 +1617,28 @@ span.product-icon::after,
 
 .product-hero-main {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 20px;
+}
+
+.product-hero-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.product-hero-top .kicker {
+  margin-bottom: 0;
+}
+
+.product-hero-text {
+  min-width: 0;
+}
+
+.product-hero-text h1 {
+  margin-top: 8px;
 }
 
 .product-icon.is-large {
@@ -1663,10 +1698,10 @@ span.product-icon::after,
 }
 
 .product-overview {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px 32px;
-  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 68ch;
 }
 
 .product-overview p {
@@ -1864,6 +1899,465 @@ span.product-icon::after,
     width: 68px;
     height: 68px;
     border-radius: 16px;
+  }
+}
+
+/* ==========================================================================
+   Genel sayfa iskeleti (tüm ürünler, iletişim)
+   ========================================================================== */
+.page {
+  width: var(--shell);
+  margin: 0 auto;
+  padding: 34px 0 56px;
+}
+
+.page-head {
+  max-width: 62ch;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.page-head h1 {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.042em;
+  line-height: 1.05;
+}
+
+.page-lead {
+  margin-top: 14px;
+  color: var(--muted-strong);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.page-section {
+  padding-top: 34px;
+}
+
+.standalone-slogan {
+  margin-bottom: 18px;
+}
+
+.page-section .small-works-list a {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.7fr) minmax(0, 1.8fr) 18px;
+}
+
+/* İlgili işler ------------------------------------------------------------ */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.related-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) 16px;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  background: #fff;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(13, 17, 19, 0.06);
+}
+
+.related-card .product-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+}
+
+.related-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.related-text strong {
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.related-text span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.related-card .btn-icon {
+  color: var(--mint-deep);
+}
+
+/* ==========================================================================
+   İletişim sayfası
+   ========================================================================== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 20px;
+  padding-top: 30px;
+  align-items: start;
+}
+
+.contact-form-card {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  background: var(--surface);
+}
+
+.contact-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.field > span i {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 11px 13px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.92rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.55;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--mint);
+  box-shadow: 0 0 0 3px rgba(23, 195, 164, 0.16);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #aab3b6;
+}
+
+.hidden-field {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.form-foot {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.form-foot .btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.form-note {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  max-width: 40ch;
+}
+
+.form-note.is-success {
+  color: var(--mint-deep);
+  font-weight: 600;
+}
+
+.form-note.is-error {
+  color: #b3261e;
+  font-weight: 600;
+}
+
+.contact-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  background: #fff;
+}
+
+.contact-detail {
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+}
+
+.contact-detail + .contact-detail {
+  border-top: 1px solid var(--line-soft);
+}
+
+.contact-detail .section-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-detail p {
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mint-deep);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.contact-email:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+.contact-email .btn-icon {
+  transition: transform 160ms ease;
+}
+
+/* Alt bilgi çağrısı ------------------------------------------------------- */
+.cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.cta-email {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.9rem;
+}
+
+.cta-email:hover {
+  color: #fff;
+}
+
+@media (max-width: 1080px) {
+  .related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 24px 0 44px;
+  }
+
+  .related-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .field-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-form-card {
+    padding: 18px;
+  }
+
+  .page-section .small-works-list a {
+    grid-template-columns: minmax(0, 1fr) 18px;
+  }
+}
+
+/* Sayfa içi geniş adım listesi ------------------------------------------- */
+.step-list-wide {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.step-list-wide li {
+  display: block;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.step-list-wide .step-number {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.step-list-wide strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.step-list-wide p {
+  margin-top: 4px;
+}
+
+/* Hakkımızda -------------------------------------------------------------- */
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.about-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.about-card .mock-image {
+  position: absolute;
+  inset: 0;
+}
+
+/* Çalışma notları sayfası ------------------------------------------------- */
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.note-entry {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  background: #fff;
+}
+
+.note-entry-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.note-entry-body h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.note-entry-body p {
+  margin-top: 8px;
+  max-width: 72ch;
+  color: var(--muted-strong);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.note-footnote {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Hizmet sayfasında kart başlıkları h2 olur */
+.service-card h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.panel-body h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.95rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.page-section .service-card {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1080px) {
+  .step-list-wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .step-list-wide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .note-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .note-entry-side {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
   }
 }
 

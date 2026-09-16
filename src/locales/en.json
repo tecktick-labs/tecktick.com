@@ -11,14 +11,16 @@
     "enShort": "EN"
   },
   "nav": {
+    "home": "Home",
+    "homeAria": "Tecktick Labs home",
     "products": "Products",
     "services": "Services",
     "about": "About",
     "insights": "Insights",
     "toggle": "Toggle navigation",
-    "home": "Tecktick Labs home",
     "main": "Main navigation",
-    "footer": "Footer navigation"
+    "footer": "Footer navigation",
+    "contact": "Contact"
   },
   "common": {
     "letsTalk": "Let's Talk",
@@ -336,6 +338,86 @@
           "text": "The project is past the concept stage. The backbone of movement, combat, skills, NPCs, loot, equipment, parties and fleets is in place. The weight now is on connecting those systems, measuring performance, producing content and raising visual and audio quality."
         }
       }
+    },
+    "relatedTitle": "Other work",
+    "ctaButton": "Get in touch"
+  },
+  "productsPage": {
+    "kicker": "Products",
+    "title": "The work we ship",
+    "text": "Our own games, the platforms we run for businesses and the sites we build for clients. Each one has its own page.",
+    "ownTitle": "Products and games",
+    "clientTitle": "Small work"
+  },
+  "contact": {
+    "kicker": "Let's Talk",
+    "title": "Got an idea?\nOne tick is enough.",
+    "text": "Tell us in a few sentences what you want to build. If we are a good fit, we will get back to you quickly.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "form": {
+      "title": "Leave a short note",
+      "name": "Your name",
+      "namePlaceholder": "First and last name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyOptional": "optional",
+      "companyPlaceholder": "Company or project name",
+      "subject": "Subject",
+      "subjects": {
+        "project": "New project",
+        "app": "Mobile app",
+        "game": "Game",
+        "other": "Something else"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us briefly what you have in mind.",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Thanks, your message reached us. We will get back to you shortly.",
+      "error": "The message could not be sent. You can email us directly.",
+      "required": "Required field"
     }
+  },
+  "servicesPage": {
+    "kicker": "Services",
+    "title": "From idea to impact",
+    "text": "We turn an idea into a plan you can discuss, and that plan into a product that ships. Design, development and life after launch all sit with the same team.",
+    "howTitle": "How we work",
+    "ctaTitle": "Let's talk about your project",
+    "ctaText": "We will sharpen the scope together and walk you through how the work would run."
+  },
+  "aboutPage": {
+    "kicker": "About",
+    "title": "A small studio,\nend-to-end work",
+    "lead": "Tecktick Labs is a technology studio building software, mobile apps and games. We are a small team, so instead of splitting the work we follow it from start to finish.",
+    "storyTitle": "Who we are",
+    "story": {
+      "p1": "The same team runs client projects and builds our own products. Publishing our own games and platforms keeps the standard honest on client work too: we know what a product that people actually use demands.",
+      "p2": "We would rather move with working builds than big presentations. An early release teaches more than months of discussion. So we cut the work into small pieces and leave something visible at every step."
+    },
+    "valuesTitle": "What we care about",
+    "values": {
+      "clarity": {
+        "title": "Being understood",
+        "description": "We explain what we are doing and why in plain language. When detail is needed we are the people you talk to, not a layer in between."
+      },
+      "ownership": {
+        "title": "Taking ownership",
+        "description": "The work does not end at handover. We watch how it behaves in the wild, what breaks and how it gets used."
+      },
+      "craft": {
+        "title": "Craft",
+        "description": "Speed matters, rushing does not. A build that runs smoothly, opens fast and reads clearly counts as part of the result."
+      }
+    },
+    "factsTitle": "Quick facts"
+  },
+  "insightsPage": {
+    "kicker": "From the workshop",
+    "title": "Work notes",
+    "text": "This is where you can follow what we are doing on which project. We update them as work lands and add new entries.",
+    "footnote": "New notes land here as the work moves."
   }
 }

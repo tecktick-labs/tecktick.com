@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { Icon } from './Icons'
 import { Wordmark } from './Logo'
 import { LanguageSwitcher } from './LanguageSwitcher'
@@ -21,29 +21,31 @@ export function Header() {
   return (
     <header className={`topbar${scrolled ? ' is-scrolled' : ''}`}>
       <div className="topbar-inner">
-        <Link className="brand" to="/" aria-label={t('nav.home')}>
+        <Link className="brand" to="/" aria-label={t('nav.homeAria')}>
           <Wordmark />
         </Link>
 
         <nav className={`nav${open ? ' is-open' : ''}`} aria-label={t('nav.main')}>
           {navigation.map((item) => (
-            <Link
-              key={item.href}
-              to={`/${item.href}`}
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === '/'}
+              className={({ isActive }) => (isActive ? 'is-active' : undefined)}
               onClick={() => setOpen(false)}
             >
               {t(`nav.${item.key}`)}
-            </Link>
+            </NavLink>
           ))}
           {/* Dar ekranda üst bardaki buton gizlendiği için menüde yer alır */}
-          <Link className="nav-cta" to="/#contact" onClick={() => setOpen(false)}>
+          <Link className="nav-cta" to="/contact" onClick={() => setOpen(false)}>
             {t('common.letsTalk')}
           </Link>
         </nav>
 
         <div className="topbar-actions">
           <LanguageSwitcher />
-          <Link className="btn btn-dark btn-sm topbar-cta" to="/#contact">
+          <Link className="btn btn-dark btn-sm topbar-cta" to="/contact">
             {t('common.letsTalk')}
             <Icon name="arrow" className="btn-icon" />
           </Link>

@@ -150,10 +150,23 @@ export const approachSteps = [
 export const insightKeys = ['anlikEleman', 'barbaros', 'process'] as const
 
 export const navigation = [
-  { key: 'products', href: '#products' },
-  { key: 'services', href: '#services' },
-  { key: 'about', href: '#about' },
-  { key: 'insights', href: '#insights' },
+  { key: 'home', to: '/' },
+  { key: 'products', to: '/products' },
+  { key: 'services', to: '/services' },
+  { key: 'about', to: '/about' },
+  { key: 'insights', to: '/insights' },
+] as const
+
+/** Alt bilgi navigasyonu iletişim sayfasını da içerir */
+export const footerNavigation = [
+  ...navigation,
+  { key: 'contact', to: '/contact' },
 ] as const
 
 export const contactEmail = 'account@tecktick.com'
+
+/** Görünen biçim ve tel: bağlantısı için ham numara */
+export const contactPhone = {
+  display: '0534 317 55 65',
+  href: 'tel:+905343175565',
+}

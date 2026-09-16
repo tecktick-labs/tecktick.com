@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { Icon } from './Icons'
 import { insightKeys } from '../data/site'
 
 export function Insights() {
@@ -11,7 +13,13 @@ export function Insights() {
           <p className="kicker">{t('insights.kicker')}</p>
           <h2 className="multiline">{t('insights.title')}</h2>
         </div>
-        <p className="intro-text">{t('insights.text')}</p>
+        <div className="section-head-side">
+          <p className="intro-text">{t('insights.text')}</p>
+          <Link className="text-link" to="/insights">
+            {t('insightsPage.title')}
+            <Icon name="arrow" className="btn-icon" />
+          </Link>
+        </div>
       </div>
 
       <div className="insight-grid">

@@ -14,7 +14,13 @@ export function Products() {
           <p className="kicker">{t('products.kicker')}</p>
           <h2 className="multiline">{t('products.title')}</h2>
         </div>
-        <p className="intro-text">{t('products.text')}</p>
+        <div className="section-head-side">
+          <p className="intro-text">{t('products.text')}</p>
+          <Link className="text-link" to="/products">
+            {t('productsPage.title')}
+            <Icon name="arrow" className="btn-icon" />
+          </Link>
+        </div>
       </div>
 
       <div className="product-grid">

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { Icon } from '../components/Icons'
 import { ProductIcon } from '../components/ProductIcon'
-import { contactEmail, findProduct } from '../data/site'
+import { findProduct, products } from '../data/site'
 
 export function ProductPage() {
   const { t } = useTranslation()
@@ -26,27 +26,32 @@ export function ProductPage() {
 
   const base = `productPages.items.${product.key}`
   const detail = product.detail ?? {}
+  const related = products.filter((item) => item.id !== product.id).slice(0, 4)
 
   return (
     <article className="product-page">
       <header className="product-hero">
-        <Link className="back-link" to="/#products">
+        <Link className="back-link" to="/products">
           <Icon name="arrowLeft" className="btn-icon" />
           {t('productPages.back')}
         </Link>
 
         <div className="product-hero-main">
           <ProductIcon product={product} size="large" />
-          <div>
-            <p className="kicker">{t(`products.items.${product.key}.category`)}</p>
+          <div className="product-hero-text">
+            <div className="product-hero-top">
+              <p className="kicker">{t(`products.items.${product.key}.category`)}</p>
+              <span className={`badge badge-${product.status}`}>
+                {product.status === 'live'
+                  ? t('common.live')
+                  : t('common.comingSoon')}
+              </span>
+            </div>
             <h1>{t(`products.items.${product.key}.name`)}</h1>
             <p className="product-hero-tagline">
               {t(`products.items.${product.key}.tagline`)}
             </p>
           </div>
-          <span className={`badge badge-${product.status}`}>
-            {product.status === 'live' ? t('common.live') : t('common.comingSoon')}
-          </span>
         </div>
 
         <div className="product-hero-foot">
@@ -144,15 +149,37 @@ export function ProductPage() {
         </div>
       )}
 
+      {related.length > 0 && (
+        <section className="product-section">
+          <h2 className="section-label">{t('productPages.relatedTitle')}</h2>
+          <div className="related-grid">
+            {related.map((item) => (
+              <Link
+                className="related-card"
+                key={item.id}
+                to={`/products/${item.id}`}
+              >
+                <ProductIcon product={item} />
+                <span className="related-text">
+                  <strong>{t(`products.items.${item.key}.name`)}</strong>
+                  <span>{t(`products.items.${item.key}.category`)}</span>
+                </span>
+                <Icon name="arrow" className="btn-icon" />
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="product-cta">
         <div>
           <h2>{t('productPages.ctaTitle')}</h2>
           <p>{t('productPages.ctaText')}</p>
         </div>
-        <a className="btn btn-dark" href={`mailto:${contactEmail}`}>
-          {contactEmail}
+        <Link className="btn btn-dark" to="/contact">
+          {t('productPages.ctaButton')}
           <Icon name="arrow" className="btn-icon" />
-        </a>
+        </Link>
       </section>
     </article>
   )

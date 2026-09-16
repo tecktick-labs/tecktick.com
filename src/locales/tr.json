@@ -11,14 +11,16 @@
     "enShort": "EN"
   },
   "nav": {
+    "home": "Ana sayfa",
+    "homeAria": "Tecktick Labs ana sayfa",
     "products": "Ürünler",
     "services": "Hizmetler",
     "about": "Hakkımızda",
     "insights": "Notlar",
     "toggle": "Menüyü aç veya kapat",
-    "home": "Tecktick Labs ana sayfa",
     "main": "Ana navigasyon",
-    "footer": "Alt navigasyon"
+    "footer": "Alt navigasyon",
+    "contact": "İletişim"
   },
   "common": {
     "letsTalk": "Konuşalım",
@@ -336,6 +338,86 @@
           "text": "Proje artık konsept aşamasında değil. Hareket, savaş, yetenekler, NPC'ler, ganimet, ekipman, takım ve filo sistemlerinin omurgası kurulu durumda. Şimdiki ağırlık bu sistemleri birbirine bağlamak, performansı ölçmek, içerik üretmek ve görsel ile ses kalitesini yükseltmek."
         }
       }
+    },
+    "relatedTitle": "Diğer işler",
+    "ctaButton": "İletişime geç"
+  },
+  "productsPage": {
+    "kicker": "Ürünler",
+    "title": "Yaptığımız işler",
+    "text": "Kendi oyunlarımız, işletmeler için kurduğumuz platformlar ve müşterilerimiz için hazırladığımız siteler. Her birinin kendi sayfası var.",
+    "ownTitle": "Ürünler ve oyunlar",
+    "clientTitle": "Küçük işler"
+  },
+  "contact": {
+    "kicker": "Konuşalım",
+    "title": "Bir fikrin mi var?\nTek tık yeter.",
+    "text": "Ne inşa etmek istediğini birkaç cümleyle anlat. Uygun olduğumuzda hızlıca dönüş yaparız.",
+    "emailLabel": "E-posta",
+    "phoneLabel": "Telefon",
+    "form": {
+      "title": "Kısa bir not bırak",
+      "name": "Adın",
+      "namePlaceholder": "Adın ve soyadın",
+      "email": "E-posta",
+      "emailPlaceholder": "ornek@sirket.com",
+      "company": "Şirket",
+      "companyOptional": "isteğe bağlı",
+      "companyPlaceholder": "Şirket ya da proje adı",
+      "subject": "Konu",
+      "subjects": {
+        "project": "Yeni proje",
+        "app": "Mobil uygulama",
+        "game": "Oyun",
+        "other": "Diğer"
+      },
+      "message": "Mesaj",
+      "messagePlaceholder": "Ne yapmak istediğini kısaca anlat.",
+      "submit": "Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Teşekkürler, mesajın bize ulaştı. En kısa sürede döneceğiz.",
+      "error": "Mesaj gönderilemedi. Doğrudan e-posta ile yazabilirsin.",
+      "required": "Zorunlu alan"
     }
+  },
+  "servicesPage": {
+    "kicker": "Hizmetler",
+    "title": "Fikirden etkiye",
+    "text": "Bir fikri konuşulabilir bir plana, planı da yayına alınmış bir ürüne çeviriyoruz. Tasarım, geliştirme ve yayın sonrası aynı ekipte ilerliyor.",
+    "howTitle": "Nasıl çalışıyoruz?",
+    "ctaTitle": "Aklındaki işi konuşalım",
+    "ctaText": "Kapsamı birlikte netleştirelim, sonrasında nasıl ilerleyeceğimizi anlatalım."
+  },
+  "aboutPage": {
+    "kicker": "Hakkımızda",
+    "title": "Küçük bir stüdyo,\nuçtan uca iş",
+    "lead": "Tecktick Labs; yazılım, mobil uygulama ve oyun geliştiren bir teknoloji stüdyosu. Küçük bir ekibiz, bu yüzden işi bölmek yerine baştan sona takip ediyoruz.",
+    "storyTitle": "Kimiz?",
+    "story": {
+      "p1": "Aynı ekip hem müşteri projelerini yürütüyor hem kendi ürünlerimizi geliştiriyor. Kendi oyunlarımızı ve platformlarımızı yayınlamak, müşteri işlerinde de aynı standardı korumamızı sağlıyor: gerçekten kullanılan bir ürünün neye ihtiyaç duyduğunu biliyoruz.",
+      "p2": "Büyük sunumlar yerine çalışan sürümlerle ilerlemeyi tercih ediyoruz. Erken bir sürüm çıkarmak, aylarca konuşmaktan daha çok şey öğretiyor. Bu yüzden işi küçük parçalara bölüyor, her adımda görülebilir bir şey bırakıyoruz."
+    },
+    "valuesTitle": "Neye dikkat ediyoruz?",
+    "values": {
+      "clarity": {
+        "title": "Anlaşılır olmak",
+        "description": "Ne yaptığımızı ve neden yaptığımızı sade bir dille anlatırız. Teknik ayrıntı gerektiğinde çevirmen değil, muhatap oluruz."
+      },
+      "ownership": {
+        "title": "Sahiplenmek",
+        "description": "İş teslim edildiğinde bitmez. Yayın sonrası davranışı, hataları ve kullanım verisini takip ederiz."
+      },
+      "craft": {
+        "title": "İşçilik",
+        "description": "Hız önemli ama acele değil. Akıcı çalışan, hızlı açılan ve anlaşılır bir arayüz bizim için sonuçla aynı şey."
+      }
+    },
+    "factsTitle": "Kısa bilgiler"
+  },
+  "insightsPage": {
+    "kicker": "Atölyeden",
+    "title": "Çalışma notları",
+    "text": "Hangi projede ne yaptığımızı buradan takip edebilirsin. Tamamlandıkça günceller, yeni başlıklar ekleriz.",
+    "footnote": "Yeni notlar iş ilerledikçe buraya eklenir."
   }
 }

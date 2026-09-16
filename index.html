@@ -28,6 +28,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Netlify form tanımı: gönderimler statik derlemede bu form üzerinden toplanır -->
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
