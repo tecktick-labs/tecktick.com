@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "title": "Tecktick Labs",
+    "description": "Tecktick Labs; yazılım, mobil uygulama ve oyun geliştiren bir teknoloji stüdyosu. Tek tık. Sonsuz olasılık."
+  },
+  "language": {
+    "label": "Dil",
+    "tr": "Türkçe",
+    "en": "English",
+    "trShort": "TR",
+    "enShort": "EN"
+  },
+  "nav": {
+    "products": "Ürünler",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "insights": "Notlar",
+    "toggle": "Menüyü aç veya kapat",
+    "home": "Tecktick Labs ana sayfa",
+    "main": "Ana navigasyon",
+    "footer": "Alt navigasyon"
+  },
+  "common": {
+    "letsTalk": "Konuşalım",
+    "discoverServices": "Hizmetlerimizi keşfet",
+    "viewOnAppStore": "App Store'da gör",
+    "inDevelopment": "Geliştiriliyor",
+    "live": "Yayında",
+    "comingSoon": "Çok yakında",
+    "visitSite": "Siteyi aç",
+    "viewDetails": "Detayları gör"
+  },
+  "hero": {
+    "kicker": "Teknoloji Stüdyosu",
+    "titleStrong": "Tek tık.",
+    "titleSoft": "Sonsuz olasılık.",
+    "lead": "Yazılım geliştiriyor, sistem kuruyor ve fikirleri gerçek ürünlere dönüştürüyoruz. Hızlı, odaklı ve hep bir adım önde.",
+    "ctaPrimary": "Birlikte inşa edelim",
+    "ctaSecondary": "Videoyu izle",
+    "mock": {
+      "menu": {
+        "ideas": "Fikirler",
+        "products": "Ürünler",
+        "people": "İnsanlar",
+        "tomorrow": "Daha aydınlık bir yarın"
+      },
+      "title": "Daha akıllı\nçözümler\ndaha hızlı",
+      "text": "Fikirden etkiye. İşleri ileri taşıyan dijital ürünler geliştiriyoruz.",
+      "button": "İşlerimizi incele",
+      "greeting": "Günaydın",
+      "greetingLine": "Hadi başlayalım",
+      "greetingStrong": "sırada ne var?",
+      "growthLabel": "Toplam büyüme",
+      "growthValue": "+%40",
+      "activeProjects": "Aktif proje",
+      "teamMembers": "Ekip üyesi",
+      "weeksToLaunch": "Hafta sonra lansman"
+    }
+  },
+  "stats": {
+    "motto": "Kur. Geliştir. Büyüt.",
+    "projects": {
+      "value": "50+",
+      "label": "Tamamlanan proje"
+    },
+    "clients": {
+      "value": "20+",
+      "label": "Mutlu müşteri"
+    },
+    "industries": {
+      "value": "5+",
+      "label": "Sektör"
+    },
+    "next": {
+      "value": "∞",
+      "label": "Sırada ne var"
+    }
+  },
+  "services": {
+    "kicker": "Hizmetlerimiz",
+    "title": "Fikirden\netkiye.",
+    "text": "İddialı ekiplerle birlikte fark yaratan dijital ürünler tasarlıyor, geliştiriyor ve büyütüyoruz.",
+    "items": {
+      "customSoftware": {
+        "title": "Özel Yazılım Geliştirme",
+        "description": "Gerçek iş ihtiyaçlarına göre kurgulanan çözümler."
+      },
+      "product": {
+        "title": "Ürün Geliştirme",
+        "description": "Fikirden pazara ve sonrasına."
+      },
+      "integration": {
+        "title": "Sistem Entegrasyonu",
+        "description": "Bağla. Otomatikleştir. Büyüt."
+      },
+      "consulting": {
+        "title": "Teknoloji Danışmanlığı",
+        "description": "Daha aydınlık bir gelecek için daha akıllı kararlar."
+      }
+    },
+    "panel": {
+      "kicker": "Daha Aydınlık Bir Yarın",
+      "title": "Sınırsız bir dünya\niçin teknoloji.",
+      "text": "Karmaşık problemleri sade ve güçlü çözümlere dönüştürüyoruz."
+    }
+  },
+  "products": {
+    "kicker": "Ürünlerimiz",
+    "title": "Ürünler ve\nişler.",
+    "text": "Kendi oyunlarımız, işletmeler için kurduğumuz platform ve müşterilerimiz için yaptığımız siteler. Hepsi yayında, hepsi aynı standartta.",
+    "items": {
+      "anlikEleman": {
+        "name": "Anlık Eleman",
+        "category": "İş Platformu / Web + iOS",
+        "tagline": "Günlük ve sezonluk işi, çalışanla anında buluşturur.",
+        "description": "İşverenler ilanını açar, çalışanlar müsait olduğu günleri seçip başvurur. Konuma göre ilan listeleme, başvuru takibi, mesajlaşma ve işveren paneli tek platformda."
+      },
+      "nappsa": {
+        "name": "Nappsa",
+        "category": "Yaşam / iOS",
+        "tagline": "Karar vermeyi kolaylaştıran günlük öneriler.",
+        "description": "Bugün ne yesem, ne izlesem, ne yapsam? Nappsa güne özel derlenmiş öneriler sunarak karar yorgunluğunu azaltır."
+      },
+      "tilo": {
+        "name": "Tilo: Resimli Yapboz",
+        "category": "Bulmaca / Rahatlatıcı",
+        "tagline": "Kendi fotoğraflarını sakin yapbozlara çevir.",
+        "description": "Bir fotoğraf seç, yapboza dönüştür ve kendi hızında tamamla. Kısa molalar ve küçük odak anları için tasarlandı."
+      },
+      "gridGrin": {
+        "name": "Grid Grin: Blok Bulmaca",
+        "category": "Bulmaca / Rahatlatıcı",
+        "tagline": "Okuması kolay, bırakması zor.",
+        "description": "Blokları yerleştir, alan aç, komboları kovala. Süre baskısı yok. Sadece temiz bir bulmaca ritmi ve kendi rekorun."
+      },
+      "bks": {
+        "name": "Barbaros: Kızıl Sakal",
+        "category": "MMO Oyun / Geliştiriliyor",
+        "tagline": "Akdeniz'de geçen çok oyunculu korsan dünyası.",
+        "description": "Kendi ekibimizle geliştirdiğimiz MMO. Unity istemcisi, oyun sunucusu, API ve veritabanı birlikte ilerliyor; dünya, savaş ve ilerleme sistemleri şekilleniyor."
+      }
+    },
+    "meta": {
+      "ios": "iOS + iPadOS",
+      "free": "Ücretsiz",
+      "mobile": "Mobil",
+      "year": "2025",
+      "inDevelopment": "Geliştiriliyor",
+      "comingSoon": "Çok yakında",
+      "web": "Web",
+      "year2026": "2026",
+      "unity": "Unity",
+      "mmo": "MMO",
+      "server": "Sunucu + API"
+    },
+    "smallWorks": {
+      "title": "Küçük işler",
+      "slogan": "Bazen 1 saat, bazen 1 yıl. Hepsi tecktick.",
+      "text": "Kısa sürede kurduğumuz, yayında olan işletme ve proje siteleri.",
+      "items": {
+        "emrasKitchen": {
+          "name": "Emran'ın Mutfağı",
+          "category": "Butik pastane / Web",
+          "description": "Doğum günü, nişan ve kurumsal etkinlikler için özel pasta ve tatlı masası sunan butik mutfağın tanıtım ve sipariş sitesi."
+        },
+        "inceptionRent": {
+          "name": "Inception Rent a Car",
+          "category": "Araç kiralama / Web",
+          "description": "Belek ve Antalya çevresinde ekonomiden lükse araç kiralama; filo listeleme, fiyatlandırma ve teslim noktası seçimiyle rezervasyon."
+        },
+        "elysPrime": {
+          "name": "Elys Prime",
+          "category": "Konut projesi / Web",
+          "description": "Bulki Yapı'nın Elys Prime yaşam projesi için tanıtım sitesi; proje görselleri ve daire planları tek sayfada."
+        }
+      }
+    }
+  },
+  "approach": {
+    "kicker": "Yaklaşımımız",
+    "title": "Dinle.\nKur.\nGeliştir.\nBüyüt.",
+    "office": "Bugünün fikirleri.\nDaha aydınlık\nbir yarın.",
+    "vision": "Aynı vizyon.\nDaha büyük yarın.",
+    "steps": {
+      "understand": {
+        "title": "Anla",
+        "description": "Dinliyoruz. Öğreniyoruz."
+      },
+      "build": {
+        "title": "Kur",
+        "description": "Üretiyoruz. Teslim ediyoruz."
+      },
+      "iterate": {
+        "title": "Geliştir",
+        "description": "İyileştiriyoruz. Ölçekliyoruz."
+      },
+      "evolve": {
+        "title": "Büyüt",
+        "description": "Birlikte büyüyoruz."
+      }
+    }
+  },
+  "insights": {
+    "kicker": "Atölyeden",
+    "title": "Şu an\nne yapıyoruz?",
+    "text": "Blog değil, çalışma notu. Bu hafta masamızda ne varsa burada yazıyor.",
+    "items": {
+      "anlikEleman": {
+        "tag": "Anlık Eleman",
+        "status": "Devam ediyor",
+        "title": "Daha az adım, daha çok iş",
+        "excerpt": "Arayüzü baştan sadeleştiriyoruz. İş arayan tek ekranda müsait günlerini seçip başvurabiliyor, işveren ise ilanı, başvuruları ve mesajları mobil panelden yönetiyor. Web ve mobil aynı anda ilerliyor, böylece iki taraf da aynı deneyimi görüyor."
+      },
+      "barbaros": {
+        "tag": "Barbaros: Kızıl Sakal",
+        "status": "Geliştiriliyor",
+        "title": "Sunucu ve Unity aynı ritimde",
+        "excerpt": "MMO tarafında oyun sunucusu, API ve veritabanı ile Unity istemcisini senkron geliştiriyoruz. Her yeni mekanik önce veri modelinde ve sunucu tarafında karşılığını buluyor, ardından oyun içinde oynanabilir hâle geliyor."
+      },
+      "process": {
+        "tag": "Stüdyo",
+        "status": "Her hafta",
+        "title": "Toplantı, anlamlandırma, ilerleme",
+        "excerpt": "Her projede düzenli toplantılarla ne yaptığımızı ve neden yaptığımızı tazeliyoruz. Kapsamı netleştirip işi küçük parçalara bölüyor, geliştirme sürecini herkesin görebileceği şekilde açık tutuyoruz."
+      }
+    }
+  },
+  "footer": {
+    "kicker": "Konuşalım",
+    "title": "Bir fikrin mi var?\nTek tık yeter.",
+    "text": "Ne inşa ettiğini anlat. Uygun olduğumuzda hızlıca dönüş yaparız.",
+    "copyright": "© {{year}} Tecktick Labs"
+  },
+  "productPages": {
+    "back": "Tüm ürünler",
+    "overviewTitle": "Genel bakış",
+    "highlightsTitle": "Öne çıkanlar",
+    "journeyTitle": "Oyuncunun yolculuğu",
+    "techTitle": "Perde arkası",
+    "statusTitle": "Şu an nerede?",
+    "ctaTitle": "Bu proje ilgini çektiyse",
+    "ctaText": "Benzer bir iş konuşmak ya da süreci merak etmek için yazman yeterli.",
+    "items": {
+      "anlikEleman": {
+        "overview": {
+          "p1": "Anlık Eleman, günlük ve sezonluk iş arayanlarla eleman arayan işletmeleri aynı yerde buluşturur. Çalışan müsait olduğu günleri seçer, yakınındaki ilanları görür ve tek akışta başvurur. İşveren ise ilanını açar, gelen başvuruları inceler ve doğrudan mesajlaşır.",
+          "p2": "Şu an ağırlığı arayüz ve deneyim tarafına verdik. Başvuru akışındaki adımları azaltıyor, işveren için mobil bir yönetim paneli kuruyor ve web ile mobil sürümü birlikte ilerletiyoruz; böylece iki taraf da aynı dili konuşuyor."
+        }
+      },
+      "nappsa": {
+        "overview": {
+          "p1": "Nappsa, gün içinde verilen küçük kararları hafifletmek için kurulmuş bir öneri uygulaması. Bugün ne yesem, ne izlesem, ne yapsam sorularına kısa ve derlenmiş cevaplar verir.",
+          "p2": "Amaç sonsuz bir liste sunmak değil, seçmeyi kolaylaştırmak. Öneriler günlük olarak tazelenir ve kullanıcıyı uzun aramalar yerine tek bir karara götürür."
+        }
+      },
+      "tilo": {
+        "overview": {
+          "p1": "Tilo, kendi fotoğraflarını yapboza çeviren sakin bir bulmaca oyunu. Bir kare seç, parçalara ayır ve kendi hızında tamamla.",
+          "p2": "Sayaç, seri bozma ya da baskı yok. Kısa molalarda açılıp birkaç parça yerleştirilebilecek, sonra kaldığı yerden devam edilebilecek bir ritim üzerine kurulu."
+        }
+      },
+      "gridGrin": {
+        "overview": {
+          "p1": "Grid Grin, blokları tahtaya yerleştirip satır ve sütun temizlediğin klasik bir blok bulmaca. Kuralları ilk bakışta anlaşılır, ustalaşması zaman alır.",
+          "p2": "Süre baskısı yerine yer açma ve kombo kurma üzerine oynanır. Asıl rakip kendi rekorundur."
+        }
+      },
+      "bks": {
+        "overview": {
+          "p1": "Barbaros: Kızıl Sakal, 1300–1500 arası denizcilik atmosferinden beslenen, yukarıdan bakışlı ve gerçek zamanlı çok oyunculu bir deniz dünyası. Oyuncu küçük bir tekneyle başlar; görevler, savaşlar ve ticaretle güçlendikçe daha büyük gemilere ve daha derin sulara açılır.",
+          "p2": "Oyun tek bir savaş alanından ibaret değil. Keşif, deniz savaşı, ekipman geliştirme, ticaret ve filo siyaseti aynı denizde iç içe geçer. Uzun soluklu bir MMO olarak tasarlanıyor: hedef bir maçı kazanmak değil, denizde kendi adını duyurmak."
+        },
+        "stats": {
+          "levels": {
+            "value": "128",
+            "label": "Karakter seviyesi"
+          },
+          "ships": {
+            "value": "10",
+            "label": "Gemi kademesi"
+          },
+          "maps": {
+            "value": "14",
+            "label": "Harita"
+          },
+          "classes": {
+            "value": "4",
+            "label": "Oyun tarzı"
+          },
+          "party": {
+            "value": "6",
+            "label": "Gemilik takım"
+          }
+        },
+        "highlights": {
+          "factions": {
+            "title": "İki taraf, iki dünya",
+            "description": "Korsanlar ve Şehirliler birbirine rakip iki taraf. Her birinin kendi başlangıç bölgesi, gemileri, mimarisi ve karakterleri var. Seçtiğin taraf denizde nasıl karşılandığını belirliyor."
+          },
+          "classes": {
+            "title": "Aynı gemi, dört ayrı kaptan",
+            "description": "Gonzales hız ve manevra, Marta iyileştirme ve destek, Zoro doğrudan hasar, Bruno ön hatta dayanıklılık üzerine oynar. Gemi görünümü sınıftan bağımsız olduğu için aynı gemiyle bambaşka iki oyun tarzı çıkabiliyor."
+          },
+          "combat": {
+            "title": "Doğru anda doğru gülle",
+            "description": "Savaşın merkezinde top ve zıpkın var, ama farkı mühimmat yaratıyor. Kimi gülle yavaşlatır, kimi zırh kırar, kimi ateş ya da zehir bırakır, kimi rakibin iyileşmesini keser. Kazanan en büyük topu değil, o anın doğru seçimini yapan olur."
+          },
+          "ships": {
+            "title": "Küçük tekneden amiral gemisine",
+            "description": "On gemi kademesi boyunca gövde büyür, top sayısı artar, yelkenler ve süslemeler değişir. Yelken, dümen, gövde, pruva figürü ve mürettebat gibi alanlar ayrı ayrı geliştirilir. Yükseltme risklidir: seviye arttıkça şans azalır, bu yüzden iyi bir parça denizde gerçekten değerlidir."
+          },
+          "world": {
+            "title": "Sisin ardındaki deniz",
+            "description": "Harita baştan açık değil; görüş alanının dışı savaş sisiyle kaplı, bu yüzden rakibi önce fark etmek avantaj. Sunucu zaman zaman denizde daha tehlikeli ve daha çok ödül veren bölgeler açar. Sandıklar, deniz canavarları, boss'lar ve balıkçılık bu dünyaya dağılmış durumda."
+          },
+          "social": {
+            "title": "Takımdan filoya",
+            "description": "Altı gemiye kadar birlikte hareket eden takımlar, uzun vadede kalıcı filolara dönüşür. Filolar ada sahibi olabilir, savunma kuleleri dikebilir ve bölgenin kontrolü için savaşır. Oyuncular arası pazar da bu dengeyi besler."
+          }
+        },
+        "journey": {
+          "smallBoat": "Küçük tekne",
+          "firstQuests": "İlk görevler",
+          "newShips": "Yeni gemiler",
+          "build": "Yetenek ve ekipman",
+          "combat": "Boss ve PvP",
+          "party": "Takım",
+          "fleet": "Filo",
+          "island": "Ada hakimiyeti",
+          "endgame": "Büyük filo savaşları"
+        },
+        "tech": {
+          "text": "Oyunun kuralları sunucuda işler; Unity tarafı görüntüyü, kontrolü ve oyunun hissini taşır. Bir atışın isabet edip etmediğine istemci değil sunucu karar verir, bu yüzden denizdeki herkes aynı gerçeği görür. Kalıcı ilerleme ile anlık savaş verisi ayrı katmanlarda tutulur, böylece dünya büyüdükçe sistem birlikte büyüyebilir."
+        },
+        "status": {
+          "text": "Proje artık konsept aşamasında değil. Hareket, savaş, yetenekler, NPC'ler, ganimet, ekipman, takım ve filo sistemlerinin omurgası kurulu durumda. Şimdiki ağırlık bu sistemleri birbirine bağlamak, performansı ölçmek, içerik üretmek ve görsel ile ses kalitesini yükseltmek."
+        }
+      }
+    }
+  }
+}

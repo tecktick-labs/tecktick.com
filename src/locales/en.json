@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "title": "Tecktick Labs",
+    "description": "Tecktick Labs is a technology studio building software, mobile apps and games. One tick. Endless possibilities."
+  },
+  "language": {
+    "label": "Language",
+    "tr": "Türkçe",
+    "en": "English",
+    "trShort": "TR",
+    "enShort": "EN"
+  },
+  "nav": {
+    "products": "Products",
+    "services": "Services",
+    "about": "About",
+    "insights": "Insights",
+    "toggle": "Toggle navigation",
+    "home": "Tecktick Labs home",
+    "main": "Main navigation",
+    "footer": "Footer navigation"
+  },
+  "common": {
+    "letsTalk": "Let's Talk",
+    "discoverServices": "Discover our services",
+    "viewOnAppStore": "View on App Store",
+    "inDevelopment": "In development",
+    "live": "Live",
+    "comingSoon": "Coming soon",
+    "visitSite": "Visit site",
+    "viewDetails": "See details"
+  },
+  "hero": {
+    "kicker": "Technology Studio",
+    "titleStrong": "One tick.",
+    "titleSoft": "Endless possibilities.",
+    "lead": "We build software, create systems and turn ideas into real products. Fast, focused and always one step ahead.",
+    "ctaPrimary": "Let's build together",
+    "ctaSecondary": "Watch video",
+    "mock": {
+      "menu": {
+        "ideas": "Ideas",
+        "products": "Products",
+        "people": "People",
+        "tomorrow": "A brighter tomorrow"
+      },
+      "title": "Smarter\nSolutions\nFaster",
+      "text": "From idea to impact. We build digital products that move businesses forward.",
+      "button": "Explore our work",
+      "greeting": "Good morning",
+      "greetingLine": "Let's build",
+      "greetingStrong": "what's next.",
+      "growthLabel": "Total Growth",
+      "growthValue": "+40%",
+      "activeProjects": "Active Projects",
+      "teamMembers": "Team Members",
+      "weeksToLaunch": "Weeks to Launch"
+    }
+  },
+  "stats": {
+    "motto": "Build. Iterate. Evolve.",
+    "projects": {
+      "value": "50+",
+      "label": "Projects Delivered"
+    },
+    "clients": {
+      "value": "20+",
+      "label": "Happy Clients"
+    },
+    "industries": {
+      "value": "5+",
+      "label": "Industries"
+    },
+    "next": {
+      "value": "∞",
+      "label": "What's Next"
+    }
+  },
+  "services": {
+    "kicker": "Our Services",
+    "title": "From idea\nto impact.",
+    "text": "We partner with ambitious businesses to design, develop and scale digital products that make a difference.",
+    "items": {
+      "customSoftware": {
+        "title": "Custom Software Development",
+        "description": "Tailored solutions for real business needs."
+      },
+      "product": {
+        "title": "Product Development",
+        "description": "From idea to market and beyond."
+      },
+      "integration": {
+        "title": "System Integration",
+        "description": "Connect. Automate. Grow."
+      },
+      "consulting": {
+        "title": "Technology Consulting",
+        "description": "Smarter decisions for a brighter future."
+      }
+    },
+    "panel": {
+      "kicker": "A Brighter Tomorrow",
+      "title": "Technology\nfor a borderless\nworld.",
+      "text": "We turn complex problems into simple, powerful solutions."
+    }
+  },
+  "products": {
+    "kicker": "Our Products",
+    "title": "Products and\nwork.",
+    "text": "Our own games, the platform we run for businesses and the sites we build for clients. All shipped, all held to the same standard.",
+    "items": {
+      "anlikEleman": {
+        "name": "Anlık Eleman",
+        "category": "Job Platform / Web + iOS",
+        "tagline": "Matches daily and seasonal work with the right people, instantly.",
+        "description": "Employers post a shift, workers pick the days they are free and apply. Location-based listings, application tracking, messaging and an employer panel in one platform."
+      },
+      "nappsa": {
+        "name": "Nappsa",
+        "category": "Lifestyle / iOS",
+        "tagline": "Daily suggestions that make deciding easier.",
+        "description": "What to eat, what to watch, what to do? Nappsa serves a short, curated set of ideas for the day and cuts decision fatigue."
+      },
+      "tilo": {
+        "name": "Tilo: Picture Puzzle",
+        "category": "Puzzle / Casual",
+        "tagline": "Turn your own photos into calm puzzles.",
+        "description": "Pick a photo, turn it into a jigsaw and finish it at your own pace. Built for short breaks and small moments of focus."
+      },
+      "gridGrin": {
+        "name": "Grid Grin: Block Puzzle",
+        "category": "Puzzle / Casual",
+        "tagline": "Simple to read, hard to put down.",
+        "description": "Place blocks, clear space, chase combos. No timers, no pressure. Just a clean puzzle rhythm and your own high score."
+      },
+      "bks": {
+        "name": "Barbaros: Kızıl Sakal",
+        "category": "MMO Game / In development",
+        "tagline": "A multiplayer pirate world set in the Mediterranean.",
+        "description": "An MMO we build in-house. The Unity client, game server, API and database move together while the world, combat and progression systems take shape."
+      }
+    },
+    "meta": {
+      "ios": "iOS + iPadOS",
+      "free": "Free",
+      "mobile": "Mobile",
+      "year": "2025",
+      "inDevelopment": "In development",
+      "comingSoon": "Coming soon",
+      "web": "Web",
+      "year2026": "2026",
+      "unity": "Unity",
+      "mmo": "MMO",
+      "server": "Server + API"
+    },
+    "smallWorks": {
+      "title": "Small work",
+      "slogan": "Sometimes an hour, sometimes a year. All of it tecktick.",
+      "text": "Business and project sites we put together quickly and shipped.",
+      "items": {
+        "emrasKitchen": {
+          "name": "Emran's Kitchen",
+          "category": "Boutique bakery / Web",
+          "description": "Showcase and ordering site for a boutique kitchen making custom cakes and dessert tables for birthdays, engagements and company events."
+        },
+        "inceptionRent": {
+          "name": "Inception Rent a Car",
+          "category": "Car rental / Web",
+          "description": "Car rental around Belek and Antalya, from economy to luxury, with fleet listing, pricing and pickup point selection."
+        },
+        "elysPrime": {
+          "name": "Elys Prime",
+          "category": "Residential project / Web",
+          "description": "Showcase site for Bulki Yapı's Elys Prime residential project, with renders and apartment floor plans on one page."
+        }
+      }
+    }
+  },
+  "approach": {
+    "kicker": "Our Approach",
+    "title": "Listen.\nBuild.\nIterate.\nEvolve.",
+    "office": "Ideas today.\nA brighter\ntomorrow.",
+    "vision": "Same vision.\nBigger tomorrow.",
+    "steps": {
+      "understand": {
+        "title": "Understand",
+        "description": "We listen. We learn."
+      },
+      "build": {
+        "title": "Build",
+        "description": "We create. We deliver."
+      },
+      "iterate": {
+        "title": "Iterate",
+        "description": "We improve. We scale."
+      },
+      "evolve": {
+        "title": "Evolve",
+        "description": "We grow together."
+      }
+    }
+  },
+  "insights": {
+    "kicker": "From the workshop",
+    "title": "What we are\nworking on",
+    "text": "Not a blog, a work log. Whatever is on our desk this week is written here.",
+    "items": {
+      "anlikEleman": {
+        "tag": "Anlık Eleman",
+        "status": "In progress",
+        "title": "Fewer steps, more work matched",
+        "excerpt": "We are simplifying the whole interface. Workers pick the days they are free and apply from a single screen, while employers handle listings, applications and messages from a mobile dashboard. Web and mobile move together, so both sides get the same experience."
+      },
+      "barbaros": {
+        "tag": "Barbaros: Kızıl Sakal",
+        "status": "In development",
+        "title": "Server and Unity in the same rhythm",
+        "excerpt": "On the MMO side we develop the game server, API and database in sync with the Unity client. Every new mechanic lands in the data model and on the server first, then becomes playable in the game."
+      },
+      "process": {
+        "tag": "Studio",
+        "status": "Every week",
+        "title": "Meet, make sense of it, move",
+        "excerpt": "Regular meetings keep what we are building and why it matters fresh on every project. We sharpen the scope, cut the work into small pieces and keep the development process visible to everyone involved."
+      }
+    }
+  },
+  "footer": {
+    "kicker": "Let's Talk",
+    "title": "Got an idea?\nOne tick is enough.",
+    "text": "Tell us what you are building. If we are a good fit, we will get back to you quickly.",
+    "copyright": "© {{year}} Tecktick Labs"
+  },
+  "productPages": {
+    "back": "All products",
+    "overviewTitle": "Overview",
+    "highlightsTitle": "Highlights",
+    "journeyTitle": "The player's journey",
+    "techTitle": "Behind the scenes",
+    "statusTitle": "Where it stands",
+    "ctaTitle": "If this one caught your eye",
+    "ctaText": "Write to us to talk about similar work or to hear how the process runs.",
+    "items": {
+      "anlikEleman": {
+        "overview": {
+          "p1": "Anlık Eleman brings people looking for daily or seasonal work together with the businesses that need them. Workers pick the days they are free, see nearby listings and apply in a single flow. Employers post a shift, review applications and message candidates directly.",
+          "p2": "Right now the weight is on interface and experience. We are cutting steps out of the application flow, building a mobile dashboard for employers and moving web and mobile forward together, so both sides speak the same language."
+        }
+      },
+      "nappsa": {
+        "overview": {
+          "p1": "Nappsa is a suggestion app built to lighten the small decisions of the day. What to eat, what to watch, what to do: it answers each with a short, curated set of ideas.",
+          "p2": "The goal is not an endless list but an easier choice. Suggestions refresh daily and take you to one decision instead of a long search."
+        }
+      },
+      "tilo": {
+        "overview": {
+          "p1": "Tilo is a calm puzzle game that turns your own photos into jigsaws. Pick a shot, break it into pieces and finish it at your own pace.",
+          "p2": "No timers, no streaks, no pressure. It is built for a rhythm you can open during a short break, place a few pieces and pick up again later."
+        }
+      },
+      "gridGrin": {
+        "overview": {
+          "p1": "Grid Grin is a classic block puzzle where you drop blocks onto the board and clear rows and columns. The rules read in seconds, mastery takes longer.",
+          "p2": "Instead of time pressure it runs on making space and setting up combos. Your real opponent is your own high score."
+        }
+      },
+      "bks": {
+        "overview": {
+          "p1": "Barbaros: Kızıl Sakal is a top-down, real-time multiplayer sea world drawing on the seafaring era between 1300 and 1500. You start with a small boat and work your way to larger ships and deeper waters through quests, battles and trade.",
+          "p2": "It is not a single battle arena. Exploration, naval combat, equipment progression, trade and fleet politics all share one sea. It is designed as a long-running MMO: the point is not to win a match but to make a name for yourself out there."
+        },
+        "stats": {
+          "levels": {
+            "value": "128",
+            "label": "Character levels"
+          },
+          "ships": {
+            "value": "10",
+            "label": "Ship tiers"
+          },
+          "maps": {
+            "value": "14",
+            "label": "Maps"
+          },
+          "classes": {
+            "value": "4",
+            "label": "Play styles"
+          },
+          "party": {
+            "value": "6",
+            "label": "Ships per party"
+          }
+        },
+        "highlights": {
+          "factions": {
+            "title": "Two sides, two worlds",
+            "description": "Pirates and Cities stand against each other. Each has its own starting region, ships, architecture and characters. The side you pick decides how the sea greets you."
+          },
+          "classes": {
+            "title": "One ship, four captains",
+            "description": "Gonzales plays on speed and manoeuvring, Marta on healing and support, Zoro on raw damage, Bruno on holding the front line. Because the ship's look is independent of the class, the same vessel can produce two completely different play styles."
+          },
+          "combat": {
+            "title": "The right shot at the right moment",
+            "description": "Cannons and harpoons sit at the centre of combat, but ammunition makes the difference. Some rounds slow, some break armour, some leave fire or poison, some cut off the enemy's healing. The winner is not the biggest gun but the right choice in the moment."
+          },
+          "ships": {
+            "title": "From small boat to flagship",
+            "description": "Across ten ship tiers the hull grows, the cannon count rises and sails and ornaments change. Sails, rudder, hull, figurehead and crew all upgrade separately. Upgrading carries risk: the higher the level the lower the odds, which is what makes a good part genuinely valuable."
+          },
+          "world": {
+            "title": "The sea behind the fog",
+            "description": "The map is not open from the start. Everything outside your line of sight is covered by fog of war, so spotting a rival first is an advantage. The server opens up more dangerous, more rewarding regions from time to time. Chests, sea monsters, bosses and fishing are scattered across this world."
+          },
+          "social": {
+            "title": "From party to fleet",
+            "description": "Parties of up to six ships turn into lasting fleets over time. Fleets can hold islands, raise defence towers and fight for control of a region. A player-run market keeps that balance moving."
+          }
+        },
+        "journey": {
+          "smallBoat": "Small boat",
+          "firstQuests": "First quests",
+          "newShips": "New ships",
+          "build": "Skills and gear",
+          "combat": "Bosses and PvP",
+          "party": "Party",
+          "fleet": "Fleet",
+          "island": "Island control",
+          "endgame": "Great fleet battles"
+        },
+        "tech": {
+          "text": "The rules of the game run on the server, while Unity carries the visuals, the controls and the feel. Whether a shot lands is decided by the server, not the client, so everyone at sea sees the same truth. Lasting progress and live battle data sit in separate layers, so the system can grow as the world does."
+        },
+        "status": {
+          "text": "The project is past the concept stage. The backbone of movement, combat, skills, NPCs, loot, equipment, parties and fleets is in place. The weight now is on connecting those systems, measuring performance, producing content and raising visual and audio quality."
+        }
+      }
+    }
+  }
+}
