@@ -1,6 +1,7 @@
-import { useEffect, useState, type FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Icon } from '../components/Icons'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { contactEmail, contactPhone } from '../data/site'
 
 const FORM_NAME = 'contact'
@@ -15,14 +16,9 @@ const encode = (data: Record<string, string>) =>
 
 export function ContactPage() {
   const { t } = useTranslation()
+  useDocumentMeta(t('contact.kicker'), t('contact.text'))
   const [status, setStatus] = useState<Status>('idle')
 
-  useEffect(() => {
-    document.title = `${t('contact.kicker')} — ${t('meta.title')}`
-    return () => {
-      document.title = t('meta.title')
-    }
-  }, [t])
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()

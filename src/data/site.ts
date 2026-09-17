@@ -23,11 +23,17 @@ export type ProductDetail = {
   hasStatus?: boolean
 }
 
+/** Ürünler sayfasındaki filtre grupları */
+export type ProductKind = 'app' | 'game' | 'platform'
+
 export type Product = {
   id: string
   /** products.items.<key> altındaki çeviri grubu */
   key: string
   status: 'live' | 'soon'
+  kind: ProductKind
+  /** Ürünler sayfasının üst vitrininde gösterilir */
+  featured?: boolean
   /** Görsel yoksa arayüz otomatik olarak yer tutucuya düşer */
   icon: string | null
   tone: 'mint' | 'ink' | 'violet'
@@ -50,6 +56,8 @@ export const products: Product[] = [
     id: 'anlik-eleman',
     key: 'anlikEleman',
     status: 'live',
+    kind: 'platform',
+    featured: true,
     icon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/25/37/1c/25371c3b-bb08-275d-4fa3-55eaba68ef3d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg',
     tone: 'mint',
     links: [
@@ -63,6 +71,7 @@ export const products: Product[] = [
     id: 'nappsa',
     key: 'nappsa',
     status: 'live',
+    kind: 'app',
     icon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/64/7d/de647d90-3890-8c0a-2e01-d7fa5f4b652a/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg',
     tone: 'ink',
     links: [
@@ -75,6 +84,7 @@ export const products: Product[] = [
     id: 'tilo',
     key: 'tilo',
     status: 'live',
+    kind: 'game',
     icon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f0/4a/ce/f04acefc-e39b-5c1a-da06-cd2b5ac578f7/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg',
     tone: 'mint',
     links: [
@@ -87,6 +97,7 @@ export const products: Product[] = [
     id: 'grid-grin',
     key: 'gridGrin',
     status: 'live',
+    kind: 'game',
     icon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/83/fc/f883fcb2-223e-1878-56d3-41fb65b548ec/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg',
     tone: 'ink',
     links: [
@@ -99,6 +110,8 @@ export const products: Product[] = [
     id: 'bks',
     key: 'bks',
     status: 'soon',
+    kind: 'game',
+    featured: true,
     icon: bksLogo,
     tone: 'violet',
     iconTheme: 'dark',
@@ -131,13 +144,103 @@ export const smallWorks = [
   { id: 'elys-prime', key: 'elysPrime', url: 'https://elysprime.com/' },
 ] as const
 
-export const statKeys = ['projects', 'clients', 'industries', 'next'] as const
+/** Ürünler sayfasındaki filtre seçenekleri; sırayla gösterilir */
+export const productFilters = [
+  { key: 'all', match: () => true },
+  { key: 'app', match: (p: Product) => p.kind === 'app' },
+  { key: 'game', match: (p: Product) => p.kind === 'game' },
+  { key: 'platform', match: (p: Product) => p.kind === 'platform' },
+  { key: 'soon', match: (p: Product) => p.status === 'soon' },
+] as const
+
+export type ProductFilterKey = (typeof productFilters)[number]['key']
+
+export function filterProducts(key: string): Product[] {
+  const filter = productFilters.find((item) => item.key === key)
+  if (!filter) return products
+  return products.filter(filter.match)
+}
+
+/** Ürünler sayfasının üstünde sabit duran şerit */
+export const featuredProducts = products.filter((product) => product.featured)
+
+/** Ana sayfada gösterilecek kısa liste: öne çıkanlar önce, toplam üç iş */
+export const homeProducts = [
+  ...products.filter((product) => product.featured),
+  ...products.filter((product) => !product.featured),
+].slice(0, 3)
+
+/**
+ * Sayılar elle yazılmaz; ürün ve iş listelerinden hesaplanır.
+ * Yeni bir kayıt eklendiğinde rakamlar kendiliğinden güncellenir.
+ */
+export const siteStats = {
+  shipped:
+    products.filter((product) => product.status === 'live').length +
+    smallWorks.length,
+  apps: products.filter((product) =>
+    product.links.some((link) => link.kind === 'appStore'),
+  ).length,
+  web:
+    smallWorks.length +
+    products.filter((product) =>
+      product.links.some((link) => link.kind === 'web'),
+    ).length,
+  building: products.filter((product) => product.status === 'soon').length,
+}
+
+export const statKeys = ['shipped', 'apps', 'web', 'building'] as const
+
+/** Marka mottosu; iki dilde de aynı kalır, bu yüzden çeviri dosyasında değil. */
+export const motto = 'Build. Iterate. Evolve.'
+
+/** Hakkımızda sayfasındaki geçmiş alanları */
+export const experienceKeys = [
+  'banking',
+  'corporate',
+  'multilingual',
+  'platforms',
+  'realtime',
+] as const
+
+export const valueKeys = ['clarity', 'ownership', 'craft'] as const
 
 export const services = [
   { id: 'customSoftware', icon: 'code', featured: true },
   { id: 'product', icon: 'layers', featured: false },
   { id: 'integration', icon: 'grid', featured: false },
   { id: 'consulting', icon: 'people', featured: false },
+] as const
+
+/**
+ * Hizmetler sayfasındaki yetenek listesi.
+ * Metinler locales/servicesPage.capabilities altındadır; burada yalnızca
+ * sıra ve ikon adı tutulur.
+ */
+export const capabilities = [
+  { key: 'mobile', icon: 'mobile' },
+  { key: 'web', icon: 'web' },
+  { key: 'services', icon: 'server' },
+  { key: 'integration', icon: 'plug' },
+  { key: 'cloud', icon: 'cloud' },
+  { key: 'product', icon: 'rocket' },
+  { key: 'consulting', icon: 'compass' },
+  { key: 'ai', icon: 'sparkle' },
+] as const
+
+/** Süreç bölümünün yanındaki değişmez söz listesi */
+export const promiseKeys = ['team', 'scope', 'build'] as const
+
+/** Teknik yığını anlatan alt marka; ad olduğu için çevrilmez. */
+export const stackBrand = { first: 'Multi', second: 'Teck' }
+
+/** Araç adları marka adıdır, çevrilmez; grup başlıkları i18n'den gelir. */
+export const toolGroups = [
+  { key: 'mobile', items: ['React Native', 'Expo'] },
+  { key: 'web', items: ['Next.js', 'React'] },
+  { key: 'backend', items: ['NestJS', 'Node.js', 'Express'] },
+  { key: 'data', items: ['PostgreSQL', 'MongoDB', 'Redis', 'Prisma', 'Supabase', 'Firebase'] },
+  { key: 'cloud', items: ['Docker', 'Nginx', 'AWS', 'Firebase Hosting'] },
 ] as const
 
 export const approachSteps = [
@@ -147,21 +250,80 @@ export const approachSteps = [
   { key: 'evolve', step: '04' },
 ] as const
 
-export const insightKeys = ['anlikEleman', 'barbaros', 'process'] as const
+/**
+ * Çalışma notları / haberler.
+ * Metinler locales/insights.items.<key> altındadır; burada yalnızca yapı,
+ * tarih ve sınıflandırma tutulur. Her notun kendi sayfası vardır:
+ * /insights/<id>
+ */
+export type InsightProject = 'anlikEleman' | 'barbaros' | 'studio'
 
-export const navigation = [
-  { key: 'home', to: '/' },
-  { key: 'products', to: '/products' },
-  { key: 'services', to: '/services' },
-  { key: 'about', to: '/about' },
-  { key: 'insights', to: '/insights' },
-] as const
+export type Insight = {
+  id: string
+  key: string
+  project: InsightProject
+  /** ISO tarih; görüntüleme dile göre biçimlendirilir */
+  date: string
+  featured?: boolean
+}
 
-/** Alt bilgi navigasyonu iletişim sayfasını da içerir */
-export const footerNavigation = [
-  ...navigation,
-  { key: 'contact', to: '/contact' },
-] as const
+export const insights: Insight[] = [
+  {
+    id: 'anlik-eleman-isveren-paneli',
+    key: 'aePanel',
+    project: 'anlikEleman',
+    date: '2026-09-12',
+    featured: true,
+  },
+  {
+    id: 'anlik-eleman-mobil',
+    key: 'aeMobile',
+    project: 'anlikEleman',
+    date: '2026-09-08',
+  },
+  {
+    id: 'anlik-eleman-web',
+    key: 'aeWeb',
+    project: 'anlikEleman',
+    date: '2026-09-02',
+  },
+  {
+    id: 'barbaros-sunucu-unity',
+    key: 'barbarosServer',
+    project: 'barbaros',
+    date: '2026-08-28',
+  },
+  {
+    id: 'barbaros-harita-uretimi',
+    key: 'barbarosMaps',
+    project: 'barbaros',
+    date: '2026-08-21',
+  },
+  {
+    id: 'calisma-ritmimiz',
+    key: 'process',
+    project: 'studio',
+    date: '2026-08-14',
+  },
+]
+
+export const insightProjects = ['all', 'anlikEleman', 'barbaros', 'studio'] as const
+
+export function filterInsights(project: string): Insight[] {
+  if (project === 'all') return insights
+  return insights.filter((item) => item.project === project)
+}
+
+export function findInsight(id: string | undefined): Insight | undefined {
+  return insights.find((item) => item.id === id)
+}
+
+/** Ana sayfada gösterilen üç not; farklı projelerden seçilir */
+export const homeInsights = [
+  insights.find((i) => i.key === 'aePanel'),
+  insights.find((i) => i.key === 'barbarosMaps'),
+  insights.find((i) => i.key === 'process'),
+].filter(Boolean) as Insight[]
 
 export const contactEmail = 'account@tecktick.com'
 

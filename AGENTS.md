@@ -70,8 +70,11 @@ curl -s "https://itunes.apple.com/lookup?id=<APP_ID>&country=tr" | python3 -m js
 
 `artworkUrl512` alanı ikon URL'si olarak kullanılır.
 
-### 5. Sayfalar ve bağlantılar
-Site `react-router-dom` ile çalışır:
+### 5. Sayfalar, rotalar ve navigasyon
+Site `react-router-dom` ile çalışır ve **rotaların tek kaynağı
+`src/lib/routes.ts`** dosyasıdır. Menü, alt bilgi ve kırıntı navigasyonu bu
+tanımdan beslenir; bağlantı yazarken yol elle yazılmaz, `routePath('products')`
+veya `productPath(id)` kullanılır.
 
 | Rota | Sayfa |
 | --- | --- |
@@ -82,23 +85,142 @@ Site `react-router-dom` ile çalışır:
 | `/about` | Hakkımızda (`src/pages/AboutPage.tsx`) |
 | `/insights` | Çalışma notları (`src/pages/InsightsPage.tsx`) |
 | `/contact` | İletişim ve form (`src/pages/ContactPage.tsx`) |
-| diğer | Ana sayfaya yönlenir |
+| diğer | 404 sayfası (`src/pages/NotFoundPage.tsx`) |
 
-`productId`, `src/data/site.ts` içindeki ürün `id` alanıdır. Netlify
-yönlendirmesi (`netlify.toml`) tüm yolları `index.html`'e verir, bu satır
-silinmemelidir.
+**Yeni sayfa eklerken sırayla:**
 
-Her menü sekmesi kendi sayfasını açar. Bölüme kaydıran `#hash`
-bağlantıları **kullanılmaz**: ana sayfadayken bütün hash sekmeleri aynı anda
-seçili görünüyordu ve gereksiz bir ara adımdı. Site içi bağlantılar
-`<Link to="/services">` biçiminde yazılır, menüde `NavLink` ile aktif sayfa
-vurgulanır ve `main.tsx` içindeki `ScrollManager` her geçişte sayfayı başa
-alır.
+1. `src/lib/routes.ts` içine rota kaydını ekle (`inNav` / `inFooter` menüde
+   görünürlüğü belirler).
+2. `src/locales/*.json` içindeki `nav` altına etiketi ekle; anahtar adı rota
+   anahtarıyla aynı olmalıdır.
+3. Sayfayı `src/pages/` altında oluştur ve `main.tsx` içinde **`lazy` ile**
+   bağla. Ana sayfa dışındaki her sayfa ayrı pakete bölünür; yüzlerce sayfaya
+   çıkıldığında ilk yükleme boyutu sabit kalır.
+4. Sayfanın en üstünde `useDocumentMeta(başlık, açıklama)` çağır. Sekme
+   başlığı ve açıklama etiketi burada yönetilir, sayfa içinde `document.title`
+   yazılmaz.
+5. Alt seviye bir sayfaysa `Breadcrumbs` ekle.
 
-Ana sayfa bu sayfaların özetini gösterir; her bölümün başlığındaki bağlantı
-ilgili sayfaya gider.
+Bölüme kaydıran `#hash` bağlantıları **kullanılmaz**: ana sayfadayken bütün
+hash sekmeleri aynı anda seçili görünüyordu ve gereksiz bir ara adımdı. Menüde
+`NavLink` aktif sayfayı vurgular, `ScrollManager` her geçişte sayfayı başa alır.
 
-### 6. İletişim formu
+### 6. Sayfa kalıbı ve ana sayfa ilişkisi
+Ana sayfa bir **vitrindir**, alt sayfalar **derinliktir**. Ana sayfadaki bölüm
+aynı içeriği baştan listelemez; kısa bir özet gösterir ve ilgili sayfaya
+bağlanır (örnek: ana sayfada üç iş, `/products` sayfasında tamamı).
+
+Alt sayfalar ortak iskeleti kullanır, böylece yeni sayfa tasarlamak gerekmez:
+
+```
+.page            sayfa kabı (shell genişliği)
+  Breadcrumbs    konum
+  .page-head     kicker + h1 + .page-lead
+  .page-section  her bölüm; başlığı .section-label
+```
+
+Tasarım dili ana sayfayla aynıdır: açık zemin, ince çizgiler, nane yeşili
+vurgu, `--shell` genişliği ve mevcut token'lar. Yeni renk, gölge veya yazı
+boyutu uydurulmaz.
+
+**Uzun sayfalar tek bir düzeni tekrarlamaz.** Bölümler birbirinden farklı
+kurulur ve aralarına nefes alanı konur. Hizmetler sayfası bu kalıbın örneğidir:
+
+1. Kart ızgarası + koyu panel
+2. Tam genişlikte **slogan bandı** (`.slogan-band`) — bölümleri ayırır
+3. Yoğun iki sütunlu liste (`.capability-grid`) — ikon + başlık + tek cümle
+4. Dar dikey akış (`.process-steps`) + yanında koyu söz bloğu (`.promise`)
+5. Kapalı gelen, tıklanınca açılan koyu satır (`.tools-disclosure`) — teknik
+   ayrıntı meraklısına sunulur, sayfayı meşgul etmez. Kapalıyken bile ne
+   olduğu bellidir: kısa ipucu ve araç sayısı satırda görünür.
+6. Kapanış çağrısı
+
+### Haberler (çalışma notları)
+`/insights` bir haber akışıdır; her notun kendi sayfası vardır
+(`/insights/<id>`). Yeni not eklerken:
+
+1. `src/data/site.ts` içindeki `insights` dizisine kayıt ekle: `id` (adreste
+   görünen kısa ad), `key` (çeviri anahtarı), `project` ve ISO `date`.
+   Liste yeniden eskiye sıralıdır; `featured: true` olan not listenin başındaki
+   geniş kartta çıkar ve yalnızca bir notta bulunur.
+2. `src/locales/*.json` içindeki `insights.items.<key>` altına `tag`, `status`,
+   `title`, `excerpt` ve `body.p1/p2/p3` ekle. Özet liste ve paylaşım
+   açıklaması olarak kullanılır, gövde yalnızca not sayfasında görünür.
+3. Ana sayfada üç not görünür (`homeInsights`); farklı projelerden seçilir,
+   aynı projenin üç notu yan yana gelmez.
+
+Tarihler elle yazılmaz: ISO değeri `formatDate` ile aktif dile göre
+biçimlenir. Filtreler proje bazlıdır ve seçim adres satırında tutulur
+(`/insights?project=barbaros`).
+
+**SEO:** `useDocumentMeta` her sayfada başlık, açıklama, `og:` etiketleri ve
+canonical adresi kurar; not sayfaları ayrıca `useArticleSchema` ile Article
+yapısal verisi yayınlar. Bunlar tarayıcıda çalışır. Arama motorlarının
+JavaScript çalıştırmadan içeriği görmesi gerekiyorsa sonraki adım ön render
+(prerender/SSG) kurmaktır.
+
+**Sayılar uydurulmaz.** Ana sayfadaki şerit ve Hakkımızda sayfasındaki
+kutu, `src/data/site.ts` içindeki `siteStats` alanından beslenir; bu alan
+ürün ve iş listelerinden hesaplanır (yayına alınan iş, App Store uygulaması,
+web projesi, geliştirilen ürün). Yeni bir kayıt eklendiğinde rakamlar
+kendiliğinden güncellenir. Çeviri dosyasında yalnızca etiketler durur, değerler
+değil.
+
+**Marka mottosu:** "Build. Iterate. Evolve." iki dilde de aynı kalır; çeviri
+dosyasında değil `src/data/site.ts` içindeki `motto` alanındadır. Ana sayfanın
+istatistik şeridi ve Hakkımızda sayfasının kapanışı bu alandan beslenir.
+
+**Marka yazımı:** her yerde **Tecktick** (ilk harf büyük). Küçük harfli
+`tecktick` yazımı kullanılmaz; `labs` küçük kalır. Teknik yığını anlatan
+açılır satır **Multi Teck** alt markasını taşır; ad olduğu için çeviri
+dosyasında değil `src/data/site.ts` içindeki `stackBrand` alanında durur ve
+"Teck" kısmı nane yeşiliyle vurgulanır.
+
+Metin ölçüsü: her başlık kendini anlatır, altına tanıtım paragrafı yazılmaz.
+Açıklamalar tek cümledir. Teknik terim yerine işin ne yaptığı anlatılır
+(örnek: "backend" değil, "arka plan sistemleri: hesaplar, yetkiler ve iş
+kuralları"). Marka ve teknoloji adları çeviri dosyasına girmez, veri olarak
+`src/data/site.ts` içinde durur.
+
+### 7. Ürünler sayfası: vitrin ve filtreler
+`featured: true` işaretli işler sayfanın en üstünde **sabit** bir şeritte
+durur ve filtre değişse de yerinde kalır. `FeaturedRail` bileşeni sayıya göre
+davranır:
+
+| Öne çıkan sayısı | Görünüm |
+| --- | --- |
+| 1 | Tek geniş vitrin |
+| 2 | Yan yana iki eşit kart |
+| 3 ve üzeri | İki kart görünür; oklarla veya sürükleyerek sonsuz döngü |
+
+Döngü, listeyi üç kez basıp orta kopyadan başlatarak kurulur. Konum
+düzeltmesi kaydırma **bittikten sonra** yapılır; kaydırma sırasında yapılınca
+tarayıcının snap davranışıyla çakışıp konumu sıfırlıyordu.
+
+Her ürün ayrıca `kind` alanı taşır (`app`, `game`, `platform`). Filtreler
+`productFilters` dizisinden gelir ve seçim **adres satırında** tutulur
+(`/products?filter=game`), böylece filtrelenmiş görünüm paylaşılabilir.
+Yeni bir filtre eklemek için diziye bir kayıt ve `productsPage.filters`
+altına etiket eklemek yeterlidir.
+
+Metin konusunda ölçü: sayfa başlığı kendi kendini anlatır. Başlığın üstüne
+bölüm etiketi, altına uzun tanıtım paragrafı yazılmaz. Küçük ölçekli işler
+"küçük işler" değil **"diğer projelerimiz"** başlığıyla listelenir.
+
+### 8. İkon stili (değiştirilmez)
+Tüm ikonlar `src/components/Icons.tsx` içindeki `paths` sözlüğünde, tek bir
+çizim diliyle tanımlanır:
+
+- `viewBox="0 0 24 24"`, `fill="none"`, `stroke="currentColor"`
+- `strokeWidth="1.8"`, `strokeLinecap="round"`, `strokeLinejoin="round"`
+- Sade çizgi çizim; dolgu, gölge, çok renk ve gradyan yok
+
+Yeni ikon gerektiğinde bu sözlüğe aynı kurallarla bir kayıt eklenir.
+**İkon kütüphanesi kurulmaz** (lucide, heroicons vb.), emoji veya hazır görsel
+ikon kullanılmaz. Ürün logoları bunun dışındadır; onlar `src/assets/` altında
+durur.
+
+### 9. İletişim formu
 Form **Netlify Forms** üzerinden çalışır ve iki parçası vardır:
 
 1. `index.html` içindeki gizli statik form (Netlify derleme sırasında burayı
@@ -120,7 +242,7 @@ içindedir, metin değil veri oldukları için çeviri dosyalarında tutulmaz.
 kaydına bakın. Böylece her ürün sayfası açılır, içerik derinliği ürüne göre
 değişir.
 
-### 7. Eksik görseller kırık göstermez
+### 10. Eksik görseller kırık göstermez
 Ürün ikonu `ProductIcon` bileşeninden geçer: kayıtta ikon yoksa **veya**
 dosya yüklenemezse otomatik olarak yer tutucuya düşer. Bu yüzden henüz
 yüklenmemiş bir görselin yolu veriye yazılabilir.
@@ -129,7 +251,7 @@ Proje görselleri `src/assets/` altında durur ve veri dosyasına `import`
 edilir (örnek: `src/assets/bks-logo.png` → Barbaros: Kızıl Sakal). Böylece
 Vite dosyayı işler ve eksik dosya derlemede hata verir.
 
-### 8. Görsel yer tutucuları
+### 11. Görsel yer tutucuları
 Gerçek görseller henüz yok. Görsel alanları `mock-image` sınıfıyla CSS
 yer tutucusuna düşer (`mock-office`, `mock-globe`, `mock-gradient`,
 `mock-thumb`). Gerçek görsel geldiğinde bu `div` bir `img` ile değiştirilir;
@@ -143,13 +265,16 @@ logo.png              tek marka varlığı
 src/
   main.tsx            Router, App, <html lang> / başlık senkronu, ScrollManager
   pages/              Home, ProductsPage, ProductPage, ServicesPage,
-                      AboutPage, InsightsPage, ContactPage
+                      AboutPage, InsightsPage, ContactPage, NotFoundPage
+  lib/routes.ts       rotaların tek kaynağı
+  hooks/              useDocumentMeta (sekme başlığı ve açıklama)
   i18n.ts             i18next kurulumu, dil algılama, localStorage
   locales/tr.json     çeviriler (varsayılan)
   locales/en.json     çeviriler
   data/site.ts        yapısal içerik, metin içermez
   components/         Header, Hero, Services, Products, Approach, Insights,
-                      Footer, Logo, Icons, ProductIcon, LanguageSwitcher
+                      Footer, Logo, Icons, ProductIcon, Breadcrumbs,
+                      LanguageSwitcher
   assets/             proje görselleri (bks-logo.png ve 512px sürümü)
   styles.css          tasarım token'ları ve tüm stiller
 ```

@@ -2,7 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 import { Icon } from './Icons'
 import { Wordmark } from './Logo'
-import { contactEmail, footerNavigation } from '../data/site'
+import { contactEmail } from '../data/site'
+import { footerRoutes, routePath } from '../lib/routes'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -21,7 +22,7 @@ export function Footer() {
         <div className="cta-side">
           <p>{t('footer.text')}</p>
           <div className="cta-actions">
-            <Link className="btn btn-mint" to="/contact">
+            <Link className="btn btn-mint" to={routePath('contact')}>
               {t('productPages.ctaButton')}
               <Icon name="arrow" className="btn-icon" />
             </Link>
@@ -34,12 +35,12 @@ export function Footer() {
       )}
 
       <div className="footer-bottom">
-        <Link className="brand" to="/">
+        <Link className="brand" to={routePath('home')}>
           <Wordmark variant="light" />
         </Link>
         <nav className="footer-nav" aria-label={t('nav.footer')}>
-          {footerNavigation.map((item) => (
-            <Link key={item.to} to={item.to}>
+          {footerRoutes.map((item) => (
+            <Link key={item.key} to={item.path}>
               {t(`nav.${item.key}`)}
             </Link>
           ))}

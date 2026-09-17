@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Icon } from './Icons'
 import { ProductIcon } from './ProductIcon'
-import { products, smallWorks } from '../data/site'
+import { homeProducts, smallWorks } from '../data/site'
 
 export function Products() {
   const { t } = useTranslation()
@@ -24,7 +24,7 @@ export function Products() {
       </div>
 
       <div className="product-grid">
-        {products.map((product) => (
+        {homeProducts.map((product) => (
           <article className={`product-card tone-${product.tone}`} key={product.id}>
             <div className="product-top">
               <ProductIcon product={product} />

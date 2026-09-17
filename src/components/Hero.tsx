@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Icon } from './Icons'
 import { LogoMark } from './Logo'
-import { statKeys } from '../data/site'
+import { motto, siteStats, statKeys } from '../data/site'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -98,14 +98,14 @@ export function Hero() {
         <div className="stats-grid">
           {statKeys.map((key) => (
             <div className="stat" key={key}>
-              <strong>{t(`stats.${key}.value`)}</strong>
+              <strong>{siteStats[key]}</strong>
               <span>{t(`stats.${key}.label`)}</span>
             </div>
           ))}
         </div>
         <p className="stats-motto">
           <i />
-          {t('stats.motto')}
+          {motto}
         </p>
       </div>
     </section>

@@ -1,7 +1,9 @@
-import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { Icon } from '../components/Icons'
+import { Breadcrumbs } from '../components/Breadcrumbs'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { productPath, routePath } from '../lib/routes'
 import { ProductIcon } from '../components/ProductIcon'
 import { findProduct, products } from '../data/site'
 
@@ -10,18 +12,13 @@ export function ProductPage() {
   const { productId } = useParams()
   const product = findProduct(productId)
   const productName = product ? t(`products.items.${product.key}.name`) : ''
-
-  // Sekme başlığı ürün adını gösterir, sayfadan çıkınca site adına döner.
-  useEffect(() => {
-    if (!productName) return
-    document.title = `${productName} — ${t('meta.title')}`
-    return () => {
-      document.title = t('meta.title')
-    }
-  }, [productName, t])
+  const productSummary = product
+    ? t(`products.items.${product.key}.tagline`)
+    : undefined
+  useDocumentMeta(productName || undefined, productSummary)
 
   if (!product) {
-    return <Navigate to="/" replace />
+    return <Navigate to="/products" replace />
   }
 
   const base = `productPages.items.${product.key}`
@@ -30,8 +27,16 @@ export function ProductPage() {
 
   return (
     <article className="product-page">
+      <Breadcrumbs
+        items={[
+          { label: t('nav.breadcrumbHome'), to: routePath('home') },
+          { label: t('nav.products'), to: routePath('products') },
+          { label: productName },
+        ]}
+      />
+
       <header className="product-hero">
-        <Link className="back-link" to="/products">
+        <Link className="back-link" to={routePath('products')}>
           <Icon name="arrowLeft" className="btn-icon" />
           {t('productPages.back')}
         </Link>
@@ -157,7 +162,7 @@ export function ProductPage() {
               <Link
                 className="related-card"
                 key={item.id}
-                to={`/products/${item.id}`}
+                to={productPath(item.id)}
               >
                 <ProductIcon product={item} />
                 <span className="related-text">
@@ -176,7 +181,7 @@ export function ProductPage() {
           <h2>{t('productPages.ctaTitle')}</h2>
           <p>{t('productPages.ctaText')}</p>
         </div>
-        <Link className="btn btn-dark" to="/contact">
+        <Link className="btn btn-dark" to={routePath('contact')}>
           {t('productPages.ctaButton')}
           <Icon name="arrow" className="btn-icon" />
         </Link>

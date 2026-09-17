@@ -16,11 +16,12 @@
     "products": "Products",
     "services": "Services",
     "about": "About",
-    "insights": "Insights",
+    "insights": "News",
     "toggle": "Toggle navigation",
     "main": "Main navigation",
     "footer": "Footer navigation",
-    "contact": "Contact"
+    "contact": "Contact",
+    "breadcrumbHome": "Home"
   },
   "common": {
     "letsTalk": "Let's Talk",
@@ -44,7 +45,7 @@
         "ideas": "Ideas",
         "products": "Products",
         "people": "People",
-        "tomorrow": "A brighter tomorrow"
+        "tomorrow": "How we work"
       },
       "title": "Smarter\nSolutions\nFaster",
       "text": "From idea to impact. We build digital products that move businesses forward.",
@@ -60,22 +61,17 @@
     }
   },
   "stats": {
-    "motto": "Build. Iterate. Evolve.",
-    "projects": {
-      "value": "50+",
-      "label": "Projects Delivered"
+    "shipped": {
+      "label": "Projects shipped"
     },
-    "clients": {
-      "value": "20+",
-      "label": "Happy Clients"
+    "apps": {
+      "label": "Apps on the App Store"
     },
-    "industries": {
-      "value": "5+",
-      "label": "Industries"
+    "web": {
+      "label": "Web projects"
     },
-    "next": {
-      "value": "∞",
-      "label": "What's Next"
+    "building": {
+      "label": "In development"
     }
   },
   "services": {
@@ -97,13 +93,13 @@
       },
       "consulting": {
         "title": "Technology Consulting",
-        "description": "Smarter decisions for a brighter future."
+        "description": "We review what you run and map the way forward."
       }
     },
     "panel": {
-      "kicker": "A Brighter Tomorrow",
-      "title": "Technology\nfor a borderless\nworld.",
-      "text": "We turn complex problems into simple, powerful solutions."
+      "kicker": "Lean back with Tecktick",
+      "title": "Crossing limits\nis up to Tecktick.",
+      "text": "We just make it look simple."
     }
   },
   "products": {
@@ -156,9 +152,9 @@
       "server": "Server + API"
     },
     "smallWorks": {
-      "title": "Small work",
-      "slogan": "Sometimes an hour, sometimes a year. All of it tecktick.",
-      "text": "Business and project sites we put together quickly and shipped.",
+      "title": "Other projects",
+      "slogan": "Sometimes an hour, sometimes a year. All of it Tecktick.",
+      "text": "Business and project sites we built and shipped.",
       "items": {
         "emrasKitchen": {
           "name": "Emran's Kitchen",
@@ -181,8 +177,8 @@
   "approach": {
     "kicker": "Our Approach",
     "title": "Listen.\nBuild.\nIterate.\nEvolve.",
-    "office": "Ideas today.\nA brighter\ntomorrow.",
-    "vision": "Same vision.\nBigger tomorrow.",
+    "office": "Tell us the idea.\nThe team is right here.",
+    "vision": "Make it work.\nThen make it grow.",
     "steps": {
       "understand": {
         "title": "Understand",
@@ -207,23 +203,71 @@
     "title": "What we are\nworking on",
     "text": "Not a blog, a work log. Whatever is on our desk this week is written here.",
     "items": {
-      "anlikEleman": {
+      "aePanel": {
         "tag": "Anlık Eleman",
         "status": "In progress",
-        "title": "Fewer steps, more work matched",
-        "excerpt": "We are simplifying the whole interface. Workers pick the days they are free and apply from a single screen, while employers handle listings, applications and messages from a mobile dashboard. Web and mobile move together, so both sides get the same experience."
+        "title": "A separate panel for companies",
+        "excerpt": "We are building the employer's own workspace at panel.anlikeleman.com. Posting shifts, reviewing applications, messaging candidates and tracking workers all sit in one panel.",
+        "body": {
+          "p1": "On Anlık Eleman the employer side is a product of its own, just like the worker side. So we are building a separate panel for companies at panel.anlikeleman.com.",
+          "p2": "In the panel an employer posts a shift, sees every application in one list, messages candidates and tracks workers day by day. The goal is to cut the steps needed to fill a shift.",
+          "p3": "The panel runs on the same data as the mobile app. When an application lands, the employer sees it on the phone and in the panel at the same moment."
+        }
       },
-      "barbaros": {
+      "aeMobile": {
+        "tag": "Anlık Eleman",
+        "status": "In progress",
+        "title": "iOS and Android from one codebase",
+        "excerpt": "We build the mobile app for both stores together. Notifications, location and the application flow behave the same on each platform.",
+        "body": {
+          "p1": "We build the mobile app for iOS and Android from a single codebase. Two stores, one team, one release flow.",
+          "p2": "Notifications, location permissions and the application flow behave the same on both platforms. Platform-specific differences stay only where the system demands them.",
+          "p3": "This lets us ship a new feature to both platforms within the same week."
+        }
+      },
+      "aeWeb": {
+        "tag": "Anlık Eleman",
+        "status": "In progress",
+        "title": "Fewer steps on the web",
+        "excerpt": "We are simplifying the flow for job seekers: pick your free days, see nearby listings, apply from a single screen. Web and mobile move together.",
+        "body": {
+          "p1": "On the web we are rebuilding the job seeker flow to be simpler. Pick your free days, see nearby listings, apply from one screen.",
+          "p2": "The old flow spread an application across several steps. By merging steps and shortening the form we expect fewer people to drop out before finishing.",
+          "p3": "Web and mobile move together; both sides use the same screens and the same language."
+        }
+      },
+      "barbarosServer": {
         "tag": "Barbaros: Kızıl Sakal",
         "status": "In development",
         "title": "Server and Unity in the same rhythm",
-        "excerpt": "On the MMO side we develop the game server, API and database in sync with the Unity client. Every new mechanic lands in the data model and on the server first, then becomes playable in the game."
+        "excerpt": "On the MMO side we develop the game server, API and database in sync with the Unity client. Every new mechanic lands on the server first, then becomes playable in the game.",
+        "body": {
+          "p1": "In Barbaros: Kızıl Sakal the rules of the game run on the server. Unity carries the visuals, the controls and the feel.",
+          "p2": "We develop the game server, API and database in sync with the Unity client. A new mechanic lands in the data model and on the server first, then becomes playable in the game.",
+          "p3": "That order is what keeps everyone at sea seeing the same truth: whether a shot lands is decided by the server, not the client."
+        }
+      },
+      "barbarosMaps": {
+        "tag": "Barbaros: Kızıl Sakal",
+        "status": "In development",
+        "title": "Building the maps in Unity",
+        "excerpt": "We produce the game world's maps on the Unity side: islands, ports, open sea areas and the crossings between maps.",
+        "body": {
+          "p1": "We produce the game world's maps on the Unity side. Islands, ports, open sea areas and the crossings between maps are each built by hand.",
+          "p2": "A map is not only a visual space. Which region is more dangerous, where loot appears and where you cross into another map are all decided at this stage.",
+          "p3": "The aim is a sea that stays readable and fast with hundreds of ships on screen at once."
+        }
       },
       "process": {
         "tag": "Studio",
         "status": "Every week",
         "title": "Meet, make sense of it, move",
-        "excerpt": "Regular meetings keep what we are building and why it matters fresh on every project. We sharpen the scope, cut the work into small pieces and keep the development process visible to everyone involved."
+        "excerpt": "Regular meetings keep what we are building and why it matters fresh on every project. We sharpen the scope, cut the work into small pieces and keep the process visible to everyone involved.",
+        "body": {
+          "p1": "Regular meetings keep what we are building and why it matters fresh on every project.",
+          "p2": "We sharpen the scope and cut the work into small pieces, so every step leaves something visible and working.",
+          "p3": "We keep the process open: where we are, what is waiting and what comes next is always clear."
+        }
       }
     }
   },
@@ -343,11 +387,25 @@
     "ctaButton": "Get in touch"
   },
   "productsPage": {
-    "kicker": "Products",
     "title": "The work we ship",
-    "text": "Our own games, the platforms we run for businesses and the sites we build for clients. Each one has its own page.",
     "ownTitle": "Products and games",
-    "clientTitle": "Small work"
+    "clientTitle": "Other projects",
+    "filters": {
+      "all": "All",
+      "app": "Apps",
+      "game": "Games",
+      "platform": "Platforms",
+      "soon": "Coming soon"
+    },
+    "featured": "Featured",
+    "count_one": "{{count}} project",
+    "count_other": "{{count}} projects",
+    "emptyTitle": "Nothing in this filter",
+    "emptyText": "Try another category or view everything.",
+    "emptyAction": "Show all",
+    "openFeatured": "Explore the project",
+    "prev": "Previous",
+    "next": "Next"
   },
   "contact": {
     "kicker": "Let's Talk",
@@ -381,22 +439,75 @@
     }
   },
   "servicesPage": {
-    "kicker": "Services",
-    "title": "From idea to impact",
-    "text": "We turn an idea into a plan you can discuss, and that plan into a product that ships. Design, development and life after launch all sit with the same team.",
+    "title": "What we do",
     "howTitle": "How we work",
     "ctaTitle": "Let's talk about your project",
-    "ctaText": "We will sharpen the scope together and walk you through how the work would run."
+    "ctaText": "We will sharpen the scope together and walk you through how the work would run.",
+    "offerTitle": "Our core flow",
+    "slogan1": "Tell us the idea. The team that builds it is right here.",
+    "slogan2": "We are never sure until something actually runs.",
+    "capabilityTitle": "What we can build",
+    "capabilities": {
+      "mobile": {
+        "title": "Mobile apps",
+        "text": "Apps that run on iPhone and Android at the same time."
+      },
+      "web": {
+        "title": "Websites and dashboards",
+        "text": "Company sites, platforms and admin screens."
+      },
+      "services": {
+        "title": "Services and live flow",
+        "text": "Accounts, permissions and business rules; messaging, notifications and screens that update instantly."
+      },
+      "integration": {
+        "title": "Third-party connections",
+        "text": "Payment, maps, advertising and analytics services."
+      },
+      "cloud": {
+        "title": "Going live",
+        "text": "Server setup, domains and store releases."
+      },
+      "product": {
+        "title": "From idea to product",
+        "text": "Taking an idea apart and turning it into a working product."
+      },
+      "consulting": {
+        "title": "Reviewing what you have",
+        "text": "Going through your current software, planning and speeding it up."
+      },
+      "ai": {
+        "title": "AI assistance",
+        "text": "Faster prototypes, automation and less repetitive work."
+      }
+    },
+    "toolsTitle": "For the curious",
+    "toolsNote": "The job decides the technology, not habit.",
+    "tools": {
+      "mobile": "Mobile",
+      "web": "Web",
+      "backend": "Backend",
+      "data": "Data",
+      "cloud": "Infrastructure"
+    },
+    "promise": {
+      "title": "The same on every job",
+      "team": "One team, one point of contact",
+      "scope": "Clear scope, no surprises",
+      "build": "A working build at every step"
+    },
+    "toolsHint": "Which technologies do we work with?",
+    "toolsCount_one": "{{count}} tool",
+    "toolsCount_other": "{{count}} tools"
   },
   "aboutPage": {
     "kicker": "About",
-    "title": "A small studio,\nend-to-end work",
-    "lead": "Tecktick Labs is a technology studio building software, mobile apps and games. We are a small team, so instead of splitting the work we follow it from start to finish.",
-    "storyTitle": "Who we are",
-    "story": {
-      "p1": "The same team runs client projects and builds our own products. Publishing our own games and platforms keeps the standard honest on client work too: we know what a product that people actually use demands.",
-      "p2": "We would rather move with working builds than big presentations. An early release teaches more than months of discussion. So we cut the work into small pieces and leave something visible at every step."
-    },
+    "title": "We turn ideas into\ndigital products that work",
+    "lead": "Tecktick Labs is a technology studio based in Istanbul. We build mobile apps, web platforms, backend systems and custom software.",
+    "journeyTitle": "A new company,\nnot a new track record",
+    "journeyText": "The company is at the start of its journey. Behind it sits development history that runs from enterprise projects to mobile apps, from business platforms to real-time systems.",
+    "approachTitle": "How we look at a project",
+    "approachText": "We do not treat a project as something to write code for. First we understand the need and the people using it, then we cut needless complexity and ship something sustainable. Design, software, data, integrations and release are handled as one whole.",
     "valuesTitle": "What we care about",
     "values": {
       "clarity": {
@@ -409,15 +520,42 @@
       },
       "craft": {
         "title": "Craft",
-        "description": "Speed matters, rushing does not. A build that runs smoothly, opens fast and reads clearly counts as part of the result."
+        "description": "Speed matters, rushing does not. A build that runs smoothly, opens fast and reads clearly is part of the result."
       }
     },
+    "ownTitle": "Our own products",
+    "ownText": "Alongside client work we build our own products. That keeps us judging a product not only on its engineering, but on user experience, operations, growth and whether it holds up over time.",
+    "ownLink": "See our products",
+    "workTitle": "How we work is simple",
+    "workText": "We understand the problem, build the right system, ship something that works and keep improving it with real feedback.",
     "factsTitle": "Quick facts"
   },
   "insightsPage": {
-    "kicker": "From the workshop",
-    "title": "Work notes",
-    "text": "This is where you can follow what we are doing on which project. We update them as work lands and add new entries.",
+    "kicker": "News from us",
+    "title": "From the workshop",
+    "text": "What we are working on, what we shipped and notes from the studio.",
+    "featured": "Featured",
+    "readMore": "Read the rest",
+    "backToList": "All news",
+    "relatedTitle": "Other notes",
+    "publishedOn": "Published",
+    "count_one": "{{count}} note",
+    "count_other": "{{count}} notes",
+    "emptyTitle": "Nothing under this heading",
+    "emptyText": "Pick another project or view everything.",
+    "filters": {
+      "all": "All",
+      "anlikEleman": "Anlık Eleman",
+      "barbaros": "Barbaros: Kızıl Sakal",
+      "studio": "Studio"
+    },
     "footnote": "New notes land here as the work moves."
+  },
+  "notFound": {
+    "kicker": "404",
+    "title": "This page\nwas not found",
+    "text": "The address may have changed or the page may have been removed. You can continue from below.",
+    "home": "Back to home",
+    "products": "Browse products"
   }
 }

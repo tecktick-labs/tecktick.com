@@ -26,7 +26,7 @@ export function Wordmark({ variant = 'dark' }: LogoProps) {
     <>
       <LogoMark variant={variant} />
       <span className="brand-name">
-        tecktick<small>labs</small>
+        Tecktick<small>labs</small>
       </span>
     </>
   )

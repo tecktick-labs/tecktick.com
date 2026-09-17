@@ -16,11 +16,12 @@
     "products": "Ürünler",
     "services": "Hizmetler",
     "about": "Hakkımızda",
-    "insights": "Notlar",
+    "insights": "Haberler",
     "toggle": "Menüyü aç veya kapat",
     "main": "Ana navigasyon",
     "footer": "Alt navigasyon",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "breadcrumbHome": "Ana sayfa"
   },
   "common": {
     "letsTalk": "Konuşalım",
@@ -44,7 +45,7 @@
         "ideas": "Fikirler",
         "products": "Ürünler",
         "people": "İnsanlar",
-        "tomorrow": "Daha aydınlık bir yarın"
+        "tomorrow": "Çalışma şeklimiz"
       },
       "title": "Daha akıllı\nçözümler\ndaha hızlı",
       "text": "Fikirden etkiye. İşleri ileri taşıyan dijital ürünler geliştiriyoruz.",
@@ -60,22 +61,17 @@
     }
   },
   "stats": {
-    "motto": "Kur. Geliştir. Büyüt.",
-    "projects": {
-      "value": "50+",
-      "label": "Tamamlanan proje"
+    "shipped": {
+      "label": "Yayına alınan iş"
     },
-    "clients": {
-      "value": "20+",
-      "label": "Mutlu müşteri"
+    "apps": {
+      "label": "App Store uygulaması"
     },
-    "industries": {
-      "value": "5+",
-      "label": "Sektör"
+    "web": {
+      "label": "Web projesi"
     },
-    "next": {
-      "value": "∞",
-      "label": "Sırada ne var"
+    "building": {
+      "label": "Geliştirilen ürün"
     }
   },
   "services": {
@@ -97,13 +93,13 @@
       },
       "consulting": {
         "title": "Teknoloji Danışmanlığı",
-        "description": "Daha aydınlık bir gelecek için daha akıllı kararlar."
+        "description": "Mevcut sistemini inceler, yol haritası çıkarırız."
       }
     },
     "panel": {
-      "kicker": "Daha Aydınlık Bir Yarın",
-      "title": "Sınırsız bir dünya\niçin teknoloji.",
-      "text": "Karmaşık problemleri sade ve güçlü çözümlere dönüştürüyoruz."
+      "kicker": "Tecktick'le arkana yaslan",
+      "title": "Sınırları aşmak\nTecktick'e bakar.",
+      "text": "Fazla basit gösteriyoruz."
     }
   },
   "products": {
@@ -156,9 +152,9 @@
       "server": "Sunucu + API"
     },
     "smallWorks": {
-      "title": "Küçük işler",
-      "slogan": "Bazen 1 saat, bazen 1 yıl. Hepsi tecktick.",
-      "text": "Kısa sürede kurduğumuz, yayında olan işletme ve proje siteleri.",
+      "title": "Diğer projelerimiz",
+      "slogan": "Bazen 1 saat, bazen 1 yıl. Hepsi Tecktick.",
+      "text": "Kurup teslim ettiğimiz işletme ve proje siteleri.",
       "items": {
         "emrasKitchen": {
           "name": "Emran'ın Mutfağı",
@@ -181,8 +177,8 @@
   "approach": {
     "kicker": "Yaklaşımımız",
     "title": "Dinle.\nKur.\nGeliştir.\nBüyüt.",
-    "office": "Bugünün fikirleri.\nDaha aydınlık\nbir yarın.",
-    "vision": "Aynı vizyon.\nDaha büyük yarın.",
+    "office": "Fikri sen anlat,\nkuracak ekip burada.",
+    "vision": "Önce çalışsın.\nSonra büyüsün.",
     "steps": {
       "understand": {
         "title": "Anla",
@@ -207,23 +203,71 @@
     "title": "Şu an\nne yapıyoruz?",
     "text": "Blog değil, çalışma notu. Bu hafta masamızda ne varsa burada yazıyor.",
     "items": {
-      "anlikEleman": {
+      "aePanel": {
         "tag": "Anlık Eleman",
         "status": "Devam ediyor",
-        "title": "Daha az adım, daha çok iş",
-        "excerpt": "Arayüzü baştan sadeleştiriyoruz. İş arayan tek ekranda müsait günlerini seçip başvurabiliyor, işveren ise ilanı, başvuruları ve mesajları mobil panelden yönetiyor. Web ve mobil aynı anda ilerliyor, böylece iki taraf da aynı deneyimi görüyor."
+        "title": "Şirketler için ayrı bir panel",
+        "excerpt": "panel.anlikeleman.com adresinde işverenin kendi ekranını kuruyoruz. İlan açma, başvuruları inceleme, aday ile mesajlaşma ve çalışan takibi tek panelde toplanıyor.",
+        "body": {
+          "p1": "Anlık Eleman'da iş arayan tarafı kadar işveren tarafı da kendi başına bir ürün. Bu yüzden şirketler için ayrı bir panel kuruyoruz: panel.anlikeleman.com.",
+          "p2": "Panelde bir işveren ilanını açıyor, gelen başvuruları tek listede görüyor, adayla mesajlaşıyor ve çalışanını gün bazında takip ediyor. Amaç, bir vardiyayı doldurmak için gereken adımı olabildiğince azaltmak.",
+          "p3": "Panel, mobil uygulamayla aynı veriyi kullanıyor. Bir başvuru geldiğinde işveren ister telefonundan ister panelden aynı anda görüyor."
+        }
       },
-      "barbaros": {
+      "aeMobile": {
+        "tag": "Anlık Eleman",
+        "status": "Devam ediyor",
+        "title": "iOS ve Android tek kod tabanından",
+        "excerpt": "Mobil uygulamayı iki mağaza için birlikte geliştiriyoruz. Bildirim, konum ve başvuru akışı iki platformda da aynı şekilde çalışıyor.",
+        "body": {
+          "p1": "Mobil uygulamayı iOS ve Android için tek kod tabanından geliştiriyoruz. İki mağaza, tek ekip, tek sürüm akışı.",
+          "p2": "Bildirimler, konum izinleri ve başvuru akışı iki platformda da aynı şekilde çalışıyor. Platforma özel farklar yalnızca sistemin zorunlu kıldığı yerlerde kalıyor.",
+          "p3": "Bu yaklaşım yeni bir özelliği iki platforma aynı hafta içinde çıkarmamızı sağlıyor."
+        }
+      },
+      "aeWeb": {
+        "tag": "Anlık Eleman",
+        "status": "Devam ediyor",
+        "title": "Web tarafında daha az adım",
+        "excerpt": "İş arayan için akışı sadeleştiriyoruz: müsait günlerini seç, yakınındaki ilanları gör, tek ekrandan başvur. Web ve mobil birlikte ilerliyor.",
+        "body": {
+          "p1": "Web tarafında iş arayanın akışını baştan sadeleştiriyoruz. Müsait günlerini seç, yakınındaki ilanları gör, tek ekrandan başvur.",
+          "p2": "Önceki akışta başvuru birkaç adıma yayılıyordu. Adımları birleştirip formu kısaltınca, başvuruyu tamamlamadan çıkan kullanıcı sayısının düşmesini bekliyoruz.",
+          "p3": "Web ve mobil birlikte ilerliyor; iki taraf da aynı ekranları ve aynı dili kullanıyor."
+        }
+      },
+      "barbarosServer": {
         "tag": "Barbaros: Kızıl Sakal",
         "status": "Geliştiriliyor",
         "title": "Sunucu ve Unity aynı ritimde",
-        "excerpt": "MMO tarafında oyun sunucusu, API ve veritabanı ile Unity istemcisini senkron geliştiriyoruz. Her yeni mekanik önce veri modelinde ve sunucu tarafında karşılığını buluyor, ardından oyun içinde oynanabilir hâle geliyor."
+        "excerpt": "MMO tarafında oyun sunucusu, API ve veritabanı ile Unity istemcisini senkron geliştiriyoruz. Her yeni mekanik önce sunucuda karşılığını buluyor, ardından oyun içinde oynanabilir hâle geliyor.",
+        "body": {
+          "p1": "Barbaros: Kızıl Sakal'da oyunun kuralları sunucuda çalışıyor. Unity tarafı görüntüyü, kontrolü ve oyunun hissini taşıyor.",
+          "p2": "Oyun sunucusu, API ve veritabanını Unity istemcisiyle senkron geliştiriyoruz. Yeni bir mekanik önce veri modelinde ve sunucuda karşılığını buluyor, ardından oyun içinde oynanabilir hâle geliyor.",
+          "p3": "Bu sıralama, denizdeki herkesin aynı gerçeği görmesini sağlıyor: bir atışın isabet edip etmediğine istemci değil sunucu karar veriyor."
+        }
+      },
+      "barbarosMaps": {
+        "tag": "Barbaros: Kızıl Sakal",
+        "status": "Geliştiriliyor",
+        "title": "Unity'de haritaları kuruyoruz",
+        "excerpt": "Oyun dünyasının haritalarını Unity tarafında üretiyoruz: adalar, limanlar, açık deniz alanları ve haritalar arası geçiş noktaları.",
+        "body": {
+          "p1": "Oyun dünyasının haritalarını Unity tarafında üretiyoruz. Adalar, limanlar, açık deniz alanları ve haritalar arası geçiş noktaları tek tek kuruluyor.",
+          "p2": "Her harita yalnızca görsel bir alan değil; hangi bölgenin daha tehlikeli olduğu, nerede ganimet çıktığı ve nereden başka bir haritaya geçildiği de bu aşamada belirleniyor.",
+          "p3": "Hedef, yüzlerce geminin aynı anda görülebileceği, okunabilir ve performanslı bir deniz oluşturmak."
+        }
       },
       "process": {
         "tag": "Stüdyo",
         "status": "Her hafta",
         "title": "Toplantı, anlamlandırma, ilerleme",
-        "excerpt": "Her projede düzenli toplantılarla ne yaptığımızı ve neden yaptığımızı tazeliyoruz. Kapsamı netleştirip işi küçük parçalara bölüyor, geliştirme sürecini herkesin görebileceği şekilde açık tutuyoruz."
+        "excerpt": "Her projede düzenli toplantılarla ne yaptığımızı ve neden yaptığımızı tazeliyoruz. Kapsamı netleştirip işi küçük parçalara bölüyor, geliştirme sürecini herkesin görebileceği şekilde açık tutuyoruz.",
+        "body": {
+          "p1": "Her projede düzenli toplantılarla ne yaptığımızı ve neden yaptığımızı tazeliyoruz.",
+          "p2": "Kapsamı netleştirip işi küçük parçalara bölüyoruz. Böylece her adımda görülebilir, çalışan bir şey bırakıyoruz.",
+          "p3": "Geliştirme sürecini açık tutuyoruz: nerede olduğumuz, neyin beklediği ve sıradaki adım her zaman belli."
+        }
       }
     }
   },
@@ -343,11 +387,25 @@
     "ctaButton": "İletişime geç"
   },
   "productsPage": {
-    "kicker": "Ürünler",
     "title": "Yaptığımız işler",
-    "text": "Kendi oyunlarımız, işletmeler için kurduğumuz platformlar ve müşterilerimiz için hazırladığımız siteler. Her birinin kendi sayfası var.",
     "ownTitle": "Ürünler ve oyunlar",
-    "clientTitle": "Küçük işler"
+    "clientTitle": "Diğer projelerimiz",
+    "filters": {
+      "all": "Tümü",
+      "app": "Uygulamalar",
+      "game": "Oyunlar",
+      "platform": "Platformlar",
+      "soon": "Yakında"
+    },
+    "featured": "Öne çıkan",
+    "count_one": "{{count}} iş",
+    "count_other": "{{count}} iş",
+    "emptyTitle": "Bu filtrede iş yok",
+    "emptyText": "Başka bir kategoriyi deneyebilir ya da tümünü görebilirsin.",
+    "emptyAction": "Tümünü göster",
+    "openFeatured": "Projeyi incele",
+    "prev": "Önceki",
+    "next": "Sonraki"
   },
   "contact": {
     "kicker": "Konuşalım",
@@ -381,22 +439,75 @@
     }
   },
   "servicesPage": {
-    "kicker": "Hizmetler",
-    "title": "Fikirden etkiye",
-    "text": "Bir fikri konuşulabilir bir plana, planı da yayına alınmış bir ürüne çeviriyoruz. Tasarım, geliştirme ve yayın sonrası aynı ekipte ilerliyor.",
+    "title": "Ne yapıyoruz?",
     "howTitle": "Nasıl çalışıyoruz?",
     "ctaTitle": "Aklındaki işi konuşalım",
-    "ctaText": "Kapsamı birlikte netleştirelim, sonrasında nasıl ilerleyeceğimizi anlatalım."
+    "ctaText": "Kapsamı birlikte netleştirelim, sonrasında nasıl ilerleyeceğimizi anlatalım.",
+    "offerTitle": "Temel akışımız",
+    "slogan1": "Fikri sen anlat, kuracak ekip burada.",
+    "slogan2": "Çalışan bir şey görmeden emin olmayız.",
+    "capabilityTitle": "Neler yapabiliyoruz?",
+    "capabilities": {
+      "mobile": {
+        "title": "Mobil uygulama",
+        "text": "iPhone ve Android'de aynı anda çalışan uygulamalar."
+      },
+      "web": {
+        "title": "Web sitesi ve panel",
+        "text": "Kurumsal siteler, platformlar ve yönetim ekranları."
+      },
+      "services": {
+        "title": "Servisler ve anlık akış",
+        "text": "Hesaplar, yetkiler ve iş kuralları; mesajlaşma, bildirim ve canlı güncellenen ekranlar."
+      },
+      "integration": {
+        "title": "Dış servis bağlantıları",
+        "text": "Ödeme, harita, reklam ve analiz servisleri."
+      },
+      "cloud": {
+        "title": "Yayına alma",
+        "text": "Sunucu kurulumu, alan adı ve mağaza yayını."
+      },
+      "product": {
+        "title": "Fikirden ürüne",
+        "text": "Bir fikri inceleyip uçtan uca çalışan ürüne çevirme."
+      },
+      "consulting": {
+        "title": "Mevcut sistemi inceleme",
+        "text": "Elindeki yazılımı gözden geçirme, plan çıkarma, hızlandırma."
+      },
+      "ai": {
+        "title": "Yapay zekâ desteği",
+        "text": "Hızlı prototip, otomasyon ve tekrar eden işlerin azaltılması."
+      }
+    },
+    "toolsTitle": "Meraklısına",
+    "toolsNote": "Teknoloji seçimini işin ihtiyacı belirler, alışkanlık değil.",
+    "tools": {
+      "mobile": "Mobil",
+      "web": "Web",
+      "backend": "Arka plan",
+      "data": "Veri",
+      "cloud": "Altyapı"
+    },
+    "promise": {
+      "title": "Her işte sabit",
+      "team": "Tek ekip, tek muhatap",
+      "scope": "Açık kapsam, sürpriz yok",
+      "build": "Her adımda çalışan bir sürüm"
+    },
+    "toolsHint": "Hangi teknolojilerle çalışıyoruz?",
+    "toolsCount_one": "{{count}} araç",
+    "toolsCount_other": "{{count}} araç"
   },
   "aboutPage": {
     "kicker": "Hakkımızda",
-    "title": "Küçük bir stüdyo,\nuçtan uca iş",
-    "lead": "Tecktick Labs; yazılım, mobil uygulama ve oyun geliştiren bir teknoloji stüdyosu. Küçük bir ekibiz, bu yüzden işi bölmek yerine baştan sona takip ediyoruz.",
-    "storyTitle": "Kimiz?",
-    "story": {
-      "p1": "Aynı ekip hem müşteri projelerini yürütüyor hem kendi ürünlerimizi geliştiriyor. Kendi oyunlarımızı ve platformlarımızı yayınlamak, müşteri işlerinde de aynı standardı korumamızı sağlıyor: gerçekten kullanılan bir ürünün neye ihtiyaç duyduğunu biliyoruz.",
-      "p2": "Büyük sunumlar yerine çalışan sürümlerle ilerlemeyi tercih ediyoruz. Erken bir sürüm çıkarmak, aylarca konuşmaktan daha çok şey öğretiyor. Bu yüzden işi küçük parçalara bölüyor, her adımda görülebilir bir şey bırakıyoruz."
-    },
+    "title": "Fikirleri çalışan\ndijital ürünlere dönüştürüyoruz",
+    "lead": "Tecktick Labs, İstanbul merkezli bir teknoloji stüdyosu. Mobil uygulamalar, web platformları, arka plan sistemleri ve özel yazılım çözümleri geliştiriyoruz.",
+    "journeyTitle": "Yeni şirket,\nyeni olmayan deneyim",
+    "journeyText": "Şirket olarak yeni bir yolculuğa başlıyoruz. Arkasında ise kurumsal projelerden mobil uygulamalara, iş platformlarından gerçek zamanlı sistemlere uzanan bir geliştirme geçmişi var.",
+    "approachTitle": "Bir projeye nasıl bakıyoruz?",
+    "approachText": "Bir projeyi yalnızca kod yazılacak bir iş olarak görmüyoruz. Önce ihtiyacı ve kullanıcıyı anlıyor, sonra gereksiz karmaşıklığı azaltarak sürdürülebilir bir ürün çıkarıyoruz. Tasarım, yazılım, veri altyapısı, entegrasyon ve yayın sürecini tek bir bütün olarak ele alıyoruz.",
     "valuesTitle": "Neye dikkat ediyoruz?",
     "values": {
       "clarity": {
@@ -409,15 +520,42 @@
       },
       "craft": {
         "title": "İşçilik",
-        "description": "Hız önemli ama acele değil. Akıcı çalışan, hızlı açılan ve anlaşılır bir arayüz bizim için sonuçla aynı şey."
+        "description": "Hız önemli ama acele değil. Akıcı çalışan, hızlı açılan ve anlaşılır bir arayüz bizim için sonucun parçasıdır."
       }
     },
+    "ownTitle": "Kendi ürünlerimiz",
+    "ownText": "Müşteri işlerinin yanında kendi dijital ürünlerimizi de üretiyoruz. Bu, bir ürünü yalnızca teknik tarafıyla değil; kullanıcı deneyimi, operasyon, büyüme ve uzun vadeli sürdürülebilirlik açısından da değerlendirmemizi sağlıyor.",
+    "ownLink": "Ürünlerimize bak",
+    "workTitle": "Çalışma şeklimiz açık",
+    "workText": "Problemi anlarız, doğru sistemi kurarız, çalışan ürünü yayına alırız ve gerçek geri bildirimle geliştirmeye devam ederiz.",
     "factsTitle": "Kısa bilgiler"
   },
   "insightsPage": {
-    "kicker": "Atölyeden",
-    "title": "Çalışma notları",
-    "text": "Hangi projede ne yaptığımızı buradan takip edebilirsin. Tamamlandıkça günceller, yeni başlıklar ekleriz.",
+    "kicker": "Bizden haberler",
+    "title": "Atölyeden",
+    "text": "Üzerinde çalıştığımız işler, çıkardığımız sürümler ve stüdyodan notlar.",
+    "featured": "Öne çıkan",
+    "readMore": "Yazının devamı",
+    "backToList": "Tüm haberler",
+    "relatedTitle": "Diğer notlar",
+    "publishedOn": "Yayımlandı",
+    "count_one": "{{count}} not",
+    "count_other": "{{count}} not",
+    "emptyTitle": "Bu başlıkta not yok",
+    "emptyText": "Başka bir projeyi seçebilir ya da tümünü görebilirsin.",
+    "filters": {
+      "all": "Tümü",
+      "anlikEleman": "Anlık Eleman",
+      "barbaros": "Barbaros: Kızıl Sakal",
+      "studio": "Stüdyo"
+    },
     "footnote": "Yeni notlar iş ilerledikçe buraya eklenir."
+  },
+  "notFound": {
+    "kicker": "404",
+    "title": "Bu sayfa\nbulunamadı",
+    "text": "Adres değişmiş ya da sayfa kaldırılmış olabilir. Aşağıdan devam edebilirsin.",
+    "home": "Ana sayfaya dön",
+    "products": "Ürünlere bak"
   }
 }

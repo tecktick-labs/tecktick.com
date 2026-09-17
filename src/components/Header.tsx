@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { Icon } from './Icons'
 import { Wordmark } from './Logo'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { navigation } from '../data/site'
+import { navRoutes, routePath } from '../lib/routes'
 
 export function Header() {
   const { t } = useTranslation()
@@ -21,16 +21,16 @@ export function Header() {
   return (
     <header className={`topbar${scrolled ? ' is-scrolled' : ''}`}>
       <div className="topbar-inner">
-        <Link className="brand" to="/" aria-label={t('nav.homeAria')}>
+        <Link className="brand" to={routePath('home')} aria-label={t('nav.homeAria')}>
           <Wordmark />
         </Link>
 
         <nav className={`nav${open ? ' is-open' : ''}`} aria-label={t('nav.main')}>
-          {navigation.map((item) => (
+          {navRoutes.map((item) => (
             <NavLink
-              key={item.to}
-              to={item.to}
-              end={item.to === '/'}
+              key={item.key}
+              to={item.path}
+              end={item.path === '/'}
               className={({ isActive }) => (isActive ? 'is-active' : undefined)}
               onClick={() => setOpen(false)}
             >
@@ -38,14 +38,18 @@ export function Header() {
             </NavLink>
           ))}
           {/* Dar ekranda üst bardaki buton gizlendiği için menüde yer alır */}
-          <Link className="nav-cta" to="/contact" onClick={() => setOpen(false)}>
+          <Link
+            className="nav-cta"
+            to={routePath('contact')}
+            onClick={() => setOpen(false)}
+          >
             {t('common.letsTalk')}
           </Link>
         </nav>
 
         <div className="topbar-actions">
           <LanguageSwitcher />
-          <Link className="btn btn-dark btn-sm topbar-cta" to="/contact">
+          <Link className="btn btn-dark btn-sm topbar-cta" to={routePath('contact')}>
             {t('common.letsTalk')}
             <Icon name="arrow" className="btn-icon" />
           </Link>
