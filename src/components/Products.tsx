@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Icon } from './Icons'
+import { linkLabelKey } from '../lib/labels'
 import { ProductIcon } from './ProductIcon'
 import { homeProducts, smallWorks } from '../data/site'
 
@@ -71,9 +72,7 @@ export function Products() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {link.kind === 'web'
-                    ? t('common.visitSite')
-                    : t('common.viewOnAppStore')}
+                  {t(linkLabelKey[link.kind])}
                   <Icon name="arrow" className="btn-icon" />
                 </a>
               ))}

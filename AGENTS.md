@@ -62,6 +62,19 @@ adı, bağlantı, durum, tema. Metin alanı eklenmez.
 - **Küçük işler** — `smallWorks` dizisi. Daha küçük ölçekli, tek bağlantılı
   işler kartlara değil, kartların altındaki sade listeye eklenir.
 
+Birden çok parçadan oluşan ürünler (web + panel + mobil gibi) **tek ürün
+olarak** listelenir; parçalar ürün sayfasındaki "Neler geliştirdik"
+bölümünde `detail.platforms` ile gösterilir. Ayrı ürün olması için kendi adı,
+kendi kullanıcısı ve tek başına satılabilir olması gerekir.
+
+Bağlantı türleri: `web`, `appStore`, `playStore`. Bir ürün hem iOS hem Android
+mağazasında olabilir; etiketler `src/lib/labels.ts` içindeki eşlemeden gelir,
+bileşen içinde tür kontrolü yazılmaz.
+
+Ekran görüntüleri de aynı servisten gelir (`screenshotUrls`). Ürün kaydındaki
+`screenshots` alanına yazıldığında ürün sayfasında galeri olarak çıkar; URL'de
+`320x480bb.jpg` yerine `600x900bb.jpg` kullanılır.
+
 App Store ikonunu ve künyesini tahmin etmek yerine resmi servisten alın:
 
 ```bash
@@ -134,6 +147,25 @@ kurulur ve aralarına nefes alanı konur. Hizmetler sayfası bu kalıbın örne�
    ayrıntı meraklısına sunulur, sayfayı meşgul etmez. Kapalıyken bile ne
    olduğu bellidir: kısa ipucu ve araç sayısı satırda görünür.
 6. Kapanış çağrısı
+
+### Yasal sayfalar
+`/legal/:id` altında üç metin vardır: `privacy` (Gizlilik Politikası), `kvkk`
+(KVKK Aydınlatma Metni), `cookies` (Çerez Politikası). Kayıtlar
+`src/data/site.ts` içindeki `legalPages` dizisinde, metinler
+`locales/legal.pages.<key>` altındadır ve **bölümler dizi olarak** tutulur:
+
+```json
+"sections": [{ "heading": "...", "body": ["..."], "items": ["..."] }]
+```
+
+Sayfa bu diziyi `t(..., { returnObjects: true })` ile okur, yani bölüm eklemek
+için yalnızca çeviri dosyasına kayıt eklemek yeterlidir. `items` isteğe
+bağlıdır. Her metnin `updated` tarihi veri dosyasındadır ve içerik
+değiştiğinde güncellenmelidir.
+
+Bağlantılar alt bilgideki ayrı satırda durur. Siteye kişisel veri toplayan
+yeni bir alan eklenirse (form alanı, analiz aracı, çerez) bu metinler de
+güncellenir.
 
 ### Haberler (çalışma notları)
 `/insights` bir haber akışıdır; her notun kendi sayfası vardır

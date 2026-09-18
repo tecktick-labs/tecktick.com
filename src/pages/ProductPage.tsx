@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { Icon } from '../components/Icons'
+import { linkLabelKey } from '../lib/labels'
 import { Breadcrumbs } from '../components/Breadcrumbs'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { productPath, routePath } from '../lib/routes'
@@ -75,9 +76,7 @@ export function ProductPage() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {link.kind === 'web'
-                    ? t('common.visitSite')
-                    : t('common.viewOnAppStore')}
+                  {t(linkLabelKey[link.kind])}
                   <Icon name="arrow" className="btn-icon" />
                 </a>
               ))}
@@ -103,6 +102,70 @@ export function ProductPage() {
             </div>
           ))}
         </div>
+      )}
+
+      {product.screenshots && product.screenshots.length > 0 && (
+        <section className="product-section">
+          <h2 className="section-label">{t('productPages.screenshotsTitle')}</h2>
+          <div className="shot-rail">
+            {product.screenshots.map((shot, index) => (
+              <img
+                key={shot}
+                className="shot"
+                src={shot}
+                alt={`${productName} ${index + 1}`}
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {detail.platforms && (
+        <section className="product-section">
+          <h2 className="section-label">{t('productPages.platformsTitle')}</h2>
+          <div className="platform-grid">
+            {detail.platforms.map((platform) => (
+              <article className="platform-card" key={platform.key}>
+                <span className="platform-icon">
+                  <Icon name={platform.icon} />
+                </span>
+                <div className="platform-body">
+                  <h3>{t(`${base}.platforms.${platform.key}.title`)}</h3>
+                  <p>{t(`${base}.platforms.${platform.key}.text`)}</p>
+                </div>
+                {platform.url && (
+                  <a
+                    className="platform-link"
+                    href={platform.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={t(`${base}.platforms.${platform.key}.title`)}
+                  >
+                    <Icon name="arrow" />
+                  </a>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {detail.featureKeys && (
+        <section className="product-section">
+          <h2 className="section-label">{t('productPages.featuresTitle')}</h2>
+          <ul className="feature-grid">
+            {detail.featureKeys.map((key) => (
+              <li className="feature" key={key}>
+                <Icon name="check" className="feature-check" />
+                <span>
+                  <strong>{t(`${base}.features.${key}.title`)}</strong>
+                  <span>{t(`${base}.features.${key}.text`)}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       {detail.highlightKeys && (

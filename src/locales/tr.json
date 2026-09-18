@@ -31,7 +31,8 @@
     "live": "Yayında",
     "comingSoon": "Çok yakında",
     "visitSite": "Siteyi aç",
-    "viewDetails": "Detayları gör"
+    "viewDetails": "Detayları gör",
+    "viewOnPlayStore": "Google Play'de gör"
   },
   "hero": {
     "kicker": "Teknoloji Stüdyosu",
@@ -65,7 +66,7 @@
       "label": "Yayına alınan iş"
     },
     "apps": {
-      "label": "App Store uygulaması"
+      "label": "Mobil uygulama"
     },
     "web": {
       "label": "Web projesi"
@@ -109,9 +110,15 @@
     "items": {
       "anlikEleman": {
         "name": "Anlık Eleman",
-        "category": "İş Platformu / Web + iOS",
+        "category": "İş Platformu / Web + Mobil",
         "tagline": "Günlük ve sezonluk işi, çalışanla anında buluşturur.",
         "description": "İşverenler ilanını açar, çalışanlar müsait olduğu günleri seçip başvurur. Konuma göre ilan listeleme, başvuru takibi, mesajlaşma ve işveren paneli tek platformda."
+      },
+      "sigortaMobil": {
+        "name": "SigortaMobil",
+        "category": "Sigorta / iOS + Android",
+        "tagline": "Teklif, poliçe ve hasar desteği tek uygulamada.",
+        "description": "Sigorta teklifi al, aktif poliçelerini gör, PDF olarak indir ve hasar durumunda destek iste. iOS ve Android'de yayında."
       },
       "nappsa": {
         "name": "Nappsa",
@@ -149,7 +156,8 @@
       "year2026": "2026",
       "unity": "Unity",
       "mmo": "MMO",
-      "server": "Sunucu + API"
+      "server": "Sunucu + API",
+      "android": "Android"
     },
     "smallWorks": {
       "title": "Diğer projelerimiz",
@@ -289,8 +297,90 @@
     "items": {
       "anlikEleman": {
         "overview": {
-          "p1": "Anlık Eleman, günlük ve sezonluk iş arayanlarla eleman arayan işletmeleri aynı yerde buluşturur. Çalışan müsait olduğu günleri seçer, yakınındaki ilanları görür ve tek akışta başvurur. İşveren ise ilanını açar, gelen başvuruları inceler ve doğrudan mesajlaşır.",
-          "p2": "Şu an ağırlığı arayüz ve deneyim tarafına verdik. Başvuru akışındaki adımları azaltıyor, işveren için mobil bir yönetim paneli kuruyor ve web ile mobil sürümü birlikte ilerletiyoruz; böylece iki taraf da aynı dili konuşuyor."
+          "p1": "Anlık Eleman, günlük ve kısa süreli işi konuma göre eşleştiren bir iş platformu. İşletme vardiyasını açıyor, iş arayan yakınındaki ilanları haritada görüp başvuruyor. İki taraf da aynı sistem üzerinde ilerliyor: başvuru, karar, mesajlaşma ve iş sonrası değerlendirme.",
+          "p2": "Platformun tamamını biz geliştirdik. Halka açık site, işverenin kendi paneli, iOS ve Android uygulaması, iç ekibin kullandığı yönetim ekranı ve hepsini besleyen arka plan servisi tek elden ilerliyor."
+        },
+        "stats": {
+          "apps": {
+            "value": "5",
+            "label": "Birlikte çalışan uygulama"
+          },
+          "platforms": {
+            "value": "2",
+            "label": "Mobil platform"
+          },
+          "roles": {
+            "value": "3",
+            "label": "Kullanıcı rolü"
+          }
+        },
+        "platforms": {
+          "web": {
+            "title": "Web",
+            "text": "anlikeleman.com üzerindeki halka açık site. İlan sayfaları arama motorları için ayrı ayrı hazırlanıyor, başvuru ve mesajlaşma da web üzerinden yapılabiliyor."
+          },
+          "panel": {
+            "title": "İşveren paneli",
+            "text": "panel.anlikeleman.com adresinde şirketin kendi ekranı. Kurumsal kayıt, ilan açma, başvuruları inceleme, ekip ve işletme yönetimi burada toplanıyor."
+          },
+          "mobile": {
+            "title": "Mobil uygulama",
+            "text": "iOS ve Android için tek uygulama. İş arayan ve işveren aynı uygulamanın iki ayrı modunu kullanıyor, kullanıcı mod arasında geçebiliyor."
+          },
+          "dashboard": {
+            "title": "Yönetim ekranı",
+            "text": "İç ekip için ayrı bir panel. Hesap, şirket ve ilan denetimi, şikayet ve destek mesajları, operasyon metrikleri buradan takip ediliyor."
+          },
+          "api": {
+            "title": "Arka plan servisi",
+            "text": "Dört arayüzün de bağlandığı tek servis. Kimlik, ilan, başvuru, mesaj, ödeme ve bildirim kuralları burada çalışıyor."
+          }
+        },
+        "features": {
+          "location": {
+            "title": "Konuma göre ilan",
+            "text": "Yakındaki açık ilanlar haritada görünüyor, arama mesafeye göre sıralanıyor."
+          },
+          "application": {
+            "title": "Başvuru akışı",
+            "text": "Müsait günleri seç, başvur, sonucu takip et. İşveren aynı ekrandan karar veriyor."
+          },
+          "messaging": {
+            "title": "Anlık mesajlaşma",
+            "text": "İşveren ve aday uygulama içinde yazışıyor; mesajlar ve bildirimler anında düşüyor."
+          },
+          "verification": {
+            "title": "Şirket doğrulama ve sözleşme",
+            "text": "Vergi numarası doğrulaması, belge yükleme, sözleşmenin üretilip imzalanması ve hesap aktivasyonu tek akışta."
+          },
+          "payment": {
+            "title": "İlan kredisi ve ödeme",
+            "text": "Şirket paket satın alıyor, ilan açtıkça kredisi düşüyor. Ödeme sonucu sunucu tarafında doğrulanıyor."
+          },
+          "notifications": {
+            "title": "Bildirim ve hatırlatma",
+            "text": "Push bildirimi, SMS ve e-posta birlikte çalışıyor; bildirime dokununca ilgili ekran açılıyor."
+          },
+          "locations": {
+            "title": "Çok şubeli işletmeler",
+            "text": "Bir şirket birden fazla işletme ve lokasyon tanımlayıp ilanlarını ayrı ayrı yönetebiliyor."
+          },
+          "rating": {
+            "title": "İş sonrası değerlendirme",
+            "text": "Çalışma bitince iki taraf da puan veriyor; ödeme, görev ve iletişim ayrı ayrı değerlendiriliyor."
+          }
+        },
+        "tech": {
+          "text": "Bütün arayüzler tek bir servise bağlı, kurallar orada çalışıyor. İlan araması konum verisiyle birlikte veritabanı tarafında yapılıyor, mesajlaşma ve bildirimler anlık akıyor, ödeme sonucu istemciye değil sunucuya soruluyor. Sistemin durumu sürekli izleniyor: yanıt süreleri, hata oranı ve bekleyen işler panolardan takip ediliyor."
+        },
+        "status": {
+          "text": "Platform yayında ve gelişmeye devam ediyor. Şu anki ağırlık işveren panelinde, mobil deneyimde ve başvuru akışının sadeleştirilmesinde."
+        }
+      },
+      "sigortaMobil": {
+        "overview": {
+          "p1": "SigortaMobil, sigorta işlerini tek bir uygulamada toplayan bir mobil çözüm. Kullanıcı teklifini alıyor, aktif poliçelerini görüyor ve istediği zaman PDF olarak indiriyor.",
+          "p2": "Uygulamayı iOS ve Android için birlikte geliştirdik. Arayüzü sadeleştirerek teklif alma ve poliçe görüntüleme akışını birkaç adıma indirdik; hasar anında destek talebi de aynı yerden açılıyor."
         }
       },
       "nappsa": {
@@ -384,7 +474,10 @@
       }
     },
     "relatedTitle": "Diğer işler",
-    "ctaButton": "İletişime geç"
+    "ctaButton": "İletişime geç",
+    "platformsTitle": "Neler geliştirdik?",
+    "featuresTitle": "Öne çıkan özellikler",
+    "screenshotsTitle": "Uygulamadan görüntüler"
   },
   "productsPage": {
     "title": "Yaptığımız işler",
@@ -557,5 +650,175 @@
     "text": "Adres değişmiş ya da sayfa kaldırılmış olabilir. Aşağıdan devam edebilirsin.",
     "home": "Ana sayfaya dön",
     "products": "Ürünlere bak"
+  },
+  "legal": {
+    "updated": "Son güncelleme",
+    "backToHome": "Ana sayfaya dön",
+    "contactNote": "Bu metinlerle ilgili sorularınız için account@tecktick.com adresine yazabilirsiniz.",
+    "pages": {
+      "privacy": {
+        "title": "Gizlilik Politikası",
+        "intro": "Bu politika, Tecktick Labs olarak tecktick.com üzerinden topladığımız kişisel verileri, bunları neden işlediğimizi ve sizin haklarınızı açıklar.",
+        "sections": [
+          {
+            "heading": "Kim olduğumuz",
+            "body": [
+              "Tecktick Labs, İstanbul merkezli bir teknoloji stüdyosudur. Bu sitede kendi ürünlerimizi ve müşterilerimiz için geliştirdiğimiz işleri tanıtıyoruz.",
+              "Veri sorumlusu Tecktick Labs'tır. Bize account@tecktick.com adresinden ulaşabilirsiniz."
+            ]
+          },
+          {
+            "heading": "Hangi verileri topluyoruz",
+            "body": [
+              "Sitede üyelik yoktur. Kişisel veri yalnızca iletişim formunu doldurduğunuzda toplanır:"
+            ],
+            "items": [
+              "Ad ve soyad",
+              "E-posta adresi",
+              "Şirket veya proje adı (isteğe bağlı)",
+              "Seçtiğiniz konu başlığı",
+              "Mesajınızın içeriği"
+            ]
+          },
+          {
+            "heading": "Neden işliyoruz",
+            "body": [
+              "Bu verileri yalnızca talebinizi değerlendirmek, size dönüş yapmak ve görüşmenin devamını yürütmek için kullanırız.",
+              "Onayınız olmadan pazarlama e-postası göndermeyiz, verilerinizi satmayız ve reklam amacıyla kullanmayız."
+            ]
+          },
+          {
+            "heading": "Kimlerle paylaşıyoruz",
+            "body": [
+              "Form gönderimleri, siteyi yayınladığımız Netlify altyapısı üzerinden bize ulaşır ve e-posta hesabımıza iletilir. Bu hizmet sağlayıcıların sunucuları yurt dışında bulunabilir.",
+              "Bunun dışında verilerinizi üçüncü taraflarla paylaşmayız. Yasal bir zorunluluk doğması hâlinde yetkili kurumlara bilgi verilebilir."
+            ]
+          },
+          {
+            "heading": "Ne kadar süre saklıyoruz",
+            "body": [
+              "Yazışmayı, görüşme sonuçlandıktan sonra en fazla iki yıl saklarız. Bu sürenin sonunda kaydı sileriz.",
+              "Daha erken silinmesini istiyorsanız bize yazmanız yeterlidir."
+            ]
+          },
+          {
+            "heading": "Haklarınız",
+            "body": [
+              "Kişisel verilerinize erişme, düzeltme, silme ve işlemeye itiraz etme haklarınız vardır. Ayrıntılar için KVKK Aydınlatma Metni sayfamıza bakabilirsiniz.",
+              "Taleplerinizi account@tecktick.com adresine iletebilirsiniz."
+            ]
+          },
+          {
+            "heading": "Çerezler",
+            "body": [
+              "Site, çalışması için gerekli olan sınırlı sayıda tarayıcı kaydı kullanır. Ayrıntılar Çerez Politikası sayfasındadır."
+            ]
+          },
+          {
+            "heading": "Değişiklikler",
+            "body": [
+              "Bu politikayı zaman zaman güncelleyebiliriz. Güncel sürüm her zaman bu sayfada yayımlanır ve sayfanın başında son güncelleme tarihi belirtilir."
+            ]
+          }
+        ]
+      },
+      "kvkk": {
+        "title": "KVKK Aydınlatma Metni",
+        "intro": "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında, veri sorumlusu sıfatıyla Tecktick Labs tarafından hazırlanmıştır.",
+        "sections": [
+          {
+            "heading": "Veri sorumlusu",
+            "body": [
+              "Veri sorumlusu Tecktick Labs'tır. İletişim adresi: account@tecktick.com"
+            ]
+          },
+          {
+            "heading": "İşlenen kişisel veriler",
+            "body": [
+              "Sitedeki iletişim formu aracılığıyla aşağıdaki veriler işlenir:"
+            ],
+            "items": [
+              "Kimlik bilgisi: ad ve soyad",
+              "İletişim bilgisi: e-posta adresi",
+              "Müşteri işlem bilgisi: şirket veya proje adı, konu başlığı ve mesaj içeriği"
+            ]
+          },
+          {
+            "heading": "İşleme amaçları",
+            "body": [
+              "Kişisel verileriniz; talebinizin alınması ve değerlendirilmesi, size geri dönüş yapılması, iş görüşmelerinin yürütülmesi ve gerektiğinde sözleşme öncesi hazırlıkların yapılması amacıyla işlenir."
+            ]
+          },
+          {
+            "heading": "Hukuki sebep",
+            "body": [
+              "Veriler, Kanun'un 5'inci maddesinin ikinci fıkrasında yer alan \"bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması\" ve \"veri sorumlusunun meşru menfaati\" hukuki sebeplerine dayanılarak, formu kendi iradenizle doldurmanız üzerine işlenir."
+            ]
+          },
+          {
+            "heading": "Toplama yöntemi",
+            "body": [
+              "Veriler yalnızca elektronik ortamda, siteye kendiniz girdiğiniz form üzerinden toplanır. Otomatik olarak profil çıkarılmaz."
+            ]
+          },
+          {
+            "heading": "Yurt dışına aktarım",
+            "body": [
+              "Site, sunucuları yurt dışında bulunabilen bir barındırma hizmeti üzerinden yayımlanmaktadır. Form gönderimleri bu altyapı üzerinden bize ulaştığı için verileriniz yurt dışındaki sunucularda geçici olarak işlenebilir."
+            ]
+          },
+          {
+            "heading": "Kanun'un 11'inci maddesi kapsamındaki haklarınız",
+            "body": [
+              "Veri sorumlusuna başvurarak aşağıdaki haklarınızı kullanabilirsiniz:"
+            ],
+            "items": [
+              "Kişisel verinizin işlenip işlenmediğini öğrenme",
+              "İşlenmişse buna ilişkin bilgi talep etme",
+              "İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme",
+              "Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme",
+              "Eksik veya yanlış işlenmişse düzeltilmesini isteme",
+              "Kanun'daki şartlar çerçevesinde silinmesini veya yok edilmesini isteme",
+              "Düzeltme, silme ve yok etme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini isteme",
+              "Münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonuç doğmasına itiraz etme",
+              "Kanuna aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme"
+            ]
+          },
+          {
+            "heading": "Başvuru yolu",
+            "body": [
+              "Taleplerinizi account@tecktick.com adresine, kimliğinizi doğrulayacak bilgilerle birlikte iletebilirsiniz. Başvurular en geç otuz gün içinde sonuçlandırılır."
+            ]
+          }
+        ]
+      },
+      "cookies": {
+        "title": "Çerez Politikası",
+        "intro": "Bu sayfa, tecktick.com'un tarayıcınızda hangi kayıtları tuttuğunu ve bunları nasıl kaldırabileceğinizi açıklar.",
+        "sections": [
+          {
+            "heading": "Kullandığımız kayıtlar",
+            "body": [
+              "Site, reklam veya takip çerezi kullanmaz. Yalnızca çalışması için gerekli olan tek bir kayıt tutulur:"
+            ],
+            "items": [
+              "Dil tercihi: seçtiğiniz dilin (Türkçe veya İngilizce) bir sonraki ziyaretinizde hatırlanması için tarayıcınızda saklanır."
+            ]
+          },
+          {
+            "heading": "Üçüncü taraf çerezleri",
+            "body": [
+              "Şu anda üçüncü taraf analiz veya reklam çerezi kullanılmamaktadır. İleride ziyaret istatistiği toplamaya başlarsak bu sayfayı güncelleyeceğiz."
+            ]
+          },
+          {
+            "heading": "Nasıl kaldırabilirsiniz",
+            "body": [
+              "Tarayıcınızın ayarlarından site verilerini temizleyerek bu kaydı silebilirsiniz. Kaydı silmeniz sitenin çalışmasını engellemez; yalnızca dil tercihiniz varsayılana döner."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

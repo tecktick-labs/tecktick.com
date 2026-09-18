@@ -31,7 +31,8 @@
     "live": "Live",
     "comingSoon": "Coming soon",
     "visitSite": "Visit site",
-    "viewDetails": "See details"
+    "viewDetails": "See details",
+    "viewOnPlayStore": "View on Google Play"
   },
   "hero": {
     "kicker": "Technology Studio",
@@ -65,7 +66,7 @@
       "label": "Projects shipped"
     },
     "apps": {
-      "label": "Apps on the App Store"
+      "label": "Mobile apps"
     },
     "web": {
       "label": "Web projects"
@@ -109,9 +110,15 @@
     "items": {
       "anlikEleman": {
         "name": "Anlık Eleman",
-        "category": "Job Platform / Web + iOS",
+        "category": "Job Platform / Web + Mobile",
         "tagline": "Matches daily and seasonal work with the right people, instantly.",
         "description": "Employers post a shift, workers pick the days they are free and apply. Location-based listings, application tracking, messaging and an employer panel in one platform."
+      },
+      "sigortaMobil": {
+        "name": "SigortaMobil",
+        "category": "Insurance / iOS + Android",
+        "tagline": "Quotes, policies and claims support in one app.",
+        "description": "Get an insurance quote, see your active policies, download them as PDF and ask for support when you need to claim. Live on iOS and Android."
       },
       "nappsa": {
         "name": "Nappsa",
@@ -149,7 +156,8 @@
       "year2026": "2026",
       "unity": "Unity",
       "mmo": "MMO",
-      "server": "Server + API"
+      "server": "Server + API",
+      "android": "Android"
     },
     "smallWorks": {
       "title": "Other projects",
@@ -289,8 +297,90 @@
     "items": {
       "anlikEleman": {
         "overview": {
-          "p1": "Anlık Eleman brings people looking for daily or seasonal work together with the businesses that need them. Workers pick the days they are free, see nearby listings and apply in a single flow. Employers post a shift, review applications and message candidates directly.",
-          "p2": "Right now the weight is on interface and experience. We are cutting steps out of the application flow, building a mobile dashboard for employers and moving web and mobile forward together, so both sides speak the same language."
+          "p1": "Anlık Eleman matches daily and short-term work by location. A business opens a shift, a worker sees nearby listings on the map and applies. Both sides move through the same system: application, decision, messaging and a review once the job is done.",
+          "p2": "We built the whole platform. The public site, the employer's own panel, the iOS and Android app, the admin screen the internal team uses and the backend service feeding all of them are developed in one place."
+        },
+        "stats": {
+          "apps": {
+            "value": "5",
+            "label": "Applications working together"
+          },
+          "platforms": {
+            "value": "2",
+            "label": "Mobile platforms"
+          },
+          "roles": {
+            "value": "3",
+            "label": "User roles"
+          }
+        },
+        "platforms": {
+          "web": {
+            "title": "Web",
+            "text": "The public site at anlikeleman.com. Listing pages are prepared individually for search engines, and applying or messaging works on the web too."
+          },
+          "panel": {
+            "title": "Employer panel",
+            "text": "The company's own workspace at panel.anlikeleman.com. Company registration, posting shifts, reviewing applications and managing teams and locations all live here."
+          },
+          "mobile": {
+            "title": "Mobile app",
+            "text": "One app for iOS and Android. Workers and employers use two modes of the same app, and people can switch between them."
+          },
+          "dashboard": {
+            "title": "Admin screen",
+            "text": "A separate panel for the internal team. Account, company and listing moderation, complaints, support messages and operational metrics are tracked here."
+          },
+          "api": {
+            "title": "Backend service",
+            "text": "The single service all four interfaces connect to. Identity, listings, applications, messages, payment and notification rules run here."
+          }
+        },
+        "features": {
+          "location": {
+            "title": "Listings by location",
+            "text": "Open shifts nearby appear on the map and search results are ordered by distance."
+          },
+          "application": {
+            "title": "Application flow",
+            "text": "Pick your free days, apply, follow the result. The employer decides from the same screen."
+          },
+          "messaging": {
+            "title": "Live messaging",
+            "text": "Employer and candidate talk inside the app; messages and notifications arrive instantly."
+          },
+          "verification": {
+            "title": "Company checks and contracts",
+            "text": "Tax number verification, document upload, contract generation and signing, then account activation in one flow."
+          },
+          "payment": {
+            "title": "Listing credits and payment",
+            "text": "Companies buy packages and spend credits as they post. Payment results are verified on the server."
+          },
+          "notifications": {
+            "title": "Notifications and reminders",
+            "text": "Push, SMS and email work together; tapping a notification opens the screen it belongs to."
+          },
+          "locations": {
+            "title": "Multi-branch businesses",
+            "text": "A company can define several businesses and locations and manage their listings separately."
+          },
+          "rating": {
+            "title": "Post-job reviews",
+            "text": "When the work ends both sides rate each other, with payment, task and communication scored separately."
+          }
+        },
+        "tech": {
+          "text": "Every interface connects to one service where the rules live. Listing search runs in the database together with location data, messaging and notifications flow live, and a payment result is confirmed by the server rather than the client. The system is watched continuously: response times, error rates and pending jobs are tracked on dashboards."
+        },
+        "status": {
+          "text": "The platform is live and still growing. The current weight is on the employer panel, the mobile experience and simplifying the application flow."
+        }
+      },
+      "sigortaMobil": {
+        "overview": {
+          "p1": "SigortaMobil brings insurance work into a single mobile app. People get a quote, see their active policies and download them as PDF whenever they need to.",
+          "p2": "We built the app for iOS and Android together. Simplifying the interface cut the quote and policy flows down to a few steps, and a claim request starts from the same place."
         }
       },
       "nappsa": {
@@ -384,7 +474,10 @@
       }
     },
     "relatedTitle": "Other work",
-    "ctaButton": "Get in touch"
+    "ctaButton": "Get in touch",
+    "platformsTitle": "What we built",
+    "featuresTitle": "Key features",
+    "screenshotsTitle": "From the app"
   },
   "productsPage": {
     "title": "The work we ship",
@@ -557,5 +650,175 @@
     "text": "The address may have changed or the page may have been removed. You can continue from below.",
     "home": "Back to home",
     "products": "Browse products"
+  },
+  "legal": {
+    "updated": "Last updated",
+    "backToHome": "Back to home",
+    "contactNote": "For questions about these documents, write to account@tecktick.com.",
+    "pages": {
+      "privacy": {
+        "title": "Privacy Policy",
+        "intro": "This policy explains what personal data we collect through tecktick.com, why we process it and what rights you have.",
+        "sections": [
+          {
+            "heading": "Who we are",
+            "body": [
+              "Tecktick Labs is a technology studio based in Istanbul. On this site we present our own products and the work we build for clients.",
+              "Tecktick Labs is the data controller. You can reach us at account@tecktick.com."
+            ]
+          },
+          {
+            "heading": "What we collect",
+            "body": [
+              "There are no accounts on this site. Personal data is collected only when you fill in the contact form:"
+            ],
+            "items": [
+              "Name and surname",
+              "Email address",
+              "Company or project name (optional)",
+              "The subject you select",
+              "The content of your message"
+            ]
+          },
+          {
+            "heading": "Why we process it",
+            "body": [
+              "We use this data only to review your request, reply to you and continue the conversation.",
+              "We do not send marketing email without your consent, we do not sell your data and we do not use it for advertising."
+            ]
+          },
+          {
+            "heading": "Who we share it with",
+            "body": [
+              "Form submissions reach us through Netlify, the platform hosting this site, and are forwarded to our email account. These providers may run servers outside Türkiye.",
+              "We do not otherwise share your data with third parties. Information may be provided to authorities where legally required."
+            ]
+          },
+          {
+            "heading": "How long we keep it",
+            "body": [
+              "We keep the correspondence for at most two years after the conversation ends, then delete it.",
+              "If you want it deleted sooner, simply write to us."
+            ]
+          },
+          {
+            "heading": "Your rights",
+            "body": [
+              "You have the right to access, correct and delete your personal data, and to object to processing. Details are on our data protection notice page.",
+              "Send your requests to account@tecktick.com."
+            ]
+          },
+          {
+            "heading": "Cookies",
+            "body": [
+              "The site uses a small number of browser records needed for it to work. Details are on the cookie policy page."
+            ]
+          },
+          {
+            "heading": "Changes",
+            "body": [
+              "We may update this policy from time to time. The current version is always published on this page with the date of the last update at the top."
+            ]
+          }
+        ]
+      },
+      "kvkk": {
+        "title": "Data Protection Notice",
+        "intro": "Prepared by Tecktick Labs as data controller under Turkish Law No. 6698 on the Protection of Personal Data.",
+        "sections": [
+          {
+            "heading": "Data controller",
+            "body": [
+              "The data controller is Tecktick Labs. Contact address: account@tecktick.com"
+            ]
+          },
+          {
+            "heading": "Personal data processed",
+            "body": [
+              "The following data is processed through the contact form on this site:"
+            ],
+            "items": [
+              "Identity data: name and surname",
+              "Contact data: email address",
+              "Transaction data: company or project name, subject and message content"
+            ]
+          },
+          {
+            "heading": "Purposes of processing",
+            "body": [
+              "Your data is processed to receive and assess your request, respond to you, carry out business discussions and, where needed, prepare for a contract."
+            ]
+          },
+          {
+            "heading": "Legal basis",
+            "body": [
+              "Processing is based on Article 5/2 of the Law, namely that it is directly related to the conclusion or performance of a contract and that it serves the legitimate interests of the data controller, following your own decision to submit the form."
+            ]
+          },
+          {
+            "heading": "Method of collection",
+            "body": [
+              "Data is collected only electronically, through the form you fill in yourself. No automated profiling is carried out."
+            ]
+          },
+          {
+            "heading": "Transfer abroad",
+            "body": [
+              "The site is published through a hosting service whose servers may be located outside Türkiye. Because form submissions reach us through that infrastructure, your data may be processed temporarily on servers abroad."
+            ]
+          },
+          {
+            "heading": "Your rights under Article 11",
+            "body": [
+              "By applying to the data controller you may exercise the following rights:"
+            ],
+            "items": [
+              "Learn whether your personal data is processed",
+              "Request information if it has been processed",
+              "Learn the purpose of processing and whether it is used accordingly",
+              "Know the third parties to whom it is transferred at home or abroad",
+              "Request correction if it is incomplete or incorrect",
+              "Request erasure or destruction within the conditions of the Law",
+              "Request that correction, erasure and destruction be notified to third parties",
+              "Object to a result against you arising solely from automated analysis",
+              "Claim compensation if you suffer damage due to unlawful processing"
+            ]
+          },
+          {
+            "heading": "How to apply",
+            "body": [
+              "Send your requests to account@tecktick.com with information confirming your identity. Applications are concluded within thirty days at the latest."
+            ]
+          }
+        ]
+      },
+      "cookies": {
+        "title": "Cookie Policy",
+        "intro": "This page explains what tecktick.com stores in your browser and how you can remove it.",
+        "sections": [
+          {
+            "heading": "What we store",
+            "body": [
+              "The site uses no advertising or tracking cookies. Only one record is kept, and it is needed for the site to work:"
+            ],
+            "items": [
+              "Language preference: the language you choose, Turkish or English, is stored in your browser so it is remembered on your next visit."
+            ]
+          },
+          {
+            "heading": "Third-party cookies",
+            "body": [
+              "No third-party analytics or advertising cookies are used at the moment. If we start collecting visit statistics, we will update this page."
+            ]
+          },
+          {
+            "heading": "How to remove it",
+            "body": [
+              "You can clear site data from your browser settings to delete this record. Deleting it does not stop the site from working; only your language preference returns to the default."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

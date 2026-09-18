@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 import { Icon } from './Icons'
 import { Wordmark } from './Logo'
-import { contactEmail } from '../data/site'
-import { footerRoutes, routePath } from '../lib/routes'
+import { contactEmail, legalPages } from '../data/site'
+import { footerRoutes, legalPath, routePath } from '../lib/routes'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -48,6 +48,16 @@ export function Footer() {
         <p className="copyright">
           {t('footer.copyright', { year: new Date().getFullYear() })}
         </p>
+      </div>
+
+      <div className="footer-legal">
+        <nav aria-label={t('legal.updated')}>
+          {legalPages.map((page) => (
+            <Link key={page.id} to={legalPath(page.id)}>
+              {t(`legal.pages.${page.key}.title`)}
+            </Link>
+          ))}
+        </nav>
       </div>
     </footer>
   )

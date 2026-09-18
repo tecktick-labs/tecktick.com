@@ -39,3 +39,4 @@ export function routePath(key: RouteKey): string {
 /** Ürün detayı gibi parametreli yollar */
 export const productPath = (id: string) => `/products/${id}`
 export const insightPath = (id: string) => `/insights/${id}`
+export const legalPath = (id: string) => `/legal/${id}`

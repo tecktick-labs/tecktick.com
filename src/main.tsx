@@ -33,6 +33,9 @@ const InsightPage = lazy(() =>
 const ContactPage = lazy(() =>
   import('./pages/ContactPage').then((m) => ({ default: m.ContactPage })),
 )
+const LegalPage = lazy(() =>
+  import('./pages/LegalPage').then((m) => ({ default: m.LegalPage })),
+)
 const NotFoundPage = lazy(() =>
   import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })),
 )
@@ -76,6 +79,7 @@ function App() {
             <Route path="/insights" element={<InsightsPage />} />
             <Route path="/insights/:insightId" element={<InsightPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/legal/:legalId" element={<LegalPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
