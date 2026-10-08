@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Icon } from '../components/Icons'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { contactEmail, contactPhone } from '../data/site'
+import { trackEvent } from '../lib/analytics'
 
 const FORM_NAME = 'contact'
 const SUBJECT_KEYS = ['project', 'app', 'game', 'other'] as const
@@ -38,6 +39,10 @@ export function ContactPage() {
       })
       if (!response.ok) throw new Error(String(response.status))
       setStatus('success')
+      trackEvent('generate_lead', {
+        form: FORM_NAME,
+        subject: String(data.get('subject') ?? ''),
+      })
       form.reset()
     } catch {
       setStatus('error')
@@ -54,7 +59,7 @@ export function ContactPage() {
 
       <div className="contact-layout">
         <section className="contact-form-card">
-          <h2 className="section-label">{t('contact.form.title')}</h2>
+          <h2 className="contact-form-title">{t('contact.form.title')}</h2>
 
           <form
             name={FORM_NAME}
@@ -83,13 +88,14 @@ export function ContactPage() {
                 />
               </label>
               <label className="field">
-                <span>{t('contact.form.email')}</span>
+                <span>{t('contact.form.phone')}</span>
                 <input
-                  type="email"
-                  name="email"
+                  type="tel"
+                  name="phone"
                   required
-                  autoComplete="email"
-                  placeholder={t('contact.form.emailPlaceholder')}
+                  autoComplete="tel"
+                  inputMode="tel"
+                  placeholder={t('contact.form.phonePlaceholder')}
                 />
               </label>
             </div>
@@ -97,8 +103,20 @@ export function ContactPage() {
             <div className="field-row">
               <label className="field">
                 <span>
+                  {t('contact.form.email')}
+                  <i>{t('contact.form.optional')}</i>
+                </span>
+                <input
+                  type="email"
+                  name="email"
+                  autoComplete="email"
+                  placeholder={t('contact.form.emailPlaceholder')}
+                />
+              </label>
+              <label className="field">
+                <span>
                   {t('contact.form.company')}
-                  <i>{t('contact.form.companyOptional')}</i>
+                  <i>{t('contact.form.optional')}</i>
                 </span>
                 <input
                   type="text"
@@ -107,17 +125,18 @@ export function ContactPage() {
                   placeholder={t('contact.form.companyPlaceholder')}
                 />
               </label>
-              <label className="field">
-                <span>{t('contact.form.subject')}</span>
-                <select name="subject" defaultValue="project">
-                  {SUBJECT_KEYS.map((key) => (
-                    <option key={key} value={key}>
-                      {t(`contact.form.subjects.${key}`)}
-                    </option>
-                  ))}
-                </select>
-              </label>
             </div>
+
+            <label className="field">
+              <span>{t('contact.form.subject')}</span>
+              <select name="subject" defaultValue="project">
+                {SUBJECT_KEYS.map((key) => (
+                  <option key={key} value={key}>
+                    {t(`contact.form.subjects.${key}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
 
             <label className="field">
               <span>{t('contact.form.message')}</span>

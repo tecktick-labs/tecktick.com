@@ -2,7 +2,9 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Icon } from './Icons'
 import { LogoMark } from './Logo'
-import { motto, siteStats, statKeys } from '../data/site'
+import { ProductIcon } from './ProductIcon'
+import { heroPhoneProducts, motto, siteStats, statKeys } from '../data/site'
+import { routePath } from '../lib/routes'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -18,13 +20,13 @@ export function Hero() {
           </h1>
           <p className="lead">{t('hero.lead')}</p>
           <div className="hero-actions">
-            <Link className="btn btn-dark" to="/contact">
+            <Link className="btn btn-glow" to={routePath('contact')}>
               {t('hero.ctaPrimary')}
               <Icon name="arrow" className="btn-icon" />
             </Link>
-            <Link className="btn btn-ghost" to="/products">
-              <span className="play-dot">
-                <Icon name="play" />
+            <Link className="btn btn-ghost" to={routePath('services')}>
+              <span className="icon-dot">
+                <Icon name="grid" />
               </span>
               {t('hero.ctaSecondary')}
             </Link>
@@ -56,38 +58,29 @@ export function Hero() {
           </div>
 
           <div className="device-phone">
+            {/* Telefon gerçek veriyi gösterir: yayındaki iş sayısı ve ürünler */}
             <div className="phone-screen">
               <div className="phone-head">
                 <LogoMark className="phone-mark" />
                 <span className="phone-avatar" />
               </div>
-              <p className="phone-greeting">
-                {t('hero.mock.greeting')}
-                <em>{t('hero.mock.greetingLine')}</em>
-                <strong>{t('hero.mock.greetingStrong')}</strong>
-              </p>
               <div className="phone-card">
-                <span className="phone-card-label">{t('hero.mock.growthLabel')}</span>
-                <strong className="phone-card-value">{t('hero.mock.growthValue')}</strong>
-                <div className="phone-chart">
-                  {[28, 34, 44, 40, 58, 66, 78, 92].map((height, index) => (
-                    <span key={index} style={{ height: `${height}%` }} />
-                  ))}
-                </div>
+                <span className="phone-card-label">{t('stats.shipped.label')}</span>
+                <strong className="phone-card-value">{siteStats.shipped}</strong>
               </div>
-              <ul className="phone-list">
-                <li>
-                  <strong>12</strong>
-                  <span>{t('hero.mock.activeProjects')}</span>
-                </li>
-                <li>
-                  <strong>8</strong>
-                  <span>{t('hero.mock.teamMembers')}</span>
-                </li>
-                <li>
-                  <strong>24</strong>
-                  <span>{t('hero.mock.weeksToLaunch')}</span>
-                </li>
+              <p className="phone-title">{t('nav.products')}</p>
+              <ul className="phone-products">
+                {heroPhoneProducts.map((product) => (
+                  <li key={product.id}>
+                    <ProductIcon product={product} />
+                    <span>
+                      <strong>{t(`products.items.${product.key}.name`)}</strong>
+                      <em className={`is-${product.status}`}>
+                        {product.status === 'live' ? t('common.live') : t('common.comingSoon')}
+                      </em>
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

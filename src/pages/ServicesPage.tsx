@@ -2,13 +2,13 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Icon } from '../components/Icons'
 import { Breadcrumbs } from '../components/Breadcrumbs'
+import { ServiceIndex } from '../components/ServiceIndex'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { routePath } from '../lib/routes'
 import {
   approachSteps,
   capabilities,
   promiseKeys,
-  services,
   stackBrand,
   toolGroups,
 } from '../data/site'
@@ -33,33 +33,10 @@ export function ServicesPage() {
         <h1>{t('servicesPage.title')}</h1>
       </header>
 
-      {/* 1. Başlıca alanlar: dört kart ve koyu panel */}
+      {/* 1. Başlıca alanlar: numaralı, açılır satırlar (ana sayfadaki kartlar burada tekrarlanmaz) */}
       <section className="page-section">
         <h2 className="section-label">{t('servicesPage.offerTitle')}</h2>
-        <div className="services-layout">
-          <div className="service-grid">
-            {services.map((service) => (
-              <article
-                className={`service-card${service.featured ? ' is-featured' : ''}`}
-                key={service.id}
-              >
-                <Icon name={service.icon} className="service-icon" />
-                <h3>{t(`services.items.${service.id}.title`)}</h3>
-                <p>{t(`services.items.${service.id}.description`)}</p>
-              </article>
-            ))}
-          </div>
-
-          <article className="panel panel-dark panel-globe">
-            <div className="mock-image mock-globe" />
-            <div className="panel-body">
-              <p className="kicker kicker-light">{t('services.panel.kicker')}</p>
-              <h3 className="multiline">{t('services.panel.title')}</h3>
-              <i className="rule" />
-              <p>{t('services.panel.text')}</p>
-            </div>
-          </article>
-        </div>
+        <ServiceIndex />
       </section>
 
       {/* 2. Slogan bandı */}

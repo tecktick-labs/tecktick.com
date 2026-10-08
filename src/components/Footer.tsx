@@ -2,7 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 import { Icon } from './Icons'
 import { Wordmark } from './Logo'
-import { contactEmail, legalPages } from '../data/site'
+import { legalPages } from '../data/site'
+import { openConsent } from '../lib/consent'
 import { footerRoutes, legalPath, routePath } from '../lib/routes'
 
 export function Footer() {
@@ -20,16 +21,10 @@ export function Footer() {
           <h2 className="multiline">{t('footer.title')}</h2>
         </div>
         <div className="cta-side">
-          <p>{t('footer.text')}</p>
-          <div className="cta-actions">
-            <Link className="btn btn-mint" to={routePath('contact')}>
-              {t('productPages.ctaButton')}
-              <Icon name="arrow" className="btn-icon" />
-            </Link>
-            <a className="cta-email" href={`mailto:${contactEmail}`}>
-              {contactEmail}
-            </a>
-          </div>
+          <Link className="btn btn-mint" to={routePath('contact')}>
+            {t('productPages.ctaButton')}
+            <Icon name="arrow" className="btn-icon" />
+          </Link>
         </div>
       </div>
       )}
@@ -51,12 +46,15 @@ export function Footer() {
       </div>
 
       <div className="footer-legal">
-        <nav aria-label={t('legal.updated')}>
+        <nav aria-label={t('legal.navLabel')}>
           {legalPages.map((page) => (
             <Link key={page.id} to={legalPath(page.id)}>
               {t(`legal.pages.${page.key}.title`)}
             </Link>
           ))}
+          <button type="button" className="footer-legal-btn" onClick={openConsent}>
+            {t('consent.manage')}
+          </button>
         </nav>
       </div>
     </footer>

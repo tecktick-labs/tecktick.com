@@ -1,5 +1,8 @@
 // Kart ikonu için 512px'e indirilmiş sürüm; kaynak dosya bks-logo.png
 import bksLogo from '../assets/bks-logo-512.png'
+// Referans logoları kendi sitelerinden alındı; ileride veritabanından gelecek
+import elysPrimeLogo from '../assets/references/elys-prime.png'
+import inceptionRentLogo from '../assets/references/inception-rent.png'
 
 /**
  * Yapısal içerik. Burada METİN YOKTUR; sadece i18n anahtarları ve
@@ -250,11 +253,45 @@ export function filterProducts(key: string): Product[] {
 /** Ürünler sayfasının üstünde sabit duran şerit */
 export const featuredProducts = products.filter((product) => product.featured)
 
-/** Ana sayfada gösterilecek kısa liste: öne çıkanlar önce, toplam üç iş */
-export const homeProducts = [
-  ...products.filter((product) => product.featured),
-  ...products.filter((product) => !product.featured),
-].slice(0, 3)
+/**
+ * Ana sayfada yalnızca bu iki ürün gösterilir, sırası buradaki gibidir.
+ * Diğer bütün ürünler ve küçük işler /products sayfasındadır.
+ */
+const HOME_PRODUCT_IDS = ['anlik-eleman', 'sigortamobil'] as const
+
+export const homeProducts = HOME_PRODUCT_IDS.map((id) => findProduct(id)).filter(
+  (product): product is Product => product !== undefined,
+)
+
+/** Hero'daki telefon çiziminde görünen gerçek ürünler, bu sırayla */
+const HERO_PHONE_PRODUCT_IDS = ['anlik-eleman', 'sigortamobil', 'bks'] as const
+
+export const heroPhoneProducts = HERO_PHONE_PRODUCT_IDS.map((id) => findProduct(id)).filter(
+  (product): product is Product => product !== undefined,
+)
+
+/**
+ * Hakkımızda sayfasındaki referans duvarı.
+ * Ad marka adıdır, çevrilmez. Logo yoksa veya yüklenemezse adın baş harfleri
+ * yer tutucu olarak gösterilir; logo dosyaları src/assets/ altına konup
+ * buraya import edilir. Liste sırası duvardaki sıradır.
+ */
+export type Reference = {
+  id: string
+  name: string
+  logo: string | null
+  url?: string
+}
+
+export const references: Reference[] = [
+  {
+    id: 'inception-rent',
+    name: 'Inception Rent a Car',
+    logo: inceptionRentLogo,
+    url: 'https://belekcarrent.com/',
+  },
+  { id: 'elys-prime', name: 'Elys Prime', logo: elysPrimeLogo, url: 'https://elysprime.com/' },
+]
 
 /**
  * Sayılar elle yazılmaz; ürün ve iş listelerinden hesaplanır.
@@ -284,7 +321,6 @@ export const motto = 'Build. Iterate. Evolve.'
 
 /** Hakkımızda sayfasındaki geçmiş alanları */
 export const experienceKeys = [
-  'banking',
   'corporate',
   'multilingual',
   'platforms',
@@ -293,11 +329,35 @@ export const experienceKeys = [
 
 export const valueKeys = ['clarity', 'ownership', 'craft'] as const
 
+/**
+ * Hizmetler. `capabilityKeys` Hizmetler sayfasındaki dizin satırında etiket
+ * olarak görünür; metinler servicesPage.capabilities.<key>.title altındadır.
+ */
 export const services = [
-  { id: 'customSoftware', icon: 'code', featured: true },
-  { id: 'product', icon: 'layers', featured: false },
-  { id: 'integration', icon: 'grid', featured: false },
-  { id: 'consulting', icon: 'people', featured: false },
+  {
+    id: 'customSoftware',
+    icon: 'code',
+    featured: true,
+    capabilityKeys: ['web', 'mobile', 'services'],
+  },
+  {
+    id: 'product',
+    icon: 'layers',
+    featured: false,
+    capabilityKeys: ['product', 'cloud'],
+  },
+  {
+    id: 'integration',
+    icon: 'grid',
+    featured: false,
+    capabilityKeys: ['integration', 'services'],
+  },
+  {
+    id: 'consulting',
+    icon: 'people',
+    featured: false,
+    capabilityKeys: ['consulting', 'ai'],
+  },
 ] as const
 
 /**
@@ -331,11 +391,11 @@ export const toolGroups = [
   { key: 'cloud', items: ['Docker', 'Nginx', 'AWS', 'Firebase Hosting'] },
 ] as const
 
+/** Çalışma akışı: Analiz Et → Planla → İnşa Et; metinler approach.steps.<key> */
 export const approachSteps = [
-  { key: 'understand', step: '01' },
-  { key: 'build', step: '02' },
-  { key: 'iterate', step: '03' },
-  { key: 'evolve', step: '04' },
+  { key: 'analyze', step: '01' },
+  { key: 'plan', step: '02' },
+  { key: 'build', step: '03' },
 ] as const
 
 /**
@@ -346,10 +406,24 @@ export const approachSteps = [
  */
 export type InsightProject = 'anlikEleman' | 'barbaros' | 'studio'
 
+/** Notun hangi parçayla ilgili olduğu; listede rozet olarak görünür */
+export type InsightPlatform = 'web' | 'mobile' | 'panel' | 'backend' | 'game' | 'studio'
+
+/** Rozet ikonları; etiketler locales/insightsPage.platforms altındadır */
+export const insightPlatformIcons: Record<InsightPlatform, string> = {
+  web: 'web',
+  mobile: 'mobile',
+  panel: 'grid',
+  backend: 'server',
+  game: 'gamepad',
+  studio: 'compass',
+}
+
 export type Insight = {
   id: string
   key: string
   project: InsightProject
+  platform: InsightPlatform
   /** ISO tarih; görüntüleme dile göre biçimlendirilir */
   date: string
   featured?: boolean
@@ -360,6 +434,7 @@ export const insights: Insight[] = [
     id: 'anlik-eleman-isveren-paneli',
     key: 'aePanel',
     project: 'anlikEleman',
+    platform: 'panel',
     date: '2026-09-12',
     featured: true,
   },
@@ -367,60 +442,60 @@ export const insights: Insight[] = [
     id: 'anlik-eleman-mobil',
     key: 'aeMobile',
     project: 'anlikEleman',
+    platform: 'mobile',
     date: '2026-09-08',
   },
   {
     id: 'anlik-eleman-web',
     key: 'aeWeb',
     project: 'anlikEleman',
+    platform: 'web',
     date: '2026-09-02',
   },
   {
     id: 'barbaros-sunucu-unity',
     key: 'barbarosServer',
     project: 'barbaros',
+    platform: 'backend',
     date: '2026-08-28',
   },
   {
     id: 'barbaros-harita-uretimi',
     key: 'barbarosMaps',
     project: 'barbaros',
+    platform: 'game',
     date: '2026-08-21',
   },
   {
     id: 'calisma-ritmimiz',
     key: 'process',
     project: 'studio',
+    platform: 'studio',
     date: '2026-08-14',
   },
 ]
-
-export const insightProjects = ['all', 'anlikEleman', 'barbaros', 'studio'] as const
-
-export function filterInsights(project: string): Insight[] {
-  if (project === 'all') return insights
-  return insights.filter((item) => item.project === project)
-}
 
 export function findInsight(id: string | undefined): Insight | undefined {
   return insights.find((item) => item.id === id)
 }
 
-/** Ana sayfada gösterilen üç not; farklı projelerden seçilir */
-export const homeInsights = [
-  insights.find((i) => i.key === 'aePanel'),
-  insights.find((i) => i.key === 'barbarosMaps'),
-  insights.find((i) => i.key === 'process'),
-].filter(Boolean) as Insight[]
+/** Ana sayfadaki güncelleme satırı sayısı */
+const HOME_INSIGHT_LIMIT = 3
+
+/** Tüm notlar tarihe göre, en yeni üstte */
+export const insightsByDate = [...insights].sort((a, b) => b.date.localeCompare(a.date))
+
+/** Ana sayfada son üç güncelleme; seçim yalnızca tarihe göredir */
+export const homeInsights = insightsByDate.slice(0, HOME_INSIGHT_LIMIT)
 
 /**
  * Yasal sayfalar. Metinler locales/legal.pages.<key> altındadır;
  * her sayfanın bölümleri orada dizi olarak tutulur.
  */
 export const legalPages = [
-  { id: 'privacy', key: 'privacy', updated: '2026-09-18' },
-  { id: 'kvkk', key: 'kvkk', updated: '2026-09-18' },
-  { id: 'cookies', key: 'cookies', updated: '2026-09-18' },
+  { id: 'privacy', key: 'privacy', updated: '2026-10-08' },
+  { id: 'kvkk', key: 'kvkk', updated: '2026-10-08' },
+  { id: 'cookies', key: 'cookies', updated: '2026-10-07' },
 ] as const
 
 export function findLegalPage(id: string | undefined) {

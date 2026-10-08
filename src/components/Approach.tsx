@@ -21,7 +21,6 @@ export function Approach() {
       </article>
 
       <article className="approach-steps">
-        <p className="kicker">{t('approach.kicker')}</p>
         <div className="approach-body">
           <h2 className="multiline">{t('approach.title')}</h2>
           <ol className="step-list">

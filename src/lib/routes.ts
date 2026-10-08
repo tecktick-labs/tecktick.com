@@ -40,3 +40,8 @@ export function routePath(key: RouteKey): string {
 export const productPath = (id: string) => `/products/${id}`
 export const insightPath = (id: string) => `/insights/${id}`
 export const legalPath = (id: string) => `/legal/${id}`
+
+/** Hizmetler sayfasında açık gelecek satır: /services?service=<id> */
+export const SERVICE_PARAM = 'service'
+export const serviceFocusPath = (id: string) =>
+  `${routePath('services')}?${SERVICE_PARAM}=${id}`

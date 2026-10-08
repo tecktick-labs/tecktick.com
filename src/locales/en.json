@@ -32,7 +32,8 @@
     "comingSoon": "Coming soon",
     "visitSite": "Visit site",
     "viewDetails": "See details",
-    "viewOnPlayStore": "View on Google Play"
+    "viewOnPlayStore": "View on Google Play",
+    "viewAll": "View all"
   },
   "hero": {
     "kicker": "Technology Studio",
@@ -40,7 +41,7 @@
     "titleSoft": "Endless possibilities.",
     "lead": "We build software, create systems and turn ideas into real products. Fast, focused and always one step ahead.",
     "ctaPrimary": "Let's build together",
-    "ctaSecondary": "Watch video",
+    "ctaSecondary": "Services",
     "mock": {
       "menu": {
         "ideas": "Ideas",
@@ -50,15 +51,7 @@
       },
       "title": "Smarter\nSolutions\nFaster",
       "text": "From idea to impact. We build digital products that move businesses forward.",
-      "button": "Explore our work",
-      "greeting": "Good morning",
-      "greetingLine": "Let's build",
-      "greetingStrong": "what's next.",
-      "growthLabel": "Total Growth",
-      "growthValue": "+40%",
-      "activeProjects": "Active Projects",
-      "teamMembers": "Team Members",
-      "weeksToLaunch": "Weeks to Launch"
+      "button": "Explore our work"
     }
   },
   "stats": {
@@ -77,8 +70,7 @@
   },
   "services": {
     "kicker": "Our Services",
-    "title": "From idea\nto impact.",
-    "text": "We partner with ambitious businesses to design, develop and scale digital products that make a difference.",
+    "title": "From idea to impact.",
     "items": {
       "customSoftware": {
         "title": "Custom Software Development",
@@ -105,8 +97,7 @@
   },
   "products": {
     "kicker": "Our Products",
-    "title": "Products and\nwork.",
-    "text": "Our own games, the platform we run for businesses and the sites we build for clients. All shipped, all held to the same standard.",
+    "title": "Products and work.",
     "items": {
       "anlikEleman": {
         "name": "Anlık Eleman",
@@ -160,9 +151,7 @@
       "android": "Android"
     },
     "smallWorks": {
-      "title": "Other projects",
       "slogan": "Sometimes an hour, sometimes a year. All of it Tecktick.",
-      "text": "Business and project sites we built and shipped.",
       "items": {
         "emrasKitchen": {
           "name": "Emran's Kitchen",
@@ -183,33 +172,27 @@
     }
   },
   "approach": {
-    "kicker": "Our Approach",
-    "title": "Listen.\nBuild.\nIterate.\nEvolve.",
-    "office": "Tell us the idea.\nThe team is right here.",
+    "title": "Analyse.\nPlan.\nBuild.",
+    "office": "From idea\nto product.",
     "vision": "Make it work.\nThen make it grow.",
     "steps": {
-      "understand": {
-        "title": "Understand",
-        "description": "We listen. We learn."
+      "analyze": {
+        "title": "Analyse",
+        "description": "We study the need, the users and where things stand."
+      },
+      "plan": {
+        "title": "Plan",
+        "description": "We pin down scope, order and timeline."
       },
       "build": {
         "title": "Build",
-        "description": "We create. We deliver."
-      },
-      "iterate": {
-        "title": "Iterate",
-        "description": "We improve. We scale."
-      },
-      "evolve": {
-        "title": "Evolve",
-        "description": "We grow together."
+        "description": "We build the working product and ship it."
       }
     }
   },
   "insights": {
     "kicker": "From the workshop",
-    "title": "What we are\nworking on",
-    "text": "Not a blog, a work log. Whatever is on our desk this week is written here.",
+    "title": "What we are working on",
     "items": {
       "aePanel": {
         "tag": "Anlık Eleman",
@@ -281,8 +264,7 @@
   },
   "footer": {
     "kicker": "Let's Talk",
-    "title": "Got an idea?\nOne tick is enough.",
-    "text": "Tell us what you are building. If we are a good fit, we will get back to you quickly.",
+    "title": "One tick at Tecktick Labs,\nleave the rest to us.",
     "copyright": "© {{year}} Tecktick Labs"
   },
   "productPages": {
@@ -503,7 +485,7 @@
   "contact": {
     "kicker": "Let's Talk",
     "title": "Got an idea?\nOne tick is enough.",
-    "text": "Tell us in a few sentences what you want to build. If we are a good fit, we will get back to you quickly.",
+    "text": "Tell us in a few sentences what you want to build. We reply the same day.",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "form": {
@@ -513,7 +495,6 @@
       "email": "Email",
       "emailPlaceholder": "you@company.com",
       "company": "Company",
-      "companyOptional": "optional",
       "companyPlaceholder": "Company or project name",
       "subject": "Subject",
       "subjects": {
@@ -528,7 +509,10 @@
       "sending": "Sending...",
       "success": "Thanks, your message reached us. We will get back to you shortly.",
       "error": "The message could not be sent. You can email us directly.",
-      "required": "Required field"
+      "required": "Required field",
+      "optional": "optional",
+      "phone": "Phone",
+      "phonePlaceholder": "+90 5xx xxx xx xx"
     }
   },
   "servicesPage": {
@@ -591,14 +575,48 @@
     },
     "toolsHint": "Which technologies do we work with?",
     "toolsCount_one": "{{count}} tool",
-    "toolsCount_other": "{{count}} tools"
+    "toolsCount_other": "{{count}} tools",
+    "details": {
+      "customSoftware": {
+        "text": "We look at your workflow together and build software for the needs an off-the-shelf package does not cover.",
+        "points": {
+          "p1": "Scope and users are agreed in writing before work starts.",
+          "p2": "Web panel, mobile app or backend system; chosen to fit the need.",
+          "p3": "After delivery we follow usage and make the fixes that are needed."
+        }
+      },
+      "product": {
+        "text": "We work with you to turn an idea into a product whose first version is live.",
+        "points": {
+          "p1": "We agree together on what the first version includes and what it does not.",
+          "p2": "Working builds are shared with you at regular intervals.",
+          "p3": "Store and web release, domain and server setup are included."
+        }
+      },
+      "integration": {
+        "text": "We connect the tools you use and cut down on data moved by hand.",
+        "points": {
+          "p1": "Payment, maps, notification and analytics services can be connected.",
+          "p2": "Data exchange with the software you already run is set up.",
+          "p3": "An alert is added so you know when a connection drops."
+        }
+      },
+      "consulting": {
+        "text": "We review the software you have and explain where it stands in plain language.",
+        "points": {
+          "p1": "Slow spots and frequent problem areas are listed.",
+          "p2": "Fixing and rebuilding are compared side by side.",
+          "p3": "Next steps are written down in order of priority."
+        }
+      }
+    }
   },
   "aboutPage": {
     "kicker": "About",
     "title": "We turn ideas into\ndigital products that work",
     "lead": "Tecktick Labs is a technology studio based in Istanbul. We build mobile apps, web platforms, backend systems and custom software.",
-    "journeyTitle": "A new company,\nnot a new track record",
-    "journeyText": "The company is at the start of its journey. Behind it sits development history that runs from enterprise projects to mobile apps, from business platforms to real-time systems.",
+    "journeyTitle": "A new company, not a new track record",
+    "journeyText": "Tecktick Labs was founded in 2026. The team has worked on corporate projects, mobile apps and business platforms before; we are now bringing that experience together in our own studio.",
     "approachTitle": "How we look at a project",
     "approachText": "We do not treat a project as something to write code for. First we understand the need and the people using it, then we cut needless complexity and ship something sustainable. Design, software, data, integrations and release are handled as one whole.",
     "valuesTitle": "What we care about",
@@ -616,33 +634,35 @@
         "description": "Speed matters, rushing does not. A build that runs smoothly, opens fast and reads clearly is part of the result."
       }
     },
-    "ownTitle": "Our own products",
-    "ownText": "Alongside client work we build our own products. That keeps us judging a product not only on its engineering, but on user experience, operations, growth and whether it holds up over time.",
-    "ownLink": "See our products",
-    "workTitle": "How we work is simple",
-    "workText": "We understand the problem, build the right system, ship something that works and keep improving it with real feedback.",
-    "factsTitle": "Quick facts"
+    "experienceTitle": "Behind us",
+    "experience": {
+      "corporate": "Corporate projects",
+      "multilingual": "Multilingual platforms",
+      "platforms": "Business platforms",
+      "realtime": "Real-time systems"
+    },
+    "referencesTitle": "References"
   },
   "insightsPage": {
     "kicker": "News from us",
     "title": "From the workshop",
     "text": "What we are working on, what we shipped and notes from the studio.",
     "featured": "Featured",
-    "readMore": "Read the rest",
+    "readMore": "Read more",
     "backToList": "All news",
     "relatedTitle": "Other notes",
     "publishedOn": "Published",
-    "count_one": "{{count}} note",
-    "count_other": "{{count}} notes",
-    "emptyTitle": "Nothing under this heading",
-    "emptyText": "Pick another project or view everything.",
-    "filters": {
-      "all": "All",
-      "anlikEleman": "Anlık Eleman",
-      "barbaros": "Barbaros: Kızıl Sakal",
+    "loadMore": "Show more",
+    "progress": "{{shown}} of {{total}} notes",
+    "allLoaded": "That's all for now. New notes are added as the work moves on.",
+    "platforms": {
+      "web": "Web",
+      "mobile": "Mobile",
+      "panel": "Panel",
+      "backend": "Server",
+      "game": "Game",
       "studio": "Studio"
-    },
-    "footnote": "New notes land here as the work moves."
+    }
   },
   "notFound": {
     "kicker": "404",
@@ -653,6 +673,7 @@
   },
   "legal": {
     "updated": "Last updated",
+    "navLabel": "Legal documents",
     "backToHome": "Back to home",
     "contactNote": "For questions about these documents, write to account@tecktick.com.",
     "pages": {
@@ -674,7 +695,8 @@
             ],
             "items": [
               "Name and surname",
-              "Email address",
+              "Phone number",
+              "Email address (optional)",
               "Company or project name (optional)",
               "The subject you select",
               "The content of your message"
@@ -691,6 +713,7 @@
             "heading": "Who we share it with",
             "body": [
               "Form submissions reach us through Netlify, the platform hosting this site, and are forwarded to our email account. These providers may run servers outside Türkiye.",
+              "Google Firebase Analytics is used for visit statistics; it writes no cookies without your consent. Details are on the cookie policy page.",
               "We do not otherwise share your data with third parties. Information may be provided to authorities where legally required."
             ]
           },
@@ -735,36 +758,40 @@
           {
             "heading": "Personal data processed",
             "body": [
-              "The following data is processed through the contact form on this site:"
+              "The following data is processed on this site:"
             ],
             "items": [
               "Identity data: name and surname",
-              "Contact data: email address",
-              "Transaction data: company or project name, subject and message content"
+              "Contact data: phone number and email address (optional)",
+              "Transaction data: the company or project name, subject and message you enter in the contact form",
+              "Usage and security data: pages you visit, device and browser type, and approximate location derived from your IP address. The analytics cookie is written only if you consent."
             ]
           },
           {
             "heading": "Purposes of processing",
             "body": [
-              "Your data is processed to receive and assess your request, respond to you, carry out business discussions and, where needed, prepare for a contract."
+              "Your data is processed to receive and assess your request, respond to you, carry out business discussions and, where needed, prepare for a contract.",
+              "Usage data is processed in aggregate to understand which parts of the site draw interest and to improve it."
             ]
           },
           {
             "heading": "Legal basis",
             "body": [
-              "Processing is based on Article 5/2 of the Law, namely that it is directly related to the conclusion or performance of a contract and that it serves the legitimate interests of the data controller, following your own decision to submit the form."
+              "Processing is based on Article 5/2 of the Law, namely that it is directly related to the conclusion or performance of a contract and that it serves the legitimate interests of the data controller, following your own decision to submit the form.",
+              "Analytics cookies rely on your explicit consent under Article 5/1 of the Law. You can withdraw it at any time with the \"Cookie preferences\" link at the bottom of the page."
             ]
           },
           {
             "heading": "Method of collection",
             "body": [
-              "Data is collected only electronically, through the form you fill in yourself. No automated profiling is carried out."
+              "Data is collected electronically: through the form you fill in yourself and automatically during your visit through Google Firebase Analytics. No personal profiling is carried out and the data is not used for advertising."
             ]
           },
           {
             "heading": "Transfer abroad",
             "body": [
-              "The site is published through a hosting service whose servers may be located outside Türkiye. Because form submissions reach us through that infrastructure, your data may be processed temporarily on servers abroad."
+              "The site is published through a hosting service (Netlify) whose servers may be located outside Türkiye. Because form submissions reach us through that infrastructure, your data may be processed temporarily on servers abroad.",
+              "Usage data is processed on Google's servers abroad through the Google Firebase Analytics service."
             ]
           },
           {
@@ -799,26 +826,38 @@
           {
             "heading": "What we store",
             "body": [
-              "The site uses no advertising or tracking cookies. Only one record is kept, and it is needed for the site to work:"
+              "The site uses no advertising cookies. Two essential records are kept in your browser; they need no consent:"
             ],
             "items": [
-              "Language preference: the language you choose, Turkish or English, is stored in your browser so it is remembered on your next visit."
+              "Language preference: the language you choose, Turkish or English, is stored so it is remembered on your next visit.",
+              "Cookie preference: whether you accepted the analytics cookie, so the notice is not shown again."
             ]
           },
           {
-            "heading": "Third-party cookies",
+            "heading": "Visit statistics",
             "body": [
-              "No third-party analytics or advertising cookies are used at the moment. If we start collecting visit statistics, we will update this page."
+              "We use Google Firebase Analytics to understand which pages are visited. Unless you give consent it runs cookieless: it writes no cookies to your browser and does not recognise you across visits.",
+              "If you accept, Google Analytics cookies (those starting with _ga and _ga_) are written. They are kept for up to two years and let us tell returning visitors apart.",
+              "The data collected is aggregate: page views, approximate location (country and city), device and browser type. It is not used for advertising and is never sold. Google's servers may be located abroad."
             ]
           },
           {
-            "heading": "How to remove it",
+            "heading": "Changing your choice",
             "body": [
-              "You can clear site data from your browser settings to delete this record. Deleting it does not stop the site from working; only your language preference returns to the default."
+              "Use the \"Cookie preferences\" link at the bottom of the page to change your decision at any time. Declining deletes the analytics cookies.",
+              "You can also clear site data from your browser settings to delete every record. The site keeps working; your language returns to the default and the cookie notice appears again."
             ]
           }
         ]
       }
     }
+  },
+  "consent": {
+    "label": "Cookie preference",
+    "text": "We would like to use an analytics cookie to understand how the site is used. If you decline, the site works just the same.",
+    "policy": "Cookie Policy",
+    "accept": "Accept",
+    "reject": "Decline",
+    "manage": "Cookie preferences"
   }
 }

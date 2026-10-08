@@ -1,19 +1,16 @@
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
-import { Icon } from '../components/Icons'
 import { Breadcrumbs } from '../components/Breadcrumbs'
-import { ProductIcon } from '../components/ProductIcon'
+import { ReferenceLogo } from '../components/ReferenceLogo'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
-import { productPath, routePath } from '../lib/routes'
-import {
-  approachSteps,
-  homeProducts,
-  motto,
-  siteStats,
-  statKeys,
-  valueKeys,
-} from '../data/site'
+import { routePath } from '../lib/routes'
+import { experienceKeys, references, valueKeys } from '../data/site'
 
+/**
+ * Hakkımızda yalnızca "biz kimiz" sorusunu anlatır: hikâye, bakış açısı,
+ * değerler ve referanslar. Ürünler, süreç ve sayılar başka sayfalarda durur,
+ * burada tekrarlanmaz. İletişim çağrısı alt bilgide olduğu için sayfada ayrıca
+ * kapanış çağrısı yoktur.
+ */
 export function AboutPage() {
   const { t } = useTranslation()
   useDocumentMeta(t('aboutPage.kicker'), t('aboutPage.lead'))
@@ -32,108 +29,66 @@ export function AboutPage() {
         <p className="page-lead">{t('aboutPage.lead')}</p>
       </header>
 
-      {/* 1. Geçmiş */}
-      <section className="page-section">
-        <article className="origin-card">
-          <h2 className="multiline">{t('aboutPage.journeyTitle')}</h2>
+      {/* 1. Hikâye: büyük başlık ve yanında geçmiş */}
+      <section className="page-section about-story">
+        <h2>{t('aboutPage.journeyTitle')}</h2>
+        <div className="about-story-grid">
           <p>{t('aboutPage.journeyText')}</p>
-        </article>
+          <div>
+            <span className="section-label">{t('aboutPage.experienceTitle')}</span>
+            <ul className="about-experience">
+              {experienceKeys.map((key) => (
+                <li key={key}>{t(`aboutPage.experience.${key}`)}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
-      {/* 2. Bakış açısı */}
+      {/* 2. Bakış açısı: büyük alıntı */}
       <section className="page-section">
         <h2 className="section-label">{t('aboutPage.approachTitle')}</h2>
-        <div className="product-overview">
+        <blockquote className="about-quote">
           <p>{t('aboutPage.approachText')}</p>
-        </div>
+        </blockquote>
       </section>
 
-      {/* 3. Değerler */}
+      {/* 3. Değerler: kartsız, numaralı üç sütun */}
       <section className="page-section">
         <h2 className="section-label">{t('aboutPage.valuesTitle')}</h2>
-        <div className="highlight-grid">
-          {valueKeys.map((key) => (
-            <article className="highlight-card" key={key}>
+        <ol className="about-values">
+          {valueKeys.map((key, index) => (
+            <li key={key}>
+              <span className="about-value-number">
+                {String(index + 1).padStart(2, '0')}
+              </span>
               <h3>{t(`aboutPage.values.${key}.title`)}</h3>
               <p>{t(`aboutPage.values.${key}.description`)}</p>
-            </article>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
 
-      {/* 4. Kendi ürünlerimiz: metin + ürün kısayolları */}
-      <section className="page-section own-work">
-        <div className="own-copy">
-          <h2 className="section-label">{t('aboutPage.ownTitle')}</h2>
-          <p>{t('aboutPage.ownText')}</p>
-          <Link className="text-link" to={routePath('products')}>
-            {t('aboutPage.ownLink')}
-            <Icon name="arrow" className="btn-icon" />
-          </Link>
-        </div>
-
-        <ul className="own-list">
-          {homeProducts.map((product) => (
-            <li key={product.id}>
-              <Link to={productPath(product.id)}>
-                <ProductIcon product={product} />
-                <span>
-                  <strong>{t(`products.items.${product.key}.name`)}</strong>
-                  <span>{t(`products.items.${product.key}.category`)}</span>
-                </span>
-                <Icon name="arrow" className="btn-icon" />
-              </Link>
+      {/* 4. Referanslar: logo duvarı */}
+      <section className="page-section">
+        <h2 className="section-label">{t('aboutPage.referencesTitle')}</h2>
+        <ul className="reference-wall">
+          {references.map((reference) => (
+            <li key={reference.id}>
+              {reference.url ? (
+                <a href={reference.url} target="_blank" rel="noreferrer">
+                  <ReferenceLogo reference={reference} />
+                  <span className="reference-name">{reference.name}</span>
+                </a>
+              ) : (
+                <div>
+                  <ReferenceLogo reference={reference} />
+                  <span className="reference-name">{reference.name}</span>
+                </div>
+              )}
             </li>
           ))}
         </ul>
-      </section>
-
-      {/* 5. Çalışma şekli: dikey akış */}
-      <section className="page-section process">
-        <div className="process-main">
-          <h2 className="section-label">{t('aboutPage.workTitle')}</h2>
-          <p className="process-intro">{t('aboutPage.workText')}</p>
-          <ol className="process-steps">
-            {approachSteps.map((item) => (
-              <li key={item.key}>
-                <span className="process-marker">{item.step}</span>
-                <div className="process-body">
-                  <strong>{t(`approach.steps.${item.key}.title`)}</strong>
-                  <p>{t(`approach.steps.${item.key}.description`)}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        <aside className="facts">
-          <span className="section-label">{t('aboutPage.factsTitle')}</span>
-          <div className="facts-grid">
-            {statKeys.map((key) => (
-              <div className="stat" key={key}>
-                <strong>{siteStats[key]}</strong>
-                <span>{t(`stats.${key}.label`)}</span>
-              </div>
-            ))}
-          </div>
-        </aside>
-      </section>
-
-      {/* 6. Kapanış mottosu */}
-      <section className="motto-band">
-        <i className="rule" />
-        <p>{motto}</p>
-      </section>
-
-      <section className="product-cta">
-        <div>
-          <h2>{t('servicesPage.ctaTitle')}</h2>
-          <p>{t('servicesPage.ctaText')}</p>
-        </div>
-        <Link className="btn btn-dark" to={routePath('contact')}>
-          {t('productPages.ctaButton')}
-          <Icon name="arrow" className="btn-icon" />
-        </Link>
       </section>
     </div>
   )

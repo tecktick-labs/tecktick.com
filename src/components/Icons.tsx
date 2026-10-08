@@ -101,6 +101,15 @@ const paths: Record<string, ReactNode> = {
   arrow: <path d="M4 12h15m-6-6 6 6-6 6" />,
   arrowLeft: <path d="M20 12H5m6-6-6 6 6 6" />,
   play: <path d="M9 6.5 17 12l-8 5.5V6.5Z" />,
+  gamepad: (
+    <>
+      <path d="M7.5 7h9a4.5 4.5 0 0 1 4.4 5.4l-.8 4a2.6 2.6 0 0 1-4.5 1.2L14 16h-4l-1.6 1.6a2.6 2.6 0 0 1-4.5-1.2l-.8-4A4.5 4.5 0 0 1 7.5 7Z" />
+      <path d="M8 10.5v3" />
+      <path d="M6.5 12h3" />
+      <path d="M15.5 11h.01" />
+      <path d="M17.5 13h.01" />
+    </>
+  ),
   spark: (
     <>
       <path d="M12 3v18" />

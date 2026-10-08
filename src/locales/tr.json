@@ -32,7 +32,8 @@
     "comingSoon": "Çok yakında",
     "visitSite": "Siteyi aç",
     "viewDetails": "Detayları gör",
-    "viewOnPlayStore": "Google Play'de gör"
+    "viewOnPlayStore": "Google Play'de gör",
+    "viewAll": "Tümünü gör"
   },
   "hero": {
     "kicker": "Teknoloji Stüdyosu",
@@ -40,7 +41,7 @@
     "titleSoft": "Sonsuz olasılık.",
     "lead": "Yazılım geliştiriyor, sistem kuruyor ve fikirleri gerçek ürünlere dönüştürüyoruz. Hızlı, odaklı ve hep bir adım önde.",
     "ctaPrimary": "Birlikte inşa edelim",
-    "ctaSecondary": "Videoyu izle",
+    "ctaSecondary": "Hizmetler",
     "mock": {
       "menu": {
         "ideas": "Fikirler",
@@ -50,15 +51,7 @@
       },
       "title": "Daha akıllı\nçözümler\ndaha hızlı",
       "text": "Fikirden etkiye. İşleri ileri taşıyan dijital ürünler geliştiriyoruz.",
-      "button": "İşlerimizi incele",
-      "greeting": "Günaydın",
-      "greetingLine": "Hadi başlayalım",
-      "greetingStrong": "sırada ne var?",
-      "growthLabel": "Toplam büyüme",
-      "growthValue": "+%40",
-      "activeProjects": "Aktif proje",
-      "teamMembers": "Ekip üyesi",
-      "weeksToLaunch": "Hafta sonra lansman"
+      "button": "İşlerimizi incele"
     }
   },
   "stats": {
@@ -77,8 +70,7 @@
   },
   "services": {
     "kicker": "Hizmetlerimiz",
-    "title": "Fikirden\netkiye.",
-    "text": "İddialı ekiplerle birlikte fark yaratan dijital ürünler tasarlıyor, geliştiriyor ve büyütüyoruz.",
+    "title": "Fikirden etkiye.",
     "items": {
       "customSoftware": {
         "title": "Özel Yazılım Geliştirme",
@@ -105,8 +97,7 @@
   },
   "products": {
     "kicker": "Ürünlerimiz",
-    "title": "Ürünler ve\nişler.",
-    "text": "Kendi oyunlarımız, işletmeler için kurduğumuz platform ve müşterilerimiz için yaptığımız siteler. Hepsi yayında, hepsi aynı standartta.",
+    "title": "Ürünler ve işler.",
     "items": {
       "anlikEleman": {
         "name": "Anlık Eleman",
@@ -160,9 +151,7 @@
       "android": "Android"
     },
     "smallWorks": {
-      "title": "Diğer projelerimiz",
       "slogan": "Bazen 1 saat, bazen 1 yıl. Hepsi Tecktick.",
-      "text": "Kurup teslim ettiğimiz işletme ve proje siteleri.",
       "items": {
         "emrasKitchen": {
           "name": "Emran'ın Mutfağı",
@@ -183,33 +172,27 @@
     }
   },
   "approach": {
-    "kicker": "Yaklaşımımız",
-    "title": "Dinle.\nKur.\nGeliştir.\nBüyüt.",
-    "office": "Fikri sen anlat,\nkuracak ekip burada.",
+    "title": "Analiz Et.\nPlanla.\nİnşa Et.",
+    "office": "Fikirden\nÜrüne.",
     "vision": "Önce çalışsın.\nSonra büyüsün.",
     "steps": {
-      "understand": {
-        "title": "Anla",
-        "description": "Dinliyoruz. Öğreniyoruz."
+      "analyze": {
+        "title": "Analiz Et",
+        "description": "İhtiyacı, kullanıcıyı ve mevcut durumu inceliyoruz."
+      },
+      "plan": {
+        "title": "Planla",
+        "description": "Kapsamı, sırayı ve süreyi netleştiriyoruz."
       },
       "build": {
-        "title": "Kur",
-        "description": "Üretiyoruz. Teslim ediyoruz."
-      },
-      "iterate": {
-        "title": "Geliştir",
-        "description": "İyileştiriyoruz. Ölçekliyoruz."
-      },
-      "evolve": {
-        "title": "Büyüt",
-        "description": "Birlikte büyüyoruz."
+        "title": "İnşa Et",
+        "description": "Çalışan ürünü kurup yayına alıyoruz."
       }
     }
   },
   "insights": {
     "kicker": "Atölyeden",
-    "title": "Şu an\nne yapıyoruz?",
-    "text": "Blog değil, çalışma notu. Bu hafta masamızda ne varsa burada yazıyor.",
+    "title": "Şu an ne yapıyoruz?",
     "items": {
       "aePanel": {
         "tag": "Anlık Eleman",
@@ -281,8 +264,7 @@
   },
   "footer": {
     "kicker": "Konuşalım",
-    "title": "Bir fikrin mi var?\nTek tık yeter.",
-    "text": "Ne inşa ettiğini anlat. Uygun olduğumuzda hızlıca dönüş yaparız.",
+    "title": "Tecktick Labs tek tik atın,\ngerisini bize bırakın.",
     "copyright": "© {{year}} Tecktick Labs"
   },
   "productPages": {
@@ -503,7 +485,7 @@
   "contact": {
     "kicker": "Konuşalım",
     "title": "Bir fikrin mi var?\nTek tık yeter.",
-    "text": "Ne inşa etmek istediğini birkaç cümleyle anlat. Uygun olduğumuzda hızlıca dönüş yaparız.",
+    "text": "Ne kurmak istediğini birkaç cümleyle anlat. Aynı gün dönüş yapıyoruz.",
     "emailLabel": "E-posta",
     "phoneLabel": "Telefon",
     "form": {
@@ -513,7 +495,6 @@
       "email": "E-posta",
       "emailPlaceholder": "ornek@sirket.com",
       "company": "Şirket",
-      "companyOptional": "isteğe bağlı",
       "companyPlaceholder": "Şirket ya da proje adı",
       "subject": "Konu",
       "subjects": {
@@ -528,7 +509,10 @@
       "sending": "Gönderiliyor...",
       "success": "Teşekkürler, mesajın bize ulaştı. En kısa sürede döneceğiz.",
       "error": "Mesaj gönderilemedi. Doğrudan e-posta ile yazabilirsin.",
-      "required": "Zorunlu alan"
+      "required": "Zorunlu alan",
+      "optional": "isteğe bağlı",
+      "phone": "Telefon",
+      "phonePlaceholder": "05xx xxx xx xx"
     }
   },
   "servicesPage": {
@@ -591,14 +575,48 @@
     },
     "toolsHint": "Hangi teknolojilerle çalışıyoruz?",
     "toolsCount_one": "{{count}} araç",
-    "toolsCount_other": "{{count}} araç"
+    "toolsCount_other": "{{count}} araç",
+    "details": {
+      "customSoftware": {
+        "text": "İş akışını birlikte inceliyor, hazır bir paketin karşılamadığı ihtiyaç için sana özel bir yazılım kuruyoruz.",
+        "points": {
+          "p1": "Kapsam ve kullanıcılar işe başlamadan yazılı olarak netleşir.",
+          "p2": "Web paneli, mobil uygulama veya arka plan sistemi; ihtiyaca göre seçilir.",
+          "p3": "Teslimden sonra kullanım takip edilir, gereken düzeltmeler yapılır."
+        }
+      },
+      "product": {
+        "text": "Bir fikri, ilk sürümü yayında olan bir ürüne dönüştürmek için birlikte çalışıyoruz.",
+        "points": {
+          "p1": "İlk sürümde ne olacağı ve ne olmayacağı birlikte belirlenir.",
+          "p2": "Çalışan sürümler düzenli aralıklarla seninle paylaşılır.",
+          "p3": "Mağaza ve web yayını, alan adı ve sunucu kurulumu dahildir."
+        }
+      },
+      "integration": {
+        "text": "Kullandığın araçları birbirine bağlıyor, elle taşınan veriyi azaltıyoruz.",
+        "points": {
+          "p1": "Ödeme, harita, bildirim ve analiz servisleri bağlanabilir.",
+          "p2": "Mevcut programlarınla veri alışverişi kurulur.",
+          "p3": "Bağlantı kopduğunda haberin olması için uyarı eklenir."
+        }
+      },
+      "consulting": {
+        "text": "Elindeki yazılımı inceleyip ne durumda olduğunu sade bir dille anlatıyoruz.",
+        "points": {
+          "p1": "Yavaşlayan ve sık sorun çıkaran noktalar listelenir.",
+          "p2": "Düzeltmek ile yeniden yapmak karşılaştırılır.",
+          "p3": "Sıradaki adımlar öncelik sırasıyla yazılır."
+        }
+      }
+    }
   },
   "aboutPage": {
     "kicker": "Hakkımızda",
     "title": "Fikirleri çalışan\ndijital ürünlere dönüştürüyoruz",
     "lead": "Tecktick Labs, İstanbul merkezli bir teknoloji stüdyosu. Mobil uygulamalar, web platformları, arka plan sistemleri ve özel yazılım çözümleri geliştiriyoruz.",
-    "journeyTitle": "Yeni şirket,\nyeni olmayan deneyim",
-    "journeyText": "Şirket olarak yeni bir yolculuğa başlıyoruz. Arkasında ise kurumsal projelerden mobil uygulamalara, iş platformlarından gerçek zamanlı sistemlere uzanan bir geliştirme geçmişi var.",
+    "journeyTitle": "Yeni şirket, yeni olmayan deneyim",
+    "journeyText": "Tecktick Labs 2026'da kuruldu. Ekipte kurumsal projelerde, mobil uygulamalarda ve iş platformlarında çalışmış kişiler var; bu deneyimi şimdi kendi stüdyomuzda bir araya getiriyoruz.",
     "approachTitle": "Bir projeye nasıl bakıyoruz?",
     "approachText": "Bir projeyi yalnızca kod yazılacak bir iş olarak görmüyoruz. Önce ihtiyacı ve kullanıcıyı anlıyor, sonra gereksiz karmaşıklığı azaltarak sürdürülebilir bir ürün çıkarıyoruz. Tasarım, yazılım, veri altyapısı, entegrasyon ve yayın sürecini tek bir bütün olarak ele alıyoruz.",
     "valuesTitle": "Neye dikkat ediyoruz?",
@@ -616,33 +634,35 @@
         "description": "Hız önemli ama acele değil. Akıcı çalışan, hızlı açılan ve anlaşılır bir arayüz bizim için sonucun parçasıdır."
       }
     },
-    "ownTitle": "Kendi ürünlerimiz",
-    "ownText": "Müşteri işlerinin yanında kendi dijital ürünlerimizi de üretiyoruz. Bu, bir ürünü yalnızca teknik tarafıyla değil; kullanıcı deneyimi, operasyon, büyüme ve uzun vadeli sürdürülebilirlik açısından da değerlendirmemizi sağlıyor.",
-    "ownLink": "Ürünlerimize bak",
-    "workTitle": "Çalışma şeklimiz açık",
-    "workText": "Problemi anlarız, doğru sistemi kurarız, çalışan ürünü yayına alırız ve gerçek geri bildirimle geliştirmeye devam ederiz.",
-    "factsTitle": "Kısa bilgiler"
+    "experienceTitle": "Arkamızda",
+    "experience": {
+      "corporate": "Kurumsal projeler",
+      "multilingual": "Çok dilli platformlar",
+      "platforms": "İş platformları",
+      "realtime": "Gerçek zamanlı sistemler"
+    },
+    "referencesTitle": "Referanslarımız"
   },
   "insightsPage": {
     "kicker": "Bizden haberler",
     "title": "Atölyeden",
     "text": "Üzerinde çalıştığımız işler, çıkardığımız sürümler ve stüdyodan notlar.",
     "featured": "Öne çıkan",
-    "readMore": "Yazının devamı",
+    "readMore": "Devamını gör",
     "backToList": "Tüm haberler",
     "relatedTitle": "Diğer notlar",
     "publishedOn": "Yayımlandı",
-    "count_one": "{{count}} not",
-    "count_other": "{{count}} not",
-    "emptyTitle": "Bu başlıkta not yok",
-    "emptyText": "Başka bir projeyi seçebilir ya da tümünü görebilirsin.",
-    "filters": {
-      "all": "Tümü",
-      "anlikEleman": "Anlık Eleman",
-      "barbaros": "Barbaros: Kızıl Sakal",
+    "loadMore": "Daha fazla göster",
+    "progress": "{{total}} nottan {{shown}} tanesi",
+    "allLoaded": "Hepsi bu kadar. Yeni notlar iş ilerledikçe eklenir.",
+    "platforms": {
+      "web": "Web",
+      "mobile": "Mobil",
+      "panel": "Panel",
+      "backend": "Sunucu",
+      "game": "Oyun",
       "studio": "Stüdyo"
-    },
-    "footnote": "Yeni notlar iş ilerledikçe buraya eklenir."
+    }
   },
   "notFound": {
     "kicker": "404",
@@ -653,6 +673,7 @@
   },
   "legal": {
     "updated": "Son güncelleme",
+    "navLabel": "Yasal metinler",
     "backToHome": "Ana sayfaya dön",
     "contactNote": "Bu metinlerle ilgili sorularınız için account@tecktick.com adresine yazabilirsiniz.",
     "pages": {
@@ -674,7 +695,8 @@
             ],
             "items": [
               "Ad ve soyad",
-              "E-posta adresi",
+              "Telefon numarası",
+              "E-posta adresi (isteğe bağlı)",
               "Şirket veya proje adı (isteğe bağlı)",
               "Seçtiğiniz konu başlığı",
               "Mesajınızın içeriği"
@@ -691,6 +713,7 @@
             "heading": "Kimlerle paylaşıyoruz",
             "body": [
               "Form gönderimleri, siteyi yayınladığımız Netlify altyapısı üzerinden bize ulaşır ve e-posta hesabımıza iletilir. Bu hizmet sağlayıcıların sunucuları yurt dışında bulunabilir.",
+              "Ziyaret istatistikleri için Google Firebase Analytics kullanılır; onayınız olmadan çerez yazmaz. Ayrıntılar Çerez Politikası sayfasındadır.",
               "Bunun dışında verilerinizi üçüncü taraflarla paylaşmayız. Yasal bir zorunluluk doğması hâlinde yetkili kurumlara bilgi verilebilir."
             ]
           },
@@ -735,36 +758,40 @@
           {
             "heading": "İşlenen kişisel veriler",
             "body": [
-              "Sitedeki iletişim formu aracılığıyla aşağıdaki veriler işlenir:"
+              "Sitede aşağıdaki veriler işlenir:"
             ],
             "items": [
               "Kimlik bilgisi: ad ve soyad",
-              "İletişim bilgisi: e-posta adresi",
-              "Müşteri işlem bilgisi: şirket veya proje adı, konu başlığı ve mesaj içeriği"
+              "İletişim bilgisi: telefon numarası ve e-posta adresi (isteğe bağlı)",
+              "Müşteri işlem bilgisi: iletişim formuna yazdığınız şirket veya proje adı, konu başlığı ve mesaj içeriği",
+              "İşlem güvenliği ve kullanım bilgisi: ziyaret ettiğiniz sayfalar, cihaz ve tarayıcı türü, IP adresinden çıkarılan yaklaşık konum. Analiz çerezi yalnızca onay verirseniz yazılır."
             ]
           },
           {
             "heading": "İşleme amaçları",
             "body": [
-              "Kişisel verileriniz; talebinizin alınması ve değerlendirilmesi, size geri dönüş yapılması, iş görüşmelerinin yürütülmesi ve gerektiğinde sözleşme öncesi hazırlıkların yapılması amacıyla işlenir."
+              "Kişisel verileriniz; talebinizin alınması ve değerlendirilmesi, size geri dönüş yapılması, iş görüşmelerinin yürütülmesi ve gerektiğinde sözleşme öncesi hazırlıkların yapılması amacıyla işlenir.",
+              "Kullanım bilgisi, sitenin hangi bölümlerinin ilgi gördüğünü toplu olarak anlamak ve siteyi geliştirmek amacıyla işlenir."
             ]
           },
           {
             "heading": "Hukuki sebep",
             "body": [
-              "Veriler, Kanun'un 5'inci maddesinin ikinci fıkrasında yer alan \"bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması\" ve \"veri sorumlusunun meşru menfaati\" hukuki sebeplerine dayanılarak, formu kendi iradenizle doldurmanız üzerine işlenir."
+              "Veriler, Kanun'un 5'inci maddesinin ikinci fıkrasında yer alan \"bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması\" ve \"veri sorumlusunun meşru menfaati\" hukuki sebeplerine dayanılarak, formu kendi iradenizle doldurmanız üzerine işlenir.",
+              "Analiz çerezleri Kanun'un 5'inci maddesinin birinci fıkrası uyarınca açık rızanıza dayanır. Rızanızı sayfanın altındaki \"Çerez tercihleri\" bağlantısından istediğiniz zaman geri alabilirsiniz."
             ]
           },
           {
             "heading": "Toplama yöntemi",
             "body": [
-              "Veriler yalnızca elektronik ortamda, siteye kendiniz girdiğiniz form üzerinden toplanır. Otomatik olarak profil çıkarılmaz."
+              "Veriler elektronik ortamda; siteye kendiniz girdiğiniz form üzerinden ve ziyaretiniz sırasında Google Firebase Analytics aracılığıyla otomatik olarak toplanır. Kişisel profil çıkarılmaz, veriler reklam amacıyla kullanılmaz."
             ]
           },
           {
             "heading": "Yurt dışına aktarım",
             "body": [
-              "Site, sunucuları yurt dışında bulunabilen bir barındırma hizmeti üzerinden yayımlanmaktadır. Form gönderimleri bu altyapı üzerinden bize ulaştığı için verileriniz yurt dışındaki sunucularda geçici olarak işlenebilir."
+              "Site, sunucuları yurt dışında bulunabilen bir barındırma hizmeti (Netlify) üzerinden yayımlanmaktadır. Form gönderimleri bu altyapı üzerinden bize ulaştığı için verileriniz yurt dışındaki sunucularda geçici olarak işlenebilir.",
+              "Kullanım bilgisi, Google Firebase Analytics hizmeti aracılığıyla Google'ın yurt dışındaki sunucularında işlenir."
             ]
           },
           {
@@ -799,26 +826,38 @@
           {
             "heading": "Kullandığımız kayıtlar",
             "body": [
-              "Site, reklam veya takip çerezi kullanmaz. Yalnızca çalışması için gerekli olan tek bir kayıt tutulur:"
+              "Site reklam çerezi kullanmaz. Tarayıcınızda iki zorunlu kayıt tutulur; bunlar için onay gerekmez:"
             ],
             "items": [
-              "Dil tercihi: seçtiğiniz dilin (Türkçe veya İngilizce) bir sonraki ziyaretinizde hatırlanması için tarayıcınızda saklanır."
+              "Dil tercihi: seçtiğiniz dilin (Türkçe veya İngilizce) bir sonraki ziyaretinizde hatırlanması için saklanır.",
+              "Çerez tercihi: analiz çerezini kabul edip etmediğiniz, kartın tekrar gösterilmemesi için saklanır."
             ]
           },
           {
-            "heading": "Üçüncü taraf çerezleri",
+            "heading": "Ziyaret istatistikleri",
             "body": [
-              "Şu anda üçüncü taraf analiz veya reklam çerezi kullanılmamaktadır. İleride ziyaret istatistiği toplamaya başlarsak bu sayfayı güncelleyeceğiz."
+              "Hangi sayfaların ziyaret edildiğini anlamak için Google Firebase Analytics kullanırız. Onay vermediğiniz sürece çerezsiz çalışır: tarayıcınıza çerez yazmaz ve sizi ziyaretler arasında tanımaz.",
+              "Kabul ederseniz Google Analytics çerezleri (_ga ve _ga_ ile başlayanlar) yazılır. Bu çerezler en fazla iki yıl saklanır ve tekrar gelen ziyaretçileri ayırt etmemizi sağlar.",
+              "Toplanan bilgiler sayfa görüntüleme, yaklaşık konum (ülke ve şehir), cihaz ve tarayıcı türü gibi toplu verilerdir. Reklam amacıyla kullanılmaz ve satılmaz. Google'ın sunucuları yurt dışında bulunabilir."
             ]
           },
           {
-            "heading": "Nasıl kaldırabilirsiniz",
+            "heading": "Tercihinizi değiştirmek",
             "body": [
-              "Tarayıcınızın ayarlarından site verilerini temizleyerek bu kaydı silebilirsiniz. Kaydı silmeniz sitenin çalışmasını engellemez; yalnızca dil tercihiniz varsayılana döner."
+              "Sayfanın altındaki \"Çerez tercihleri\" bağlantısıyla kararınızı istediğiniz zaman değiştirebilirsiniz. Reddettiğinizde analiz çerezleri silinir.",
+              "Tarayıcınızın ayarlarından site verilerini temizleyerek tüm kayıtları da silebilirsiniz. Bu, sitenin çalışmasını engellemez; dil tercihiniz varsayılana döner ve çerez kartı yeniden görünür."
             ]
           }
         ]
       }
     }
+  },
+  "consent": {
+    "label": "Çerez tercihi",
+    "text": "Siteyi nasıl kullandığınızı anlamak için analiz çerezi kullanmak istiyoruz. Reddederseniz site aynı şekilde çalışır.",
+    "policy": "Çerez Politikası",
+    "accept": "Kabul et",
+    "reject": "Reddet",
+    "manage": "Çerez tercihleri"
   }
 }

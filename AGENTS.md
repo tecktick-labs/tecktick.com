@@ -121,7 +121,21 @@ hash sekmeleri aynı anda seçili görünüyordu ve gereksiz bir ara adımdı. M
 ### 6. Sayfa kalıbı ve ana sayfa ilişkisi
 Ana sayfa bir **vitrindir**, alt sayfalar **derinliktir**. Ana sayfadaki bölüm
 aynı içeriği baştan listelemez; kısa bir özet gösterir ve ilgili sayfaya
-bağlanır (örnek: ana sayfada üç iş, `/products` sayfasında tamamı).
+bağlanır (örnek: ana sayfada iki ürün, `/products` sayfasında tamamı).
+
+**Ana sayfada yalnızca iki ürün** gösterilir: Anlık Eleman ve SigortaMobil,
+bu sırayla (`HOME_PRODUCT_IDS`, `src/data/site.ts`). Diğer ürünler ve küçük
+işler ("diğer projelerimiz") yalnızca `/products` sayfasındadır; ana sayfaya
+eklenmez. Ürünler sayfasının üst vitrini (`featured`) bundan bağımsızdır.
+
+**Ana sayfa bölüm başlıkları** tek satırdır (`.section-title`: kicker + `h2`);
+başlığın yanına açıklama paragrafı veya bağlantı konmaz. Liste içeren her
+bölümün (hizmetler, ürünler, atölye) altında ortalanmış tek bir "Tümünü gör"
+butonu durur (`SectionMore`, `common.viewAll`).
+
+**Çalışma akışı** üç adımdır: Analiz Et → Planla → İnşa Et (`approachSteps`,
+metinler `approach.steps.<key>`). Ana sayfa, Hizmetler ve Hakkımızda aynı
+listeden beslenir; "Anla / Kur / Geliştir / Büyüt" kullanılmaz.
 
 Alt sayfalar ortak iskeleti kullanır, böylece yeni sayfa tasarlamak gerekmez:
 
@@ -139,7 +153,16 @@ boyutu uydurulmaz.
 **Uzun sayfalar tek bir düzeni tekrarlamaz.** Bölümler birbirinden farklı
 kurulur ve aralarına nefes alanı konur. Hizmetler sayfası bu kalıbın örneğidir:
 
-1. Kart ızgarası + koyu panel
+1. Numaralı geniş satırlar (`.service-index`) — 01–04, hizmet adı, tek
+   cümle ve sağda kapsadığı işler etiket olarak (`services[].capabilityKeys`).
+   Ana sayfadaki hizmet kartları ve koyu panel burada **tekrarlanmaz**; bir alt
+   sayfa, ana sayfadan geldiği bölümün bileşenini yeniden kullanmaz.
+   Satırlar açılır (`ServiceIndex`): açılan kısımda tek cümle, üç madde ve
+   iletişim bağlantısı durur (`servicesPage.details.<id>.text` ve
+   `.points.p1–p3`). Ana sayfadaki her hizmet kartı `serviceFocusPath(id)` ile
+   `/services?service=<id>` adresine gider; sayfa o satırı açık, üst barın
+   altına kaydırılmış ve klavye odağında getirir. Sayfa içinde başka satır
+   açmak adresi günceller ama sayfayı kaydırmaz.
 2. Tam genişlikte **slogan bandı** (`.slogan-band`) — bölümleri ayırır
 3. Yoğun iki sütunlu liste (`.capability-grid`) — ikon + başlık + tek cümle
 4. Dar dikey akış (`.process-steps`) + yanında koyu söz bloğu (`.promise`)
@@ -167,23 +190,45 @@ Bağlantılar alt bilgideki ayrı satırda durur. Siteye kişisel veri toplayan
 yeni bir alan eklenirse (form alanı, analiz aracı, çerez) bu metinler de
 güncellenir.
 
+**Analitik:** tek giriş noktası `src/lib/analytics` ve dışarıya yalnızca
+`trackEvent(ad, parametreler)` açılır. Firebase'e, `gtag`'e veya
+`firebase/*` paketlerine bileşenden doğrudan erişilmez. Olaylar
+`src/lib/analytics/events.ts` kataloğunda tipli tanımlanır; yeni olay için
+önce oraya kayıt eklenir, parametrelere kişisel veri yazılmaz. Sayfa
+görüntüleme ve dış bağlantı tıklamaları Google Analytics tarafından otomatik
+ölçülür. Analitik yalnızca üretim derlemesinde ve ayrı pakette yüklenir;
+yüklenene kadar gelen olaylar kuyrukta bekler.
+
+**Çerez onayı:** onay verilene kadar analitik çerezsiz çalışır. `CookieConsent`
+köşedeki kartla seçim ister; seçim `src/lib/consent.ts` üzerinden
+`localStorage` (`tecktick.consent`) içinde saklanır ve analitik değişikliği
+kendisi dinler. Alt bilgideki "Çerez tercihleri" kartı yeniden açar. Reklam
+izinleri her zaman kapalıdır.
+
 ### Haberler (çalışma notları)
 `/insights` bir haber akışıdır; her notun kendi sayfası vardır
 (`/insights/<id>`). Yeni not eklerken:
 
 1. `src/data/site.ts` içindeki `insights` dizisine kayıt ekle: `id` (adreste
-   görünen kısa ad), `key` (çeviri anahtarı), `project` ve ISO `date`.
-   Liste yeniden eskiye sıralıdır; `featured: true` olan not listenin başındaki
-   geniş kartta çıkar ve yalnızca bir notta bulunur.
+   görünen kısa ad), `key` (çeviri anahtarı), `project`, `platform` ve ISO
+   `date`. `platform` tür rozetidir (`web`, `mobile`, `panel`, `backend`,
+   `game`, `studio`); ikonu `insightPlatformIcons`, etiketi
+   `insightsPage.platforms` altındadır. Yeni tür eklenirse üçüne de kayıt
+   girilir. `featured: true` olan not sayfanın başındaki tek koyu satırda
+   çıkar, akışta tekrar edilmez ve yalnızca bir notta bulunur.
 2. `src/locales/*.json` içindeki `insights.items.<key>` altına `tag`, `status`,
    `title`, `excerpt` ve `body.p1/p2/p3` ekle. Özet liste ve paylaşım
    açıklaması olarak kullanılır, gövde yalnızca not sayfasında görünür.
-3. Ana sayfada üç not görünür (`homeInsights`); farklı projelerden seçilir,
-   aynı projenin üç notu yan yana gelmez.
+3. Ana sayfada son üç not görünür (`homeInsights`); seçim yalnızca tarihe
+   göredir, en yeni üstte. Her not geniş bir kutuda tek satırdır
+   (`.update-row`, köşe 12px): tarih, proje etiketi, başlık + iki satırda
+   kesilen özet, "Devamını gör". Kart ızgarası kullanılmaz.
 
 Tarihler elle yazılmaz: ISO değeri `formatDate` ile aktif dile göre
-biçimlenir. Filtreler proje bazlıdır ve seçim adres satırında tutulur
-(`/insights?project=barbaros`).
+biçimlenir. Sayfada filtre veya sekme yoktur: notlar ay başlıkları altında,
+yeniden eskiye bir zaman çizelgesinde akar (`insightsByDate`). İlk açılışta
+5 not görünür, "Daha fazla göster" her tıklamada 5 not daha ekler
+(`PAGE_SIZE`, `InsightsPage.tsx`).
 
 **SEO:** `useDocumentMeta` her sayfada başlık, açıklama, `og:` etiketleri ve
 canonical adresi kurar; not sayfaları ayrıca `useArticleSchema` ile Article
@@ -191,8 +236,8 @@ yapısal verisi yayınlar. Bunlar tarayıcıda çalışır. Arama motorlarının
 JavaScript çalıştırmadan içeriği görmesi gerekiyorsa sonraki adım ön render
 (prerender/SSG) kurmaktır.
 
-**Sayılar uydurulmaz.** Ana sayfadaki şerit ve Hakkımızda sayfasındaki
-kutu, `src/data/site.ts` içindeki `siteStats` alanından beslenir; bu alan
+**Sayılar uydurulmaz.** Ana sayfadaki şerit `src/data/site.ts` içindeki
+`siteStats` alanından beslenir (sayılar yalnızca ana sayfada görünür); bu alan
 ürün ve iş listelerinden hesaplanır (yayına alınan iş, App Store uygulaması,
 web projesi, geliştirilen ürün). Yeni bir kayıt eklendiğinde rakamlar
 kendiliğinden güncellenir. Çeviri dosyasında yalnızca etiketler durur, değerler
@@ -200,7 +245,28 @@ değil.
 
 **Marka mottosu:** "Build. Iterate. Evolve." iki dilde de aynı kalır; çeviri
 dosyasında değil `src/data/site.ts` içindeki `motto` alanındadır. Ana sayfanın
-istatistik şeridi ve Hakkımızda sayfasının kapanışı bu alandan beslenir.
+istatistik şeridi bu alandan beslenir.
+
+### Hakkımızda sayfası
+Yalnızca "biz kimiz" anlatılır; ürün listesi, çalışma akışı, sayılar ve motto
+burada **tekrarlanmaz** (hepsi başka sayfalarda var). İletişim çağrısı alt
+bilgide olduğu için sayfa içinde ayrıca kapanış çağrısı yoktur. Sıra:
+
+1. Hikâye — büyük başlık + metin, altında "Arkamızda" listesi
+   (`experienceKeys`, metin `aboutPage.experience.<key>`)
+2. Bakış açısı — nane çizgili büyük alıntı (`.about-quote`)
+3. Değerler — kartsız, numaralı üç sütun (`.about-values`)
+4. Referanslar — logo duvarı (`.reference-wall`)
+
+**Referans eklemek:** `src/data/site.ts` içindeki `references` dizisine
+`{ id, name, logo, url? }` eklenir. `name` marka adıdır, çeviri dosyasına
+girmez. Logo `src/assets/references/` altına konup import edilir (şimdilik
+referansın kendi sitesinden alınır; ileride veritabanından gelecek). Logo yoksa
+(`null`) ya da yüklenemezse `ReferenceLogo` adın baş harflerini gösterir.
+
+**Metin tonu:** Tecktick Labs 2026'da kurulmuş yeni bir şirkettir. Uzun bir
+geçmiş ima eden, doğrulanamayan ya da iddialı cümleler yazılmaz; çalışılmamış
+sektör veya müşteri adı eklenmez.
 
 **Marka yazımı:** her yerde **Tecktick** (ilk harf büyük). Küçük harfli
 `tecktick` yazımı kullanılmaz; `labs` küçük kalır. Teknik yığını anlatan
@@ -260,6 +326,13 @@ Form **Netlify Forms** üzerinden çalışır ve iki parçası vardır:
 2. `ContactPage` içindeki gerçek form; gönderimi `fetch` ile kök adrese
    `application/x-www-form-urlencoded` olarak yollar.
 
+Alanlar: `name` (zorunlu), `phone` (zorunlu, `type="tel"`), `email` ve
+`company` (isteğe bağlı), `subject`, `message` (zorunlu). Dönüş telefonla
+yapılabildiği için e-posta zorunlu değildir. Toplanan alanlar değişirse
+Gizlilik Politikası ve KVKK metnindeki veri listesi ile `updated` tarihi de
+güncellenir. Form alanları `--line-strong` çerçeveli ve dolguludur; beyaz
+kart üzerinde net görünmesi için soluk gri tonlara geri dönülmez.
+
 Yeni bir alan eklerken **her iki forma da** eklenmelidir, yoksa Netlify o
 alanı kaydetmez. Form yalnızca yayındaki Netlify sitesinde çalışır; yerel
 geliştirmede gönderim başarısız olur ve kullanıcıya e-posta adresi gösterilir.
@@ -288,6 +361,12 @@ Gerçek görseller henüz yok. Görsel alanları `mock-image` sınıfıyla CSS
 yer tutucusuna düşer (`mock-office`, `mock-globe`, `mock-gradient`,
 `mock-thumb`). Gerçek görsel geldiğinde bu `div` bir `img` ile değiştirilir;
 ürün ikonları için `src/data/site.ts` içindeki `icon` alanı doldurulur.
+
+**Hero'daki telefon çizimi uydurma veri göstermez.** Kart, `siteStats.shipped`
+(yayına alınan iş) değerini; liste `heroPhoneProducts` içindeki gerçek ürünleri
+ikon, ad ve durumla gösterir. Büyüme yüzdesi, ekip sayısı gibi doğrulanamayan
+rakamlar eklenmez. Telefon her ekran genişliğinde dizüstünün sağ alt köşesine
+biner; küçük ekranda `transform: scale` ile küçülür, alta inmez.
 
 ## Dizin düzeni
 

@@ -1,31 +1,28 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Icon } from './Icons'
+import { SectionMore } from './SectionMore'
 import { services } from '../data/site'
+import { routePath, serviceFocusPath } from '../lib/routes'
 
 export function Services() {
   const { t } = useTranslation()
 
   return (
     <section className="section services" id="services">
-      <div className="services-intro">
-        <div>
-          <p className="kicker">{t('services.kicker')}</p>
-          <h2 className="multiline">{t('services.title')}</h2>
-        </div>
-        <p className="intro-text">{t('services.text')}</p>
-        <Link className="text-link" to="/services">
-          {t('common.discoverServices')}
-          <Icon name="arrow" className="btn-icon" />
-        </Link>
+      <div className="section-title">
+        <p className="kicker">{t('services.kicker')}</p>
+        <h2>{t('services.title')}</h2>
       </div>
 
       <div className="services-layout">
         <div className="service-grid">
           {services.map((service) => (
-            <article
+            // Kart, Hizmetler sayfasında kendi satırını açık getirir
+            <Link
               className={`service-card${service.featured ? ' is-featured' : ''}`}
               key={service.id}
+              to={serviceFocusPath(service.id)}
             >
               <Icon name={service.icon} className="service-icon" />
               <h3>{t(`services.items.${service.id}.title`)}</h3>
@@ -33,7 +30,7 @@ export function Services() {
               <span className="card-arrow">
                 <Icon name="arrow" />
               </span>
-            </article>
+            </Link>
           ))}
         </div>
 
@@ -47,6 +44,8 @@ export function Services() {
           </div>
         </article>
       </div>
+
+      <SectionMore to={routePath('services')} />
     </section>
   )
 }
