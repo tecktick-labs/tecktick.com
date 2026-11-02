@@ -18,7 +18,7 @@ const toolCount = toolGroups.reduce((total, group) => total + group.items.length
 
 export function ServicesPage() {
   const { t } = useTranslation()
-  useDocumentMeta(t('servicesPage.title'))
+  useDocumentMeta(t('servicesPage.title'), t('servicesPage.description'))
 
   return (
     <div className="page services-page">

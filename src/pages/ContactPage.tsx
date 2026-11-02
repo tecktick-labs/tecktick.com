@@ -6,7 +6,7 @@ import { contactEmail, contactPhone } from '../data/site'
 import { trackEvent } from '../lib/analytics'
 
 const FORM_NAME = 'contact'
-const SUBJECT_KEYS = ['project', 'app', 'game', 'other'] as const
+const SUBJECT_KEYS = ['project', 'web', 'app', 'chatbot', 'seo', 'game', 'other'] as const
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
@@ -19,7 +19,6 @@ export function ContactPage() {
   const { t } = useTranslation()
   useDocumentMeta(t('contact.kicker'), t('contact.text'))
   const [status, setStatus] = useState<Status>('idle')
-
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Tecktick Labs",
-    "description": "Tecktick Labs is a technology studio building software, mobile apps and games. One tick. Endless possibilities."
+    "description": "Tecktick Labs is a technology studio building websites, mobile apps, AI chatbots, SEO improvements and custom software solutions. Just one Teck tick, leave the rest to us."
   },
   "language": {
     "label": "Language",
@@ -37,9 +37,9 @@
   },
   "hero": {
     "kicker": "Technology Studio",
-    "titleStrong": "One tick.",
-    "titleSoft": "Endless possibilities.",
-    "lead": "We build software, create systems and turn ideas into real products. Fast, focused and always one step ahead.",
+    "titleStrong": "Just one Teck tick.",
+    "titleSoft": "Leave the rest to us.",
+    "lead": "We turn ideas into working digital products through websites, mobile apps, AI chatbot systems and SEO improvements.",
     "ctaPrimary": "Let's build together",
     "ctaSecondary": "Services",
     "mock": {
@@ -73,20 +73,20 @@
     "title": "From idea to impact.",
     "items": {
       "customSoftware": {
-        "title": "Custom Software Development",
-        "description": "Tailored solutions for real business needs."
+        "title": "Web & Mobile Apps",
+        "description": "Company websites, admin panels, and iOS and Android applications."
       },
       "product": {
-        "title": "Product Development",
-        "description": "From idea to market and beyond."
-      },
-      "integration": {
-        "title": "System Integration",
-        "description": "Connect. Automate. Grow."
+        "title": "Chatbots & AI",
+        "description": "Smart assistants that talk with your data, support bots and automation."
       },
       "consulting": {
-        "title": "Technology Consulting",
-        "description": "We review what you run and map the way forward."
+        "title": "SEO & Performance",
+        "description": "Search engine visibility, technical SEO and page speed improvements."
+      },
+      "integration": {
+        "title": "Custom Software & Integration",
+        "description": "Systems tailored to your business rules and third-party connections."
       }
     },
     "panel": {
@@ -110,6 +110,12 @@
         "category": "Insurance / iOS + Android",
         "tagline": "Quotes, policies and claims support in one app.",
         "description": "Get an insurance quote, see your active policies, download them as PDF and ask for support when you need to claim. Live on iOS and Android."
+      },
+      "aiPlatform": {
+        "name": "Tecktick AI Assistant Platform",
+        "category": "AI & Chatbot / In development",
+        "tagline": "Multi-tenant AI assistant platform that talks with a company's own knowledge base and data.",
+        "description": "A chatbot and smart assistant platform for company websites and products that answers from your knowledge base with sources and runs controlled actions across databases and APIs."
       },
       "nappsa": {
         "name": "Nappsa",
@@ -148,11 +154,22 @@
       "unity": "Unity",
       "mmo": "MMO",
       "server": "Server + API",
-      "android": "Android"
+      "android": "Android",
+      "ai": "Chatbot + AI"
     },
     "smallWorks": {
       "slogan": "Sometimes an hour, sometimes a year. All of it Tecktick.",
       "items": {
+        "askadroVip": {
+          "name": "AS Kadro VIP",
+          "category": "HR & staffing / Web",
+          "description": "Corporate HR platform providing seasonal and full-time staffing for hospitality, logistics, retail and event businesses."
+        },
+        "veraxisHr": {
+          "name": "Veraxis HR",
+          "category": "HR & management consulting / Web",
+          "description": "Multilingual corporate site offering strategic consulting in recruitment, performance management and organisational development."
+        },
         "emrasKitchen": {
           "name": "Emran's Kitchen",
           "category": "Boutique bakery / Web",
@@ -194,6 +211,17 @@
     "kicker": "From the workshop",
     "title": "What we are working on",
     "items": {
+      "aiAgentPlatform": {
+        "tag": "AI Assistant Platform",
+        "status": "In development",
+        "title": "A chatbot and AI assistant platform that talks with your company data",
+        "excerpt": "We are building our multi-tenant AI assistant platform that answers with sources from your knowledge base and connects safely to databases and internal services.",
+        "body": {
+          "p1": "We are building an AI Assistant and Chatbot platform that companies can plug into their websites, dashboards or mobile apps in minutes.",
+          "p2": "Rather than generic chat, the assistant answers from company documents with clear citations, reads and analyses permitted SQL, API or spreadsheet data, and runs sensitive actions through human approval flows.",
+          "p3": "We are building on a modular architecture from a single codebase so the same product runs either in the cloud (SaaS) or on a customer's own servers (self-hosted)."
+        }
+      },
       "aePanel": {
         "tag": "Anlık Eleman",
         "status": "In progress",
@@ -264,7 +292,7 @@
   },
   "footer": {
     "kicker": "Let's Talk",
-    "title": "One tick at Tecktick Labs,\nleave the rest to us.",
+    "title": "Just one Teck tick,\nleave the rest to us.",
     "copyright": "© {{year}} Tecktick Labs"
   },
   "productPages": {
@@ -365,6 +393,76 @@
           "p2": "We built the app for iOS and Android together. Simplifying the interface cut the quote and policy flows down to a few steps, and a claim request starts from the same place."
         }
       },
+      "aiPlatform": {
+        "overview": {
+          "p1": "Tecktick AI Assistant Platform is a multi-tenant product that lets companies build AI assistants capable of talking with their own documents, databases and internal services. It runs through an embeddable web chat widget, a hosted chat page and a server API.",
+          "p2": "Unlike a generic Q&A bot, it operates with role-based access control: it knows who is allowed to see which data, cites its sources and runs write operations such as creating or updating records through human approval."
+        },
+        "stats": {
+          "modes": {
+            "value": "3",
+            "label": "Deployment modes"
+          },
+          "connectors": {
+            "value": "4",
+            "label": "Data connector types"
+          },
+          "channels": {
+            "value": "3",
+            "label": "Integration surfaces"
+          }
+        },
+        "platforms": {
+          "widget": {
+            "title": "Web widget and chat screen",
+            "text": "A brand-customisable live chat interface added to a customer's website or product dashboard with a single snippet."
+          },
+          "admin": {
+            "title": "Admin and training panel",
+            "text": "Workspace for uploading knowledge bases, toggling assistant capabilities, configuring data connections and monitoring conversation quality."
+          },
+          "api": {
+            "title": "Backend service and Model Gateway",
+            "text": "Server layer managing multiple language models (OpenAI, Anthropic, Google, local models) while balancing speed and cost."
+          },
+          "connectors": {
+            "title": "Safe data connectors",
+            "text": "Layer for reading and analysing PostgreSQL, REST API, Excel and CSV sources within permission boundaries."
+          }
+        },
+        "features": {
+          "rag": {
+            "title": "Cited knowledge base (RAG)",
+            "text": "Chunks and indexes company documents and clearly shows which source each answer comes from."
+          },
+          "connectors": {
+            "title": "Database and API querying",
+            "text": "Runs aggregations directly in the database or data engine while the language model interprets verified results."
+          },
+          "actions": {
+            "title": "Human-approved actions",
+            "text": "Requests explicit approval before executing critical steps such as creating or updating records."
+          },
+          "permissions": {
+            "title": "Role and permission boundaries",
+            "text": "Every user only accesses the information and operations permitted by their role."
+          },
+          "models": {
+            "title": "Flexible model routing (BYOK)",
+            "text": "Each company can bring its own AI provider key or connect through platform-managed models."
+          },
+          "tenancy": {
+            "title": "Cloud or self-hosted deployment",
+            "text": "Runs with the exact same architecture in shared cloud, dedicated cloud or on the customer's own servers."
+          }
+        },
+        "tech": {
+          "text": "Built as a modular monolith on TypeScript, NestJS, LangGraph and pgvector. Every request, query and record is isolated per tenant, and the language model never receives raw database credentials or uncontrolled network access."
+        },
+        "status": {
+          "text": "Core architecture, data connectors, permission scenarios and widget infrastructure are in active development, preparing for initial enterprise pilot deployments."
+        }
+      },
       "nappsa": {
         "overview": {
           "p1": "Nappsa is a suggestion app built to lighten the small decisions of the day. What to eat, what to watch, what to do: it answers each with a short, curated set of ideas.",
@@ -463,6 +561,7 @@
   },
   "productsPage": {
     "title": "The work we ship",
+    "description": "Mobile applications, web platforms, AI assistants, games and corporate web projects built by Tecktick Labs.",
     "ownTitle": "Products and games",
     "clientTitle": "Other projects",
     "filters": {
@@ -484,8 +583,8 @@
   },
   "contact": {
     "kicker": "Let's Talk",
-    "title": "Got an idea?\nOne tick is enough.",
-    "text": "Tell us in a few sentences what you want to build. We reply the same day.",
+    "title": "Just one Teck tick,\nleave the rest to us.",
+    "text": "A website, mobile app, chatbot or SEO work; tell us in a few sentences what you want to build. We reply the same day.",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "form": {
@@ -498,9 +597,12 @@
       "companyPlaceholder": "Company or project name",
       "subject": "Subject",
       "subjects": {
-        "project": "New project",
-        "app": "Mobile app",
-        "game": "Game",
+        "project": "New project / Custom software",
+        "web": "Website & Web panel",
+        "app": "Mobile app (iOS / Android)",
+        "chatbot": "Chatbot & AI assistant",
+        "seo": "SEO & Performance improvements",
+        "game": "Game development",
         "other": "Something else"
       },
       "message": "Message",
@@ -517,6 +619,7 @@
   },
   "servicesPage": {
     "title": "What we do",
+    "description": "Website and mobile app development, AI chatbot setup, technical SEO and performance improvements, and custom software solutions.",
     "howTitle": "How we work",
     "ctaTitle": "Let's talk about your project",
     "ctaText": "We will sharpen the scope together and walk you through how the work would run.",
@@ -527,11 +630,19 @@
     "capabilities": {
       "mobile": {
         "title": "Mobile apps",
-        "text": "Apps that run on iPhone and Android at the same time."
+        "text": "Store-ready apps that run on iPhone and Android at the same time."
       },
       "web": {
         "title": "Websites and dashboards",
-        "text": "Company sites, platforms and admin screens."
+        "text": "Fast company sites, customer portals and admin screens."
+      },
+      "chatbot": {
+        "title": "Chatbots and smart assistants",
+        "text": "24/7 AI assistants that talk with your knowledge base and business data."
+      },
+      "seo": {
+        "title": "SEO and speed optimisation",
+        "text": "Technical SEO architecture, structured data, page speed and search visibility."
       },
       "services": {
         "title": "Services and live flow",
@@ -539,7 +650,7 @@
       },
       "integration": {
         "title": "Third-party connections",
-        "text": "Payment, maps, advertising and analytics services."
+        "text": "Data exchange with payment, maps, accounting, CRM and analytics services."
       },
       "cloud": {
         "title": "Going live",
@@ -554,8 +665,8 @@
         "text": "Going through your current software, planning and speeding it up."
       },
       "ai": {
-        "title": "AI assistance",
-        "text": "Faster prototypes, automation and less repetitive work."
+        "title": "Workflow automation",
+        "text": "Document processing, data analysis and cutting repetitive work with AI models."
       }
     },
     "toolsTitle": "For the curious",
@@ -564,6 +675,7 @@
       "mobile": "Mobile",
       "web": "Web",
       "backend": "Backend",
+      "ai": "AI",
       "data": "Data",
       "cloud": "Infrastructure"
     },
@@ -578,35 +690,35 @@
     "toolsCount_other": "{{count}} tools",
     "details": {
       "customSoftware": {
-        "text": "We look at your workflow together and build software for the needs an off-the-shelf package does not cover.",
+        "text": "From a fast corporate website representing your brand to full-scale mobile apps on iOS and Android stores, we build end to end.",
         "points": {
-          "p1": "Scope and users are agreed in writing before work starts.",
-          "p2": "Web panel, mobile app or backend system; chosen to fit the need.",
-          "p3": "After delivery we follow usage and make the fixes that are needed."
+          "p1": "Mobile-friendly, fast-loading and search-engine-ready websites and admin panels.",
+          "p2": "iOS and Android apps built from a single codebase and shipped to App Store and Google Play.",
+          "p3": "After launch we track usage and handle updates and maintenance together."
         }
       },
       "product": {
-        "text": "We work with you to turn an idea into a product whose first version is live.",
+        "text": "We build AI-powered chatbot and assistant systems that answer customer questions 24/7 and talk with your own documents and database.",
         "points": {
-          "p1": "We agree together on what the first version includes and what it does not.",
-          "p2": "Working builds are shared with you at regular intervals.",
-          "p3": "Store and web release, domain and server setup are included."
-        }
-      },
-      "integration": {
-        "text": "We connect the tools you use and cut down on data moved by hand.",
-        "points": {
-          "p1": "Payment, maps, notification and analytics services can be connected.",
-          "p2": "Data exchange with the software you already run is set up.",
-          "p3": "An alert is added so you know when a connection drops."
+          "p1": "A chat widget added to your site or dashboard answers with citations from your company knowledge base.",
+          "p2": "Safe connections to your existing systems for order status, bookings, quotes or data lookups.",
+          "p3": "Permission boundaries and human-approved steps keep you in full control."
         }
       },
       "consulting": {
-        "text": "We review the software you have and explain where it stands in plain language.",
+        "text": "We run technical SEO and performance work so your site ranks higher on Google, opens fast and turns visitors into customers.",
         "points": {
-          "p1": "Slow spots and frequent problem areas are listed.",
-          "p2": "Fixing and rebuilding are compared side by side.",
-          "p3": "Next steps are written down in order of priority."
+          "p1": "Page speed (Core Web Vitals), mobile usability, sitemap and indexing issues are resolved.",
+          "p2": "Page titles, meta tags, semantic HTML and Schema.org structured data are set up for search engines.",
+          "p3": "Slow spots and conversion drop-offs on your existing site are reviewed and improved in order of priority."
+        }
+      },
+      "integration": {
+        "text": "We build custom software for workflows off-the-shelf packages cannot cover and connect your tools to eliminate manual data entry.",
+        "points": {
+          "p1": "Payment systems, maps, notifications, CRM/ERP and analytics services are connected to your software.",
+          "p2": "Custom backend services are set up for internal operations, permissions and reporting.",
+          "p3": "Monitoring and alerts are added so you know immediately if a connection drops or fails."
         }
       }
     }
@@ -614,7 +726,7 @@
   "aboutPage": {
     "kicker": "About",
     "title": "We turn ideas into\ndigital products that work",
-    "lead": "Tecktick Labs is a technology studio based in Istanbul. We build mobile apps, web platforms, backend systems and custom software.",
+    "lead": "Tecktick Labs is a technology studio based in Istanbul. We build websites, mobile apps, AI chatbot systems, SEO improvements and custom software solutions.",
     "journeyTitle": "A new company, not a new track record",
     "journeyText": "Tecktick Labs was founded in 2026. The team has worked on corporate projects, mobile apps and business platforms before; we are now bringing that experience together in our own studio.",
     "approachTitle": "How we look at a project",
@@ -661,7 +773,8 @@
       "panel": "Panel",
       "backend": "Server",
       "game": "Game",
-      "studio": "Studio"
+      "studio": "Studio",
+      "ai": "AI"
     }
   },
   "notFound": {

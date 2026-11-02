@@ -10,7 +10,9 @@ import { legalPath } from '../lib/routes'
  */
 export function CookieConsent() {
   const { t } = useTranslation()
-  const [isOpen, setIsOpen] = useState(() => readConsent() === null)
+  const [isOpen, setIsOpen] = useState(
+    () => typeof window !== 'undefined' && readConsent() === null,
+  )
 
   useEffect(() => onConsentOpen(() => setIsOpen(true)), [])
 

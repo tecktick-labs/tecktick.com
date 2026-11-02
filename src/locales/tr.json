@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Tecktick Labs",
-    "description": "Tecktick Labs; yazılım, mobil uygulama ve oyun geliştiren bir teknoloji stüdyosu. Tek tık. Sonsuz olasılık."
+    "description": "Tecktick Labs; web sitesi, mobil uygulama, yapay zekâ destekli chatbot, SEO geliştirmeleri ve özel yazılım çözümleri üreten teknoloji stüdyosu. Teck tick atın, gerisini bize bırakın."
   },
   "language": {
     "label": "Dil",
@@ -37,9 +37,9 @@
   },
   "hero": {
     "kicker": "Teknoloji Stüdyosu",
-    "titleStrong": "Tek tık.",
-    "titleSoft": "Sonsuz olasılık.",
-    "lead": "Yazılım geliştiriyor, sistem kuruyor ve fikirleri gerçek ürünlere dönüştürüyoruz. Hızlı, odaklı ve hep bir adım önde.",
+    "titleStrong": "Teck tick atın.",
+    "titleSoft": "Gerisini bize bırakın.",
+    "lead": "Web siteleri, mobil uygulamalar, yapay zekâ destekli chatbot sistemleri ve SEO çalışmalarıyla fikirleri çalışan dijital ürünlere dönüştürüyoruz.",
     "ctaPrimary": "Birlikte inşa edelim",
     "ctaSecondary": "Hizmetler",
     "mock": {
@@ -73,20 +73,20 @@
     "title": "Fikirden etkiye.",
     "items": {
       "customSoftware": {
-        "title": "Özel Yazılım Geliştirme",
-        "description": "Gerçek iş ihtiyaçlarına göre kurgulanan çözümler."
+        "title": "Web & Mobil Uygulama",
+        "description": "Kurumsal web siteleri, yönetim panelleri, iOS ve Android uygulamalar."
       },
       "product": {
-        "title": "Ürün Geliştirme",
-        "description": "Fikirden pazara ve sonrasına."
-      },
-      "integration": {
-        "title": "Sistem Entegrasyonu",
-        "description": "Bağla. Otomatikleştir. Büyüt."
+        "title": "Chatbot & Yapay Zekâ",
+        "description": "Verinizle konuşan akıllı asistanlar, destek botları ve otomasyon."
       },
       "consulting": {
-        "title": "Teknoloji Danışmanlığı",
-        "description": "Mevcut sistemini inceler, yol haritası çıkarırız."
+        "title": "SEO & Performans",
+        "description": "Arama motoru görünürlüğü, teknik SEO ve açılış hızı iyileştirmeleri."
+      },
+      "integration": {
+        "title": "Özel Yazılım & Entegrasyon",
+        "description": "İş kurallarınıza özel sistemler ve dış servis bağlantıları."
       }
     },
     "panel": {
@@ -110,6 +110,12 @@
         "category": "Sigorta / iOS + Android",
         "tagline": "Teklif, poliçe ve hasar desteği tek uygulamada.",
         "description": "Sigorta teklifi al, aktif poliçelerini gör, PDF olarak indir ve hasar durumunda destek iste. iOS ve Android'de yayında."
+      },
+      "aiPlatform": {
+        "name": "Tecktick AI Asistan Platformu",
+        "category": "Yapay Zekâ & Chatbot / Geliştiriliyor",
+        "tagline": "Şirketlerin kendi bilgi tabanı ve verisiyle konuşan çok kiracılı AI asistan altyapısı.",
+        "description": "Kurumsal web siteleri ve ürünler için bilgi tabanından kaynaklı yanıt veren, veritabanı ve API bağlantılarıyla kontrollü işlem yapabilen chatbot ve akıllı asistan platformu."
       },
       "nappsa": {
         "name": "Nappsa",
@@ -148,11 +154,22 @@
       "unity": "Unity",
       "mmo": "MMO",
       "server": "Sunucu + API",
-      "android": "Android"
+      "android": "Android",
+      "ai": "Chatbot + AI"
     },
     "smallWorks": {
       "slogan": "Bazen 1 saat, bazen 1 yıl. Hepsi Tecktick.",
       "items": {
+        "askadroVip": {
+          "name": "AS Kadro VIP",
+          "category": "İnsan kaynakları & personel temini / Web",
+          "description": "Otelcilik, lojistik, perakende ve etkinlik sektörleri için dönemsel ve tam zamanlı personel temini sunan kurumsal İK platformu."
+        },
+        "veraxisHr": {
+          "name": "Veraxis HR",
+          "category": "İK & yönetim danışmanlığı / Web",
+          "description": "İşe alım, performans yönetimi ve organizasyonel gelişim süreçlerinde stratejik danışmanlık sunan çok dilli kurumsal site."
+        },
         "emrasKitchen": {
           "name": "Emran'ın Mutfağı",
           "category": "Butik pastane / Web",
@@ -194,6 +211,17 @@
     "kicker": "Atölyeden",
     "title": "Şu an ne yapıyoruz?",
     "items": {
+      "aiAgentPlatform": {
+        "tag": "AI Asistan Platformu",
+        "status": "Geliştiriliyor",
+        "title": "Şirketlerin kendi verisiyle konuşan chatbot ve AI asistan altyapısı",
+        "excerpt": "Bilgi tabanından kaynaklı yanıt veren, veritabanı ve iç servislerle güvenli bağlantı kuran çok kiracılı AI asistan platformumuzu geliştiriyoruz.",
+        "body": {
+          "p1": "Şirketlerin web sitelerine, panellerine veya mobil uygulamalarına dakikalar içinde entegre edebileceği bir AI Asistan ve Chatbot platformu kuruyoruz.",
+          "p2": "Asistan yalnızca genel sohbet etmiyor; şirketin kendi dokümanlarından kaynak göstererek yanıt veriyor, izin verilen SQL, API veya tablo verilerini okuyup analiz edebiliyor ve insan onayı gerektiren işlemleri güvenli akışlarla yürütüyor.",
+          "p3": "Tek kod tabanı üzerinde hem bulut (SaaS) hem de şirketin kendi sunucusunda (self-hosted) çalışacak şekilde modüler bir mimariyle ilerliyoruz."
+        }
+      },
       "aePanel": {
         "tag": "Anlık Eleman",
         "status": "Devam ediyor",
@@ -264,7 +292,7 @@
   },
   "footer": {
     "kicker": "Konuşalım",
-    "title": "Tecktick Labs tek tik atın,\ngerisini bize bırakın.",
+    "title": "Teck tick atın,\ngerisini bize bırakın.",
     "copyright": "© {{year}} Tecktick Labs"
   },
   "productPages": {
@@ -365,6 +393,76 @@
           "p2": "Uygulamayı iOS ve Android için birlikte geliştirdik. Arayüzü sadeleştirerek teklif alma ve poliçe görüntüleme akışını birkaç adıma indirdik; hasar anında destek talebi de aynı yerden açılıyor."
         }
       },
+      "aiPlatform": {
+        "overview": {
+          "p1": "Tecktick AI Asistan Platformu, şirketlerin kendi dokümanları, veritabanları ve iç servisleriyle konuşabilen yapay zekâ asistanları kurmasını sağlayan çok kiracılı bir ürün. Web sitesine gömülen sohbet kutusu (widget), barındırılan sohbet sayfası ve API üzerinden çalışır.",
+          "p2": "Sıradan bir soru-cevap botundan farklı olarak rol bazlı erişim kontrolüyle çalışır: kimin hangi veriyi görebileceğini bilir, kaynak göstererek yanıt verir ve kayıt açma veya güncelleme gibi işlemleri insan onayından geçirerek yürütür."
+        },
+        "stats": {
+          "modes": {
+            "value": "3",
+            "label": "Kurulum modeli"
+          },
+          "connectors": {
+            "value": "4",
+            "label": "Veri bağlayıcı türü"
+          },
+          "channels": {
+            "value": "3",
+            "label": "Entegrasyon yüzeyi"
+          }
+        },
+        "platforms": {
+          "widget": {
+            "title": "Web widget ve sohbet ekranı",
+            "text": "Müşterinin web sitesine veya ürün paneline tek satırla eklenen, markaya göre özelleştirilebilen canlı sohbet arayüzü."
+          },
+          "admin": {
+            "title": "Yönetim ve eğitim paneli",
+            "text": "Bilgi tabanı yükleme, asistan yeteneklerini açıp kapatma, veri bağlantılarını tanımlama ve konuşma kalitesini izleme ekranı."
+          },
+          "api": {
+            "title": "Arka plan servisi ve Model Gateway",
+            "text": "Farklı dil modellerini (OpenAI, Anthropic, Google, yerel modeller) yöneten, hız ve maliyet dengesini kuran sunucu katmanı."
+          },
+          "connectors": {
+            "title": "Güvenli veri bağlayıcıları",
+            "text": "PostgreSQL, REST API, Excel ve CSV kaynaklarını okuma ve yetki dahilinde analiz etme katmanı."
+          }
+        },
+        "features": {
+          "rag": {
+            "title": "Kaynaklı bilgi tabanı (RAG)",
+            "text": "Şirket dokümanlarını parçalayıp indeksler; yanıt verirken hangi kaynaktan bilgi aldığını açıkça gösterir."
+          },
+          "connectors": {
+            "title": "Veritabanı ve API sorgulama",
+            "text": "Hesaplamaları doğrudan veritabanında veya veri motorunda yapar, dil modeli yalnızca doğrulanmış sonucu yorumlar."
+          },
+          "actions": {
+            "title": "İnsan onaylı işlemler",
+            "text": "Kayıt oluşturma veya güncelleme gibi kritik adımlarda işlem öncesi yetkili onayı ister."
+          },
+          "permissions": {
+            "title": "Rol ve yetki sınırı",
+            "text": "Her kullanıcı yalnızca kendi rolünün izin verdiği bilgiye ve işleme erişebilir."
+          },
+          "models": {
+            "title": "Esnek model seçimi (BYOK)",
+            "text": "Her şirket kendi yapay zekâ anahtarını kullanabilir veya platform üzerinden yönetilen modellere bağlanabilir."
+          },
+          "tenancy": {
+            "title": "Bulut veya kendi sunucunda kurulum",
+            "text": "İster paylaşımlı bulutta, ister izole ortamda, ister şirketin kendi sunucusunda (self-hosted) aynı yapıyla çalışır."
+          }
+        },
+        "tech": {
+          "text": "TypeScript, NestJS, LangGraph ve pgvector omurgası üzerinde modüler monolit olarak kurgulandı. Her istek, sorgu ve kayıt şirket (tenant) bazında izole edilir; dil modeli hiçbir zaman ham veritabanı şifresine veya kontrolsüz ağa doğrudan erişemez."
+        },
+        "status": {
+          "text": "Platformun çekirdek mimarisi, veri bağlayıcıları, yetki senaryoları ve widget altyapısı geliştirme aşamasında. İlk kurumsal pilot kurulumlar için hazırlıklar sürüyor."
+        }
+      },
       "nappsa": {
         "overview": {
           "p1": "Nappsa, gün içinde verilen küçük kararları hafifletmek için kurulmuş bir öneri uygulaması. Bugün ne yesem, ne izlesem, ne yapsam sorularına kısa ve derlenmiş cevaplar verir.",
@@ -463,6 +561,7 @@
   },
   "productsPage": {
     "title": "Yaptığımız işler",
+    "description": "Tecktick Labs tarafından geliştirilen mobil uygulamalar, web platformları, yapay zekâ asistanları, oyunlar ve kurumsal web projeleri.",
     "ownTitle": "Ürünler ve oyunlar",
     "clientTitle": "Diğer projelerimiz",
     "filters": {
@@ -484,8 +583,8 @@
   },
   "contact": {
     "kicker": "Konuşalım",
-    "title": "Bir fikrin mi var?\nTek tık yeter.",
-    "text": "Ne kurmak istediğini birkaç cümleyle anlat. Aynı gün dönüş yapıyoruz.",
+    "title": "Teck tick atın,\ngerisini bize bırakın.",
+    "text": "Web sitesi, mobil uygulama, chatbot ya da SEO çalışması; ne kurmak istediğini birkaç cümleyle anlat. Aynı gün dönüş yapıyoruz.",
     "emailLabel": "E-posta",
     "phoneLabel": "Telefon",
     "form": {
@@ -498,9 +597,12 @@
       "companyPlaceholder": "Şirket ya da proje adı",
       "subject": "Konu",
       "subjects": {
-        "project": "Yeni proje",
-        "app": "Mobil uygulama",
-        "game": "Oyun",
+        "project": "Yeni proje / Özel yazılım",
+        "web": "Web sitesi & Web paneli",
+        "app": "Mobil uygulama (iOS / Android)",
+        "chatbot": "Chatbot & Yapay zekâ asistanı",
+        "seo": "SEO & Performans geliştirmeleri",
+        "game": "Oyun geliştirme",
         "other": "Diğer"
       },
       "message": "Mesaj",
@@ -517,6 +619,7 @@
   },
   "servicesPage": {
     "title": "Ne yapıyoruz?",
+    "description": "Web sitesi ve mobil uygulama geliştirme, yapay zekâ destekli chatbot kurulumu, teknik SEO ve performans iyileştirmeleri ile özel yazılım çözümleri.",
     "howTitle": "Nasıl çalışıyoruz?",
     "ctaTitle": "Aklındaki işi konuşalım",
     "ctaText": "Kapsamı birlikte netleştirelim, sonrasında nasıl ilerleyeceğimizi anlatalım.",
@@ -527,11 +630,19 @@
     "capabilities": {
       "mobile": {
         "title": "Mobil uygulama",
-        "text": "iPhone ve Android'de aynı anda çalışan uygulamalar."
+        "text": "iPhone ve Android'de aynı anda çalışan, mağaza yayınına hazır uygulamalar."
       },
       "web": {
         "title": "Web sitesi ve panel",
-        "text": "Kurumsal siteler, platformlar ve yönetim ekranları."
+        "text": "Hızlı açılan kurumsal siteler, müşteri portalları ve yönetim ekranları."
+      },
+      "chatbot": {
+        "title": "Chatbot ve akıllı asistan",
+        "text": "Bilgi tabanınızla ve verinizle konuşan, 7/24 yanıt veren yapay zekâ asistanları."
+      },
+      "seo": {
+        "title": "SEO ve hız optimizasyonu",
+        "text": "Teknik SEO mimarisi, yapısal veri, sayfa açılış hızı ve arama motoru görünürlüğü."
       },
       "services": {
         "title": "Servisler ve anlık akış",
@@ -539,7 +650,7 @@
       },
       "integration": {
         "title": "Dış servis bağlantıları",
-        "text": "Ödeme, harita, reklam ve analiz servisleri."
+        "text": "Ödeme, harita, muhasebe, CRM ve analiz servisleriyle veri alışverişi."
       },
       "cloud": {
         "title": "Yayına alma",
@@ -554,8 +665,8 @@
         "text": "Elindeki yazılımı gözden geçirme, plan çıkarma, hızlandırma."
       },
       "ai": {
-        "title": "Yapay zekâ desteği",
-        "text": "Hızlı prototip, otomasyon ve tekrar eden işlerin azaltılması."
+        "title": "İş akışı otomasyonu",
+        "text": "Yapay zekâ modelleriyle belge işleme, veri analizi ve tekrar eden işlerin azaltılması."
       }
     },
     "toolsTitle": "Meraklısına",
@@ -564,6 +675,7 @@
       "mobile": "Mobil",
       "web": "Web",
       "backend": "Arka plan",
+      "ai": "Yapay Zekâ",
       "data": "Veri",
       "cloud": "Altyapı"
     },
@@ -578,35 +690,35 @@
     "toolsCount_other": "{{count}} araç",
     "details": {
       "customSoftware": {
-        "text": "İş akışını birlikte inceliyor, hazır bir paketin karşılamadığı ihtiyaç için sana özel bir yazılım kuruyoruz.",
+        "text": "Markanı temsil eden hızlı bir kurumsal web sitesinden, iOS ve Android mağazalarında çalışan kapsamlı mobil uygulamalara kadar uçtan uca geliştiriyoruz.",
         "points": {
-          "p1": "Kapsam ve kullanıcılar işe başlamadan yazılı olarak netleşir.",
-          "p2": "Web paneli, mobil uygulama veya arka plan sistemi; ihtiyaca göre seçilir.",
-          "p3": "Teslimden sonra kullanım takip edilir, gereken düzeltmeler yapılır."
+          "p1": "Mobil uyumlu, hızlı açılan ve arama motorlarına hazır web siteleri ve yönetim panelleri kurulur.",
+          "p2": "iOS ve Android uygulamaları tek kod tabanından geliştirilip App Store ve Google Play'de yayına alınır.",
+          "p3": "Teslimden sonra kullanım takip edilir, güncellemeler ve bakım birlikte yürütülür."
         }
       },
       "product": {
-        "text": "Bir fikri, ilk sürümü yayında olan bir ürüne dönüştürmek için birlikte çalışıyoruz.",
+        "text": "Müşterilerinin sorularını 7/24 yanıtlayan, kendi dokümanların ve veritabanınla konuşabilen yapay zekâ destekli chatbot ve asistan sistemleri kuruyoruz.",
         "points": {
-          "p1": "İlk sürümde ne olacağı ve ne olmayacağı birlikte belirlenir.",
-          "p2": "Çalışan sürümler düzenli aralıklarla seninle paylaşılır.",
-          "p3": "Mağaza ve web yayını, alan adı ve sunucu kurulumu dahildir."
-        }
-      },
-      "integration": {
-        "text": "Kullandığın araçları birbirine bağlıyor, elle taşınan veriyi azaltıyoruz.",
-        "points": {
-          "p1": "Ödeme, harita, bildirim ve analiz servisleri bağlanabilir.",
-          "p2": "Mevcut programlarınla veri alışverişi kurulur.",
-          "p3": "Bağlantı kopduğunda haberin olması için uyarı eklenir."
+          "p1": "Web sitene veya paneline eklenen sohbet widget'ı, şirket bilgi tabanından kaynak göstererek yanıt verir.",
+          "p2": "Sipariş durumu, randevu, teklif veya veri sorgulama gibi işlemler için mevcut sistemlerinle güvenli bağ kurulur.",
+          "p3": "Yetki sınırları ve insan onayı gerektiren adımlar tanımlanarak kontrol her zaman sende kalır."
         }
       },
       "consulting": {
-        "text": "Elindeki yazılımı inceleyip ne durumda olduğunu sade bir dille anlatıyoruz.",
+        "text": "Sitenin Google ve diğer arama motorlarında üst sıralarda yer alması, hızlı açılması ve ziyaretçiyi müşteriye dönüştürmesi için teknik SEO ve performans çalışmaları yapıyoruz.",
         "points": {
-          "p1": "Yavaşlayan ve sık sorun çıkaran noktalar listelenir.",
-          "p2": "Düzeltmek ile yeniden yapmak karşılaştırılır.",
-          "p3": "Sıradaki adımlar öncelik sırasıyla yazılır."
+          "p1": "Sayfa açılış hızı (Core Web Vitals), mobil uyumluluk, site haritası ve indeksleme sorunları giderilir.",
+          "p2": "Sayfa başlıkları, meta etiketler, anlamsal HTML ve Schema.org yapısal verileri arama motorlarına uygun kurulur.",
+          "p3": "Mevcut sitendeki yavaşlayan noktalar ve dönüşüm kayıpları incelenip öncelik sırasıyla iyileştirilir."
+        }
+      },
+      "integration": {
+        "text": "Hazır paketlerin karşılamadığı iş akışların için özel yazılım geliştiriyor, kullandığın araçları birbirine bağlayarak elle taşınan veriyi ortadan kaldırıyoruz.",
+        "points": {
+          "p1": "Ödeme sistemleri, harita, bildirim, CRM/ERP ve analiz servisleri mevcut yazılımına bağlanır.",
+          "p2": "Şirket içi operasyon, yetkilendirme ve raporlama için sana özel arka plan servisleri kurulur.",
+          "p3": "Bağlantı koptuğunda veya hata oluştuğunda anında haberin olması için izleme ve uyarı mekanizması eklenir."
         }
       }
     }
@@ -614,7 +726,7 @@
   "aboutPage": {
     "kicker": "Hakkımızda",
     "title": "Fikirleri çalışan\ndijital ürünlere dönüştürüyoruz",
-    "lead": "Tecktick Labs, İstanbul merkezli bir teknoloji stüdyosu. Mobil uygulamalar, web platformları, arka plan sistemleri ve özel yazılım çözümleri geliştiriyoruz.",
+    "lead": "Tecktick Labs, İstanbul merkezli bir teknoloji stüdyosu. Web siteleri, mobil uygulamalar, yapay zekâ destekli chatbot sistemleri, SEO geliştirmeleri ve özel yazılım çözümleri üretiyoruz.",
     "journeyTitle": "Yeni şirket, yeni olmayan deneyim",
     "journeyText": "Tecktick Labs 2026'da kuruldu. Ekipte kurumsal projelerde, mobil uygulamalarda ve iş platformlarında çalışmış kişiler var; bu deneyimi şimdi kendi stüdyomuzda bir araya getiriyoruz.",
     "approachTitle": "Bir projeye nasıl bakıyoruz?",
@@ -661,7 +773,8 @@
       "panel": "Panel",
       "backend": "Sunucu",
       "game": "Oyun",
-      "studio": "Stüdyo"
+      "studio": "Stüdyo",
+      "ai": "Yapay Zekâ"
     }
   },
   "notFound": {

@@ -1,8 +1,10 @@
 // Kart ikonu için 512px'e indirilmiş sürüm; kaynak dosya bks-logo.png
 import bksLogo from '../assets/bks-logo-512.png'
 // Referans logoları kendi sitelerinden alındı; ileride veritabanından gelecek
+import askadroVipLogo from '../assets/references/askadro-vip.jpeg'
 import elysPrimeLogo from '../assets/references/elys-prime.png'
 import inceptionRentLogo from '../assets/references/inception-rent.png'
+import veraxisHrLogo from '../assets/references/veraxis-hr.png'
 
 /**
  * Yapısal içerik. Burada METİN YOKTUR; sadece i18n anahtarları ve
@@ -140,6 +142,35 @@ export const products: Product[] = [
     detail: {},
   },
   {
+    id: 'ai-asistan-platformu',
+    key: 'aiPlatform',
+    status: 'soon',
+    kind: 'platform',
+    icon: null,
+    tone: 'mint',
+    links: [],
+    metaKeys: ['ai', 'web', 'server', 'inDevelopment'],
+    detail: {
+      statKeys: ['modes', 'connectors', 'channels'],
+      platforms: [
+        { key: 'widget', icon: 'chat' },
+        { key: 'admin', icon: 'grid' },
+        { key: 'api', icon: 'server' },
+        { key: 'connectors', icon: 'plug' },
+      ],
+      featureKeys: [
+        'rag',
+        'connectors',
+        'actions',
+        'permissions',
+        'models',
+        'tenancy',
+      ],
+      hasTech: true,
+      hasStatus: true,
+    },
+  },
+  {
     id: 'nappsa',
     key: 'nappsa',
     status: 'live',
@@ -228,6 +259,8 @@ export const products: Product[] = [
 
 /** Daha küçük ölçekli, yayında olan işler. Ürün kartlarının altında listelenir. */
 export const smallWorks = [
+  { id: 'askadro-vip', key: 'askadroVip', url: 'https://askadrovip.com/' },
+  { id: 'veraxis-hr', key: 'veraxisHr', url: 'https://veraxishr.com/' },
   { id: 'emras-kitchen', key: 'emrasKitchen', url: 'https://emraninmutfagi.com/' },
   { id: 'inception-rent', key: 'inceptionRent', url: 'https://belekcarrent.com/' },
   { id: 'elys-prime', key: 'elysPrime', url: 'https://elysprime.com/' },
@@ -285,6 +318,18 @@ export type Reference = {
 
 export const references: Reference[] = [
   {
+    id: 'askadro-vip',
+    name: 'AS Kadro VIP',
+    logo: askadroVipLogo,
+    url: 'https://askadrovip.com/',
+  },
+  {
+    id: 'veraxis-hr',
+    name: 'Veraxis HR',
+    logo: veraxisHrLogo,
+    url: 'https://veraxishr.com/',
+  },
+  {
     id: 'inception-rent',
     name: 'Inception Rent a Car',
     logo: inceptionRentLogo,
@@ -338,25 +383,25 @@ export const services = [
     id: 'customSoftware',
     icon: 'code',
     featured: true,
-    capabilityKeys: ['web', 'mobile', 'services'],
+    capabilityKeys: ['web', 'mobile', 'product'],
   },
   {
     id: 'product',
-    icon: 'layers',
+    icon: 'chat',
     featured: false,
-    capabilityKeys: ['product', 'cloud'],
+    capabilityKeys: ['chatbot', 'ai', 'integration'],
+  },
+  {
+    id: 'consulting',
+    icon: 'search',
+    featured: false,
+    capabilityKeys: ['seo', 'web', 'consulting'],
   },
   {
     id: 'integration',
     icon: 'grid',
     featured: false,
-    capabilityKeys: ['integration', 'services'],
-  },
-  {
-    id: 'consulting',
-    icon: 'people',
-    featured: false,
-    capabilityKeys: ['consulting', 'ai'],
+    capabilityKeys: ['services', 'integration', 'cloud'],
   },
 ] as const
 
@@ -368,11 +413,11 @@ export const services = [
 export const capabilities = [
   { key: 'mobile', icon: 'mobile' },
   { key: 'web', icon: 'web' },
+  { key: 'chatbot', icon: 'chat' },
+  { key: 'seo', icon: 'search' },
   { key: 'services', icon: 'server' },
   { key: 'integration', icon: 'plug' },
-  { key: 'cloud', icon: 'cloud' },
   { key: 'product', icon: 'rocket' },
-  { key: 'consulting', icon: 'compass' },
   { key: 'ai', icon: 'sparkle' },
 ] as const
 
@@ -387,6 +432,7 @@ export const toolGroups = [
   { key: 'mobile', items: ['React Native', 'Expo'] },
   { key: 'web', items: ['Next.js', 'React'] },
   { key: 'backend', items: ['NestJS', 'Node.js', 'Express'] },
+  { key: 'ai', items: ['OpenAI', 'Anthropic', 'LangChain', 'LangGraph', 'pgvector'] },
   { key: 'data', items: ['PostgreSQL', 'MongoDB', 'Redis', 'Prisma', 'Supabase', 'Firebase'] },
   { key: 'cloud', items: ['Docker', 'Nginx', 'AWS', 'Firebase Hosting'] },
 ] as const
@@ -404,10 +450,10 @@ export const approachSteps = [
  * tarih ve sınıflandırma tutulur. Her notun kendi sayfası vardır:
  * /insights/<id>
  */
-export type InsightProject = 'anlikEleman' | 'barbaros' | 'studio'
+export type InsightProject = 'anlikEleman' | 'barbaros' | 'studio' | 'aiPlatform'
 
 /** Notun hangi parçayla ilgili olduğu; listede rozet olarak görünür */
-export type InsightPlatform = 'web' | 'mobile' | 'panel' | 'backend' | 'game' | 'studio'
+export type InsightPlatform = 'web' | 'mobile' | 'panel' | 'backend' | 'game' | 'studio' | 'ai'
 
 /** Rozet ikonları; etiketler locales/insightsPage.platforms altındadır */
 export const insightPlatformIcons: Record<InsightPlatform, string> = {
@@ -417,6 +463,7 @@ export const insightPlatformIcons: Record<InsightPlatform, string> = {
   backend: 'server',
   game: 'gamepad',
   studio: 'compass',
+  ai: 'sparkle',
 }
 
 export type Insight = {
@@ -430,6 +477,13 @@ export type Insight = {
 }
 
 export const insights: Insight[] = [
+  {
+    id: 'kurumsal-ai-asistan-platformu',
+    key: 'aiAgentPlatform',
+    project: 'aiPlatform',
+    platform: 'ai',
+    date: '2026-10-24',
+  },
   {
     id: 'anlik-eleman-isveren-paneli',
     key: 'aePanel',

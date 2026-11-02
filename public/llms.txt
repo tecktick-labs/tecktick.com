@@ -1,0 +1,51 @@
+# Tecktick Labs
+
+> Teck tick atın, gerisini bize bırakın. (Just one Teck tick, leave the rest to us.)
+> İstanbul merkezli teknoloji ve yazılım geliştirme stüdyosu. Web sitesi, mobil uygulama (iOS & Android), yapay zekâ destekli chatbot sistemleri, teknik SEO geliştirmeleri ve özel yazılım çözümleri üretiyoruz.
+
+- Web: https://tecktick.com
+- E-posta: account@tecktick.com
+- Telefon: +90 534 317 55 65
+- Konum: İstanbul, Türkiye
+- Motto: Build. Iterate. Evolve.
+
+## Hizmetlerimiz (https://tecktick.com/services)
+
+1. **Web & Mobil Uygulama Geliştirme**
+   - Hızlı açılan, mobil uyumlu ve arama motorlarına hazır kurumsal web siteleri, müşteri portalları ve yönetim panelleri (Next.js, React).
+   - Tek kod tabanından iOS ve Android mağazalarında çalışan mobil uygulamalar (React Native, Expo).
+2. **Chatbot & Yapay Zekâ Çözümleri**
+   - Şirketlerin kendi dokümanları (RAG), veritabanları ve API'larıyla konuşabilen 7/24 akıllı asistanlar ve müşteri destek botları.
+   - Rol bazlı yetkilendirme, kaynak göstererek yanıt verme ve insan onaylı işlem akışları (OpenAI, Anthropic, LangChain, LangGraph, pgvector).
+3. **SEO & Performans Geliştirmeleri**
+   - Teknik SEO mimarisi, Core Web Vitals açılış hızı optimizasyonu, Schema.org yapısal veri, site haritası ve GEO (Generative Engine Optimization) kurulumu.
+   - Arama motoru görünürlüğü ve dönüşüm iyileştirme çalışmaları.
+4. **Özel Yazılım & Sistem Entegrasyonu**
+   - İş kurallarına özel arka plan servisleri (NestJS, Node.js, PostgreSQL, Redis).
+   - Ödeme sistemleri, harita, CRM/ERP, bildirim ve analiz servisleriyle güvenli veri alışverişi.
+
+## Ürünlerimiz ve Platformlarımız (https://tecktick.com/products)
+
+- **Anlık Eleman** (Yayında — https://anlikeleman.com | https://tecktick.com/products/anlik-eleman): Günlük ve sezonluk işi konuma göre çalışanla anında buluşturan web, işveren paneli ve iOS/Android mobil iş platformu.
+- **SigortaMobil** (Yayında — https://tecktick.com/products/sigortamobil): Sigorta teklifi alma, poliçe görüntüleme/PDF indirme ve hasar desteği sunan iOS ve Android mobil uygulaması.
+- **Tecktick AI Asistan Platformu** (Geliştiriliyor — https://tecktick.com/products/ai-asistan-platformu): Şirketlerin kendi bilgi tabanı, SQL/API/Excel verileriyle güvenli şekilde konuşan, web widget ve API sunan çok kiracılı (SaaS ve self-hosted) kurumsal chatbot ve AI agent platformu.
+- **Barbaros: Kızıl Sakal** (Geliştiriliyor — https://tecktick.com/products/bks): Unity ve özel oyun sunucusu üzerinde geliştirilen gerçek zamanlı çok oyunculu (MMO) denizcilik oyunu.
+- **Nappsa** (Yayında — https://tecktick.com/products/nappsa): Günlük karar yorgunluğunu azaltan iOS yaşam ve öneri uygulaması.
+- **Tilo: Resimli Yapboz** & **Grid Grin: Blok Bulmaca** (Yayında): iOS ve iPadOS bulmaca oyunları.
+
+## Kurumsal Web Projeleri ve Referanslarımız (https://tecktick.com/about)
+
+- **AS Kadro VIP** (https://askadrovip.com): Otelcilik, lojistik, perakende ve etkinlik sektörleri için personel temini sunan kurumsal İK platformu.
+- **Veraxis HR** (https://veraxishr.com): İşe alım, performans yönetimi ve organizasyonel gelişim alanlarında çok dilli İK ve yönetim danışmanlığı sitesi.
+- **Inception Rent a Car** (https://belekcarrent.com): Belek ve Antalya çevresinde filo listeleme ve rezervasyon sunan araç kiralama sitesi.
+- **Elys Prime** (https://elysprime.com): Bulki Yapı konut projesi tanıtım ve daire planları sitesi.
+- **Emran'ın Mutfağı** (https://emraninmutfagi.com): Butik pastane tanıtım ve sipariş sitesi.
+
+## Önemli Sayfalar
+
+- Ana Sayfa: https://tecktick.com/
+- Hizmetler: https://tecktick.com/services
+- Ürünler ve Projeler: https://tecktick.com/products
+- Hakkımızda ve Referanslar: https://tecktick.com/about
+- Haberler / Atölye Notları: https://tecktick.com/insights
+- İletişim: https://tecktick.com/contact

@@ -1,16 +1,42 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
+export type PrerenderMeta = {
+  title?: string
+  description?: string
+  article?: {
+    title: string
+    description: string
+    date: string
+  }
+}
+
+let activePrerenderMeta: PrerenderMeta | null = null
+
+export function beginPrerenderMeta() {
+  activePrerenderMeta = {}
+}
+
+export function consumePrerenderMeta(): PrerenderMeta {
+  const result = activePrerenderMeta ?? {}
+  activePrerenderMeta = null
+  return result
+}
+
 function setMeta(selector: string, attribute: string, value: string) {
   const element = document.querySelector(selector)
   element?.setAttribute(attribute, value)
 }
 
-function setLink(rel: string, href: string) {
-  let link = document.querySelector(`link[rel="${rel}"]`)
+function setLink(rel: string, href: string, hreflang?: string) {
+  const selector = hreflang
+    ? `link[rel="${rel}"][hreflang="${hreflang}"]`
+    : `link[rel="${rel}"]:not([hreflang]):not([type])`
+  let link = document.querySelector(selector)
   if (!link) {
     link = document.createElement('link')
     link.setAttribute('rel', rel)
+    if (hreflang) link.setAttribute('hreflang', hreflang)
     document.head.appendChild(link)
   }
   link.setAttribute('href', href)
@@ -24,17 +50,30 @@ export function useDocumentMeta(title?: string, description?: string) {
   const { t, i18n } = useTranslation()
   const language = i18n.resolvedLanguage ?? i18n.language
 
+  if (activePrerenderMeta) {
+    activePrerenderMeta.title = title
+    activePrerenderMeta.description = description
+  }
+
   useEffect(() => {
     const siteName = t('meta.title')
     const fullTitle = title ? `${title} — ${siteName}` : siteName
     const text = description ?? t('meta.description')
+    const canonicalUrl = window.location.origin + window.location.pathname
 
     document.title = fullTitle
     document.documentElement.lang = language
     setMeta('meta[name="description"]', 'content', text)
     setMeta('meta[property="og:title"]', 'content', fullTitle)
     setMeta('meta[property="og:description"]', 'content', text)
-    setLink('canonical', window.location.origin + window.location.pathname)
+    setMeta('meta[property="og:url"]', 'content', canonicalUrl)
+    setMeta('meta[property="og:locale"]', 'content', language === 'en' ? 'en_US' : 'tr_TR')
+    setMeta('meta[name="twitter:title"]', 'content', fullTitle)
+    setMeta('meta[name="twitter:description"]', 'content', text)
+    setLink('canonical', canonicalUrl)
+    setLink('alternate', canonicalUrl, 'tr')
+    setLink('alternate', `${canonicalUrl}?lng=en`, 'en')
+    setLink('alternate', canonicalUrl, 'x-default')
 
     return () => {
       document.title = siteName
@@ -52,6 +91,10 @@ export function useArticleSchema(article?: {
   description: string
   date: string
 }) {
+  if (activePrerenderMeta && article) {
+    activePrerenderMeta.article = article
+  }
+
   useEffect(() => {
     if (!article) return
     const script = document.createElement('script')

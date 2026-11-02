@@ -16,7 +16,7 @@ import {
 export function ProductsPage() {
   const { t } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
-  useDocumentMeta(t('productsPage.title'))
+  useDocumentMeta(t('productsPage.title'), t('productsPage.description'))
 
   const active = searchParams.get('filter') ?? 'all'
   const listed = filterProducts(active)

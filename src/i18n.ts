@@ -19,23 +19,23 @@ export const resources = {
   en: { translation: en },
 } as const
 
-void i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    fallbackLng: DEFAULT_LANGUAGE,
-    supportedLngs: [...SUPPORTED_LANGUAGES],
-    nonExplicitSupportedLngs: true,
-    load: 'languageOnly',
-    interpolation: { escapeValue: false },
-    detection: {
-      // Varsayılan her zaman Türkçe; tarayıcı dili bilerek kullanılmaz.
-      order: ['querystring', 'localStorage', 'htmlTag'],
-      lookupQuerystring: 'lng',
-      lookupLocalStorage: LANGUAGE_STORAGE_KEY,
-      caches: ['localStorage'],
-    },
-  })
+const instance = typeof window !== 'undefined' ? i18n.use(LanguageDetector) : i18n
+
+void instance.use(initReactI18next).init({
+  resources,
+  lng: typeof window === 'undefined' ? DEFAULT_LANGUAGE : undefined,
+  fallbackLng: DEFAULT_LANGUAGE,
+  supportedLngs: [...SUPPORTED_LANGUAGES],
+  nonExplicitSupportedLngs: true,
+  load: 'languageOnly',
+  interpolation: { escapeValue: false },
+  detection: {
+    // Varsayılan her zaman Türkçe; tarayıcı dili bilerek kullanılmaz.
+    order: ['querystring', 'localStorage', 'htmlTag'],
+    lookupQuerystring: 'lng',
+    lookupLocalStorage: LANGUAGE_STORAGE_KEY,
+    caches: ['localStorage'],
+  },
+})
 
 export default i18n

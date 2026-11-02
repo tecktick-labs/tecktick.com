@@ -38,7 +38,7 @@ type Sdk = {
 type QueuedEvent = { name: string; params: Record<string, string | number> }
 
 let sdk: Sdk | null = null
-let isDisabled = !import.meta.env.PROD
+let isDisabled = !import.meta.env.PROD || typeof window === 'undefined'
 let queue: QueuedEvent[] = []
 
 export function trackEvent<K extends AnalyticsEventName>(name: K, params: AnalyticsEvents[K]) {
