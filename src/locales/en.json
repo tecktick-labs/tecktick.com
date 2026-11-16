@@ -21,6 +21,8 @@
     "main": "Main navigation",
     "footer": "Footer navigation",
     "contact": "Contact",
+    "panel": "Content panel",
+    "serviceTopic": "Service details",
     "breadcrumbHome": "Home"
   },
   "common": {
@@ -964,6 +966,110 @@
         ]
       }
     }
+  },
+  "serviceTopicsPage": {
+    "kicker": "Services",
+    "listTitle": "Explore our AI solutions",
+    "questionsTitle": "Common questions",
+    "productKicker": "Product in development",
+    "productText": "Our enterprise AI Assistant Platform is a product in this area and is still in development.",
+    "productLink": "Explore the product",
+    "ctaTitle": "Let's define the need together",
+    "ctaText": "Start by describing your data, workflow, and access requirements.",
+    "items": {
+      "aiAssistant": {
+        "title": "Enterprise AI assistant",
+        "description": "AI assistants grounded in company documents and data, with defined access controls.",
+        "lead": "We design assistants that help teams and customers find answers in a company's own information sources.",
+        "parts": {
+          "problem": {
+            "title": "Scattered information slows answers",
+            "text": "When documents, help content, and business data live in different systems, the same questions repeatedly reach people; we first identify trustworthy and current sources, then map what the assistant may access and where its boundaries are."
+          },
+          "approach": {
+            "title": "Connect the assistant to company data",
+            "text": "We connect knowledge bases, databases, or APIs as needed, design answers grounded in relevant sources, prevent access to unauthorized data, and define where a person must approve an action."
+          },
+          "delivery": {
+            "title": "Put it where people work",
+            "text": "The assistant can appear as a website chat interface, an internal dashboard helper, or an API for another product; we start with a narrow use case and expand after evaluating real questions."
+          }
+        },
+        "questions": {
+          "q1": { "title": "Can it use only our documents?", "answer": "Yes, its information sources can be selected; document freshness, access permissions, and source attribution are defined at the start of the project." },
+          "q2": { "title": "Can it connect to our existing software?", "answer": "Where an appropriate API or data access exists, an integration can be designed; permissions determine which data it can read and which actions it may perform." },
+          "q3": { "title": "How do you handle incorrect answers?", "answer": "We make sources visible, define when to decline or hand a question to a person, and evaluate the assistant regularly with real usage examples." }
+        }
+      },
+      "automation": {
+        "title": "Workflow automation",
+        "description": "Software workflows connecting document processing, data transfer, and approvals to existing systems.",
+        "lead": "We map where data comes from, where it goes, and which decisions should stay with people before reducing repetitive work.",
+        "parts": {
+          "problem": {
+            "title": "Repeated steps slow work",
+            "text": "Copying information from documents into another system, sorting incoming requests, or repeating the same checklist takes time; before automating, we identify exceptions and decide who steps in when something fails."
+          },
+          "approach": {
+            "title": "Break the workflow into clear steps",
+            "text": "We separate intake, validation, decisions, approvals, and records; explicit rules run in ordinary software, while AI can assist with documents and text when the task calls for interpretation."
+          },
+          "delivery": {
+            "title": "Keep the team in control",
+            "text": "An automation can connect to an existing dashboard, API, notification system, or external service; we define human approval for critical actions, error logs, and retry paths so the workflow remains traceable."
+          }
+        },
+        "questions": {
+          "q1": { "title": "Does every step need AI?", "answer": "No, steps with definite rules are often clearer and more predictable in conventional software; we consider AI only for suitable uncertain tasks." },
+          "q2": { "title": "Can it connect to our CRM or accounting system?", "answer": "That depends on the system's API and access permissions; data mapping, authorization, and failure handling are part of the integration scope." },
+          "q3": { "title": "Which process should come first?", "answer": "Start with one frequent process whose steps can be described clearly and whose outcome can be checked; that makes the first implementation easier to evaluate." }
+        }
+      }
+    }
+  },
+  "panel": {
+    "brand": "Tecktick labs",
+    "back": "Back to site",
+    "kicker": "Content management",
+    "title": "Content panel",
+    "description": "Edit the site's Turkish and English copy. Published changes appear after the next Netlify build.",
+    "loginTitle": "Admin sign in",
+    "inviteTitle": "Complete your admin account",
+    "finishInvite": "Create password and continue",
+    "email": "Email",
+    "password": "Password",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "loading": "Loading content…",
+    "noAccess": "No editing access",
+    "noAccessHelp": "Your Netlify Identity account needs the editor role.",
+    "sectionsLabel": "Sections",
+    "sections": {
+      "home": "Home",
+      "services": "Services",
+      "products": "Products",
+      "insights": "Insights",
+      "company": "About and contact",
+      "shared": "Shared content"
+    },
+    "editorHint": "Edit a field, then publish your changes.",
+    "language": "Editing language",
+    "publish_one": "Publish 1 change",
+    "publish_other": "Publish {{count}} changes",
+    "saving": "Saving…",
+    "search": "Search text or field names",
+    "errors": {
+      "auth_failed": "Sign in failed. Check your credentials or Netlify Identity settings.",
+      "unauthorized": "Your session ended. Sign in again.",
+      "forbidden": "This account cannot edit content.",
+      "not_configured": "The panel server connection is not configured yet.",
+      "content_changed": "Content changed elsewhere. Refresh the page and try again.",
+      "invalid_changes": "Check your edits; fields cannot be empty and you can publish up to 50 fields at once.",
+      "source_unavailable": "The content repository could not be reached.",
+      "publish_failed": "Changes could not be published.",
+      "request_failed": "The request could not be completed. Try again shortly."
+    },
+    "notices": { "published": "Changes were saved. They will appear after the next build." }
   },
   "consent": {
     "label": "Cookie preference",

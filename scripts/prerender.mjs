@@ -35,6 +35,10 @@ for (const route of routes) {
   const escapedTitle = escapeHtml(fullTitle)
   const escapedTitleAttr = escapeAttr(fullTitle)
   const escapedDescAttr = escapeAttr(description)
+  const basePath = route.path === '/en/' ? '/' : route.path.startsWith('/en/') ? route.path.slice(3) : route.path
+  const trUrl = `https://tecktick.com${basePath}`
+  const enUrl = `https://tecktick.com/en${basePath}`
+  const isEnglish = route.path.startsWith('/en/')
 
   let html = template
     .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
@@ -69,16 +73,26 @@ for (const route of routes) {
     )
     .replace(
       /<link\s+rel="alternate"\s+hreflang="tr"\s+href="[^"]*"\s*\/>/,
-      `<link rel="alternate" hreflang="tr" href="${canonicalUrl}" />`,
+      `<link rel="alternate" hreflang="tr" href="${trUrl}" />`,
     )
     .replace(
       /<link\s+rel="alternate"\s+hreflang="en"\s+href="[^"]*"\s*\/>/,
-      `<link rel="alternate" hreflang="en" href="${canonicalUrl}?lng=en" />`,
+      `<link rel="alternate" hreflang="en" href="${enUrl}" />`,
     )
     .replace(
       /<link\s+rel="alternate"\s+hreflang="x-default"\s+href="[^"]*"\s*\/>/,
-      `<link rel="alternate" hreflang="x-default" href="${canonicalUrl}" />`,
+      `<link rel="alternate" hreflang="x-default" href="${trUrl}" />`,
     )
+
+  if (isEnglish) {
+    html = html.replace('<html lang="tr">', '<html lang="en">')
+      .replace('<meta property="og:locale" content="tr_TR" />', '<meta property="og:locale" content="en_US" />')
+      .replace('<meta property="og:locale:alternate" content="en_US" />', '<meta property="og:locale:alternate" content="tr_TR" />')
+  }
+
+  if (route.path === '/panel') {
+    html = html.replace('<meta name="robots" content="index, follow" />', '<meta name="robots" content="noindex, nofollow" />')
+  }
 
   if (articleSchema) {
     html = html.replace(
@@ -97,19 +111,21 @@ for (const route of routes) {
 }
 
 // Otomatik sitemap.xml üretimi (dist/sitemap.xml ve public/sitemap.xml)
-const sitemapEntries = routes
+const sitemapEntries = routes.filter((route) => route.path !== '/panel')
   .map((route) => {
-    const loc = `https://tecktick.com${route.path === '/' ? '/' : route.path}`
-    const hreflangLinks = route.hasHreflang
+    const loc = `https://tecktick.com${route.path}`
+    const basePath = route.path === '/en/' ? '/' : route.path.startsWith('/en/') ? route.path.slice(3) : route.path
+    const trUrl = `https://tecktick.com${basePath}`
+    const enUrl = `https://tecktick.com/en${basePath}`
+    const hreflangLinks = route.path !== '/panel'
       ? [
-          `    <xhtml:link rel="alternate" hreflang="tr" href="${loc}" />`,
-          `    <xhtml:link rel="alternate" hreflang="en" href="${loc}?lng=en" />`,
-          ...(route.path === '/'
-            ? [`    <xhtml:link rel="alternate" hreflang="x-default" href="${loc}" />`]
-            : []),
+          `    <xhtml:link rel="alternate" hreflang="tr" href="${trUrl}" />`,
+          `    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />`,
+          `    <xhtml:link rel="alternate" hreflang="x-default" href="${trUrl}" />`,
         ].join('\n') + '\n'
       : ''
-    return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${route.lastmod}</lastmod>\n    <changefreq>${route.changefreq}</changefreq>\n    <priority>${route.priority}</priority>\n${hreflangLinks}  </url>`
+    const lastmod = route.lastmod ? `    <lastmod>${route.lastmod}</lastmod>\n` : ''
+    return `  <url>\n    <loc>${loc}</loc>\n${lastmod}    <changefreq>${route.changefreq}</changefreq>\n    <priority>${route.priority}</priority>\n${hreflangLinks}  </url>`
   })
   .join('\n')
 

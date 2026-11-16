@@ -6,6 +6,7 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { CookieConsent } from './components/CookieConsent'
 import { Home } from './pages/Home'
+import { localizedPath, routePath } from './lib/routes'
 import './i18n'
 import './lib/analytics'
 import './styles.css'
@@ -41,6 +42,12 @@ const LegalPage = lazy(() =>
 const NotFoundPage = lazy(() =>
   import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })),
 )
+const PanelPage = lazy(() =>
+  import('./pages/PanelPage').then((m) => ({ default: m.PanelPage })),
+)
+const ServiceTopicPage = lazy(() =>
+  import('./pages/ServiceTopicPage').then((m) => ({ default: m.ServiceTopicPage })),
+)
 
 /** Dil değişince <html lang> ve site geneli başlık güncellenir. */
 function useLanguageSync() {
@@ -65,6 +72,18 @@ function ScrollManager() {
 
 function App() {
   useLanguageSync()
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    if (window.location.pathname !== routePath('panel') &&
+      /^#(?:invite_token|access_token|recovery_token)=/.test(window.location.hash)) {
+      window.location.replace(`${routePath('panel')}${window.location.hash}`)
+    }
+  }, [])
+
+  if (pathname === routePath('panel')) {
+    return <Suspense fallback={<div className="route-loading" aria-hidden="true" />}><PanelPage /></Suspense>
+  }
 
   return (
     <div className="site">
@@ -77,6 +96,7 @@ function App() {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:productId" element={<ProductPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:topicId" element={<ServiceTopicPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/insights" element={<InsightsPage />} />
             <Route path="/insights/:insightId" element={<InsightPage />} />
@@ -92,10 +112,25 @@ function App() {
   )
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>,
-)
+const pageUrl = new URL(window.location.href)
+const requestedLanguage = pageUrl.searchParams.get('lng')
+const storedLanguage = localStorage.getItem('tecktick.lang')
+const isEnglishUrl = /^\/en(?:\/|$)/.test(pageUrl.pathname)
+const desiredLanguage = requestedLanguage === 'en' || requestedLanguage === 'tr'
+  ? requestedLanguage
+  : storedLanguage === 'en' || storedLanguage === 'tr' ? storedLanguage : 'tr'
+
+if (pageUrl.pathname !== routePath('panel') &&
+  ((desiredLanguage === 'en' && !isEnglishUrl) || (desiredLanguage === 'tr' && isEnglishUrl) || requestedLanguage)) {
+  pageUrl.searchParams.delete('lng')
+  const target = localizedPath(pageUrl.pathname, desiredLanguage)
+  window.location.replace(`${target}${pageUrl.search}${pageUrl.hash}`)
+} else {
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <BrowserRouter basename={isEnglishUrl ? '/en' : undefined}>
+        <App />
+      </BrowserRouter>
+    </StrictMode>,
+  )
+}

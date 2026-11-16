@@ -10,6 +10,8 @@ export type RouteKey =
   | 'about'
   | 'insights'
   | 'contact'
+  | 'panel'
+  | 'serviceTopic'
 
 export type RouteDefinition = {
   key: RouteKey
@@ -27,6 +29,8 @@ export const routes: RouteDefinition[] = [
   { key: 'about', path: '/about', inNav: true, inFooter: true },
   { key: 'insights', path: '/insights', inNav: true, inFooter: true },
   { key: 'contact', path: '/contact', inNav: false, inFooter: true },
+  { key: 'panel', path: '/panel', inNav: false, inFooter: false },
+  { key: 'serviceTopic', path: '/services/:topicId', inNav: false, inFooter: false },
 ]
 
 export const navRoutes = routes.filter((route) => route.inNav)
@@ -40,6 +44,17 @@ export function routePath(key: RouteKey): string {
 export const productPath = (id: string) => `/products/${id}`
 export const insightPath = (id: string) => `/insights/${id}`
 export const legalPath = (id: string) => `/legal/${id}`
+export const serviceTopicPath = (id: string) => `/services/${id}`
+
+/** Arama motorları için her dilin ayrı ve kalıcı URL'si vardır. */
+export function stripLanguagePath(path: string): string {
+  return path === '/en' || path === '/en/' ? '/' : path.startsWith('/en/') ? path.slice(3) : path
+}
+
+export function localizedPath(path: string, language: string): string {
+  const base = stripLanguagePath(path)
+  return language === 'en' ? `/en${base}` : base
+}
 
 /** Hizmetler sayfasında açık gelecek satır: /services?service=<id> */
 export const SERVICE_PARAM = 'service'

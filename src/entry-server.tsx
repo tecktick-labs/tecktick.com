@@ -9,32 +9,31 @@ import { Home } from './pages/Home'
 import { ProductsPage } from './pages/ProductsPage'
 import { ProductPage } from './pages/ProductPage'
 import { ServicesPage } from './pages/ServicesPage'
+import { ServiceTopicPage } from './pages/ServiceTopicPage'
 import { AboutPage } from './pages/AboutPage'
 import { InsightsPage } from './pages/InsightsPage'
 import { InsightPage } from './pages/InsightPage'
 import { ContactPage } from './pages/ContactPage'
 import { LegalPage } from './pages/LegalPage'
 import { NotFoundPage } from './pages/NotFoundPage'
+import { PanelPage } from './pages/PanelPage'
 import { beginPrerenderMeta, consumePrerenderMeta } from './hooks/useDocumentMeta'
-import { insights, legalPages, products } from './data/site'
-import { insightPath, legalPath, productPath, routes } from './lib/routes'
+import { insights, legalPages, products, serviceTopics } from './data/site'
+import { insightPath, legalPath, localizedPath, productPath, routes, serviceTopicPath, stripLanguagePath } from './lib/routes'
 
 const SITE_ORIGIN = 'https://tecktick.com'
 
 export type PrerenderRouteInfo = {
   path: string
-  lastmod: string
+  lastmod?: string
   changefreq: 'weekly' | 'monthly' | 'yearly'
   priority: string
   hasHreflang?: boolean
 }
 
 export function getPrerenderRoutes(): PrerenderRouteInfo[] {
-  const today = new Date().toISOString().slice(0, 10)
-
-  const mainRoutes: PrerenderRouteInfo[] = routes.map((r) => ({
+  const mainRoutes: PrerenderRouteInfo[] = routes.filter((r) => r.key !== 'panel' && r.key !== 'serviceTopic').map((r) => ({
     path: r.path,
-    lastmod: today,
     changefreq: r.key === 'home' || r.key === 'products' || r.key === 'insights' ? 'weekly' : 'monthly',
     priority: r.key === 'home' ? '1.0' : r.key === 'services' || r.key === 'products' ? '0.9' : '0.8',
     hasHreflang: true,
@@ -42,7 +41,6 @@ export function getPrerenderRoutes(): PrerenderRouteInfo[] {
 
   const productRoutes: PrerenderRouteInfo[] = products.map((p) => ({
     path: productPath(p.id),
-    lastmod: today,
     changefreq: 'monthly',
     priority: p.featured || p.id === 'ai-asistan-platformu' ? '0.8' : '0.7',
   }))
@@ -61,16 +59,32 @@ export function getPrerenderRoutes(): PrerenderRouteInfo[] {
     priority: '0.3',
   }))
 
-  return [...mainRoutes, ...productRoutes, ...insightRoutes, ...legalRoutes]
+  const topicRoutes: PrerenderRouteInfo[] = serviceTopics.map((topic) => ({
+    path: serviceTopicPath(topic.id),
+    changefreq: 'monthly',
+    priority: '0.8',
+  }))
+
+  const contentRoutes = [...mainRoutes, ...productRoutes, ...insightRoutes, ...legalRoutes, ...topicRoutes]
+  return [...contentRoutes, ...contentRoutes.map((route) => ({
+    ...route,
+    path: localizedPath(route.path, 'en'),
+  })), {
+    path: '/panel',
+    changefreq: 'yearly',
+    priority: '0',
+  }]
 }
 
 export function renderRoute(url: string) {
-  void i18n.changeLanguage('tr')
+  const language = url.startsWith('/en/') ? 'en' : 'tr'
+  void i18n.changeLanguage(language)
   beginPrerenderMeta()
 
   const appHtml = renderToString(
     <StrictMode>
-      <MemoryRouter initialEntries={[url]}>
+      <MemoryRouter initialEntries={[stripLanguagePath(url)]}>
+        {url === '/panel' ? <PanelPage /> : (
         <div className="site">
           <Header />
           <main>
@@ -79,6 +93,7 @@ export function renderRoute(url: string) {
               <Route path="/products" element={<ProductsPage />} />
               <Route path="/products/:productId" element={<ProductPage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/:topicId" element={<ServiceTopicPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/insights" element={<InsightsPage />} />
               <Route path="/insights/:insightId" element={<InsightPage />} />
@@ -90,6 +105,7 @@ export function renderRoute(url: string) {
           <Footer />
           <CookieConsent />
         </div>
+        )}
       </MemoryRouter>
     </StrictMode>,
   )
@@ -98,7 +114,7 @@ export function renderRoute(url: string) {
   const siteName = i18n.t('meta.title')
   const fullTitle = meta.title ? `${meta.title} — ${siteName}` : siteName
   const description = meta.description ?? i18n.t('meta.description')
-  const canonicalUrl = `${SITE_ORIGIN}${url === '/' ? '/' : url}`
+  const canonicalUrl = `${SITE_ORIGIN}${url}`
 
   const articleSchema = meta.article
     ? JSON.stringify({

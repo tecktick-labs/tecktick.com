@@ -5,6 +5,24 @@
 [build.environment]
   NODE_VERSION = "22"
 
+[functions]
+  directory = "netlify/functions"
+
+[[headers]]
+  for = "/panel"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/panel/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/.netlify/functions/panel-content"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

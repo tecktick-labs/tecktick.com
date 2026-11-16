@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@netlify/functions": "^6.1.1",
+    "@netlify/identity": "^2.0.1",
     "@vitejs/plugin-react": "^5.0.0",
     "firebase": "^12.19.0",
     "i18next": "^26.4.2",

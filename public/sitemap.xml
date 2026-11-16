@@ -5,153 +5,422 @@
 >
   <url>
     <loc>https://tecktick.com/</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/?lng=en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/" />
   </url>
   <url>
     <loc>https://tecktick.com/products</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/products?lng=en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products" />
   </url>
   <url>
     <loc>https://tecktick.com/services</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/services?lng=en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/services" />
   </url>
   <url>
     <loc>https://tecktick.com/about</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/about?lng=en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/about" />
   </url>
   <url>
     <loc>https://tecktick.com/insights</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/insights?lng=en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights" />
   </url>
   <url>
     <loc>https://tecktick.com/contact</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/contact?lng=en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/contact" />
   </url>
   <url>
     <loc>https://tecktick.com/products/anlik-eleman</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/anlik-eleman" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/anlik-eleman" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/anlik-eleman" />
   </url>
   <url>
     <loc>https://tecktick.com/products/sigortamobil</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/sigortamobil" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/sigortamobil" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/sigortamobil" />
   </url>
   <url>
     <loc>https://tecktick.com/products/ai-asistan-platformu</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/ai-asistan-platformu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/ai-asistan-platformu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/ai-asistan-platformu" />
   </url>
   <url>
     <loc>https://tecktick.com/products/nappsa</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/nappsa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/nappsa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/nappsa" />
   </url>
   <url>
     <loc>https://tecktick.com/products/tilo</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/tilo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/tilo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/tilo" />
   </url>
   <url>
     <loc>https://tecktick.com/products/grid-grin</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/grid-grin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/grid-grin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/grid-grin" />
   </url>
   <url>
     <loc>https://tecktick.com/products/bks</loc>
-    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/bks" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/bks" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/bks" />
   </url>
   <url>
     <loc>https://tecktick.com/insights/kurumsal-ai-asistan-platformu</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/kurumsal-ai-asistan-platformu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/kurumsal-ai-asistan-platformu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/kurumsal-ai-asistan-platformu" />
   </url>
   <url>
     <loc>https://tecktick.com/insights/anlik-eleman-isveren-paneli</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/anlik-eleman-isveren-paneli" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/anlik-eleman-isveren-paneli" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/anlik-eleman-isveren-paneli" />
   </url>
   <url>
     <loc>https://tecktick.com/insights/anlik-eleman-mobil</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/anlik-eleman-mobil" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/anlik-eleman-mobil" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/anlik-eleman-mobil" />
   </url>
   <url>
     <loc>https://tecktick.com/insights/anlik-eleman-web</loc>
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/anlik-eleman-web" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/anlik-eleman-web" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/anlik-eleman-web" />
   </url>
   <url>
     <loc>https://tecktick.com/insights/barbaros-sunucu-unity</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/barbaros-sunucu-unity" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/barbaros-sunucu-unity" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/barbaros-sunucu-unity" />
   </url>
   <url>
     <loc>https://tecktick.com/insights/barbaros-harita-uretimi</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/barbaros-harita-uretimi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/barbaros-harita-uretimi" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/barbaros-harita-uretimi" />
   </url>
   <url>
     <loc>https://tecktick.com/insights/calisma-ritmimiz</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/calisma-ritmimiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/calisma-ritmimiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/calisma-ritmimiz" />
   </url>
   <url>
     <loc>https://tecktick.com/legal/privacy</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/legal/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/legal/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/legal/privacy" />
   </url>
   <url>
     <loc>https://tecktick.com/legal/kvkk</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/legal/kvkk" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/legal/kvkk" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/legal/kvkk" />
   </url>
   <url>
     <loc>https://tecktick.com/legal/cookies</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/legal/cookies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/legal/cookies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/legal/cookies" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/services/kurumsal-yapay-zeka-asistani</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/services/kurumsal-yapay-zeka-asistani" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/services/kurumsal-yapay-zeka-asistani" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/services/kurumsal-yapay-zeka-asistani" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/services/is-akisi-otomasyonu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/services/is-akisi-otomasyonu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/services/is-akisi-otomasyonu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/services/is-akisi-otomasyonu" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/products</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/services" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/about" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/insights</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/contact" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/products/anlik-eleman</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/anlik-eleman" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/anlik-eleman" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/anlik-eleman" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/products/sigortamobil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/sigortamobil" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/sigortamobil" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/sigortamobil" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/products/ai-asistan-platformu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/ai-asistan-platformu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/ai-asistan-platformu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/ai-asistan-platformu" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/products/nappsa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/nappsa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/nappsa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/nappsa" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/products/tilo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/tilo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/tilo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/tilo" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/products/grid-grin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/grid-grin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/grid-grin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/grid-grin" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/products/bks</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/products/bks" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/products/bks" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/products/bks" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/insights/kurumsal-ai-asistan-platformu</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/kurumsal-ai-asistan-platformu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/kurumsal-ai-asistan-platformu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/kurumsal-ai-asistan-platformu" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/insights/anlik-eleman-isveren-paneli</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/anlik-eleman-isveren-paneli" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/anlik-eleman-isveren-paneli" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/anlik-eleman-isveren-paneli" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/insights/anlik-eleman-mobil</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/anlik-eleman-mobil" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/anlik-eleman-mobil" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/anlik-eleman-mobil" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/insights/anlik-eleman-web</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/anlik-eleman-web" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/anlik-eleman-web" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/anlik-eleman-web" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/insights/barbaros-sunucu-unity</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/barbaros-sunucu-unity" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/barbaros-sunucu-unity" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/barbaros-sunucu-unity" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/insights/barbaros-harita-uretimi</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/barbaros-harita-uretimi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/barbaros-harita-uretimi" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/barbaros-harita-uretimi" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/insights/calisma-ritmimiz</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/insights/calisma-ritmimiz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/insights/calisma-ritmimiz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/insights/calisma-ritmimiz" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/legal/privacy</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/legal/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/legal/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/legal/privacy" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/legal/kvkk</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/legal/kvkk" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/legal/kvkk" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/legal/kvkk" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/legal/cookies</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/legal/cookies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/legal/cookies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/legal/cookies" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/services/kurumsal-yapay-zeka-asistani</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/services/kurumsal-yapay-zeka-asistani" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/services/kurumsal-yapay-zeka-asistani" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/services/kurumsal-yapay-zeka-asistani" />
+  </url>
+  <url>
+    <loc>https://tecktick.com/en/services/is-akisi-otomasyonu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tecktick.com/services/is-akisi-otomasyonu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tecktick.com/en/services/is-akisi-otomasyonu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tecktick.com/services/is-akisi-otomasyonu" />
   </url>
 </urlset>

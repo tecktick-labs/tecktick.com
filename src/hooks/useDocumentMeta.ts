@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { localizedPath, stripLanguagePath } from '../lib/routes'
 
 export type PrerenderMeta = {
   title?: string
@@ -60,6 +61,9 @@ export function useDocumentMeta(title?: string, description?: string) {
     const fullTitle = title ? `${title} — ${siteName}` : siteName
     const text = description ?? t('meta.description')
     const canonicalUrl = window.location.origin + window.location.pathname
+    const basePath = stripLanguagePath(window.location.pathname)
+    const turkishUrl = window.location.origin + localizedPath(basePath, 'tr')
+    const englishUrl = window.location.origin + localizedPath(basePath, 'en')
 
     document.title = fullTitle
     document.documentElement.lang = language
@@ -71,9 +75,9 @@ export function useDocumentMeta(title?: string, description?: string) {
     setMeta('meta[name="twitter:title"]', 'content', fullTitle)
     setMeta('meta[name="twitter:description"]', 'content', text)
     setLink('canonical', canonicalUrl)
-    setLink('alternate', canonicalUrl, 'tr')
-    setLink('alternate', `${canonicalUrl}?lng=en`, 'en')
-    setLink('alternate', canonicalUrl, 'x-default')
+    setLink('alternate', turkishUrl, 'tr')
+    setLink('alternate', englishUrl, 'en')
+    setLink('alternate', turkishUrl, 'x-default')
 
     return () => {
       document.title = siteName

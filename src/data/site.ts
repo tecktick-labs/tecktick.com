@@ -405,6 +405,12 @@ export const services = [
   },
 ] as const
 
+/** Ayrıntılı hizmet sayfaları; metinler yalnızca çeviri dosyalarındadır. */
+export const serviceTopics = [
+  { id: 'kurumsal-yapay-zeka-asistani', key: 'aiAssistant', productId: 'ai-asistan-platformu' },
+  { id: 'is-akisi-otomasyonu', key: 'automation', productId: 'ai-asistan-platformu' },
+] as const
+
 /**
  * Hizmetler sayfasındaki yetenek listesi.
  * Metinler locales/servicesPage.capabilities altındadır; burada yalnızca

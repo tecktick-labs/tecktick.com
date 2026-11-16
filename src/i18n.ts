@@ -23,7 +23,9 @@ const instance = typeof window !== 'undefined' ? i18n.use(LanguageDetector) : i1
 
 void instance.use(initReactI18next).init({
   resources,
-  lng: typeof window === 'undefined' ? DEFAULT_LANGUAGE : undefined,
+  lng: typeof window === 'undefined'
+    ? DEFAULT_LANGUAGE
+    : /^\/en(?:\/|$)/.test(window.location.pathname) ? 'en' : undefined,
   fallbackLng: DEFAULT_LANGUAGE,
   supportedLngs: [...SUPPORTED_LANGUAGES],
   nonExplicitSupportedLngs: true,

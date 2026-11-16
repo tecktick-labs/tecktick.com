@@ -4,11 +4,12 @@ import { Icon } from '../components/Icons'
 import { Breadcrumbs } from '../components/Breadcrumbs'
 import { ServiceIndex } from '../components/ServiceIndex'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
-import { routePath } from '../lib/routes'
+import { routePath, serviceTopicPath } from '../lib/routes'
 import {
   approachSteps,
   capabilities,
   promiseKeys,
+  serviceTopics,
   stackBrand,
   toolGroups,
 } from '../data/site'
@@ -130,6 +131,23 @@ export function ServicesPage() {
             </div>
           </div>
         </details>
+      </section>
+
+      <section className="page-section">
+        <h2 className="section-label">{t('serviceTopicsPage.listTitle')}</h2>
+        <ul className="service-topic-links">
+          {serviceTopics.map((topic) => (
+            <li key={topic.id}>
+              <Link to={serviceTopicPath(topic.id)}>
+                <span>
+                  <strong>{t(`serviceTopicsPage.items.${topic.key}.title`)}</strong>
+                  <small>{t(`serviceTopicsPage.items.${topic.key}.description`)}</small>
+                </span>
+                <Icon name="arrow" className="btn-icon" />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="product-cta">

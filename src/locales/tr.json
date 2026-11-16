@@ -21,6 +21,8 @@
     "main": "Ana navigasyon",
     "footer": "Alt navigasyon",
     "contact": "İletişim",
+    "panel": "İçerik paneli",
+    "serviceTopic": "Hizmet ayrıntısı",
     "breadcrumbHome": "Ana sayfa"
   },
   "common": {
@@ -964,6 +966,110 @@
         ]
       }
     }
+  },
+  "serviceTopicsPage": {
+    "kicker": "Hizmetler",
+    "listTitle": "Yapay zekâ çözümlerini ayrıntılı inceleyin",
+    "questionsTitle": "Sık sorulan sorular",
+    "productKicker": "Geliştirdiğimiz ürün",
+    "productText": "Kurumsal AI Asistan Platformu, bu alandaki ürün çalışmamızdır ve geliştirme aşamasındadır.",
+    "productLink": "Ürünü incele",
+    "ctaTitle": "İhtiyacınızı birlikte tanımlayalım",
+    "ctaText": "Mevcut verinizi, iş akışınızı ve erişim gereksinimlerinizi anlatarak başlayabilirsiniz.",
+    "items": {
+      "aiAssistant": {
+        "title": "Kurumsal yapay zekâ asistanı",
+        "description": "Şirket dokümanları ve verileriyle çalışan, erişim kurallarına bağlı yapay zekâ asistanları.",
+        "lead": "Ekiplerin ve müşterilerin doğru bilgiye ulaşması için şirketin kendi kaynaklarıyla konuşan bir asistan tasarlıyoruz.",
+        "parts": {
+          "problem": {
+            "title": "Bilgi dağınıksa yanıt gecikir",
+            "text": "Dokümanlar, yardım içerikleri ve iş verileri farklı sistemlerde tutulduğunda aynı sorular tekrar tekrar insanlara yönelir; önce hangi bilginin güvenilir ve güncel olduğunu belirleyip asistanın erişebileceği kaynakları sınırlarıyla birlikte haritalandırıyoruz."
+          },
+          "approach": {
+            "title": "Asistanı kurum verisine bağlarız",
+            "text": "Bilgi tabanı, veritabanı veya API bağlantılarını ihtiyaca göre kurar; yanıtın ilgili kaynağa dayanmasını, yetkisi olmayan verinin gösterilmemesini ve işlem yapacak adımlarda insan onayının nerede gerektiğini tasarlarız."
+          },
+          "delivery": {
+            "title": "Kullanılacağı yere göre sunarız",
+            "text": "Asistan web sayfasında bir sohbet alanı, iç yönetim panelinde bir yardımcı veya başka bir ürüne bağlanan API olabilir; ilk kullanım senaryosunu dar tutup gerçek sorularla değerlendirerek kapsamı kademeli genişletiriz."
+          }
+        },
+        "questions": {
+          "q1": { "title": "Asistan yalnızca bizim belgelerimizle çalışabilir mi?", "answer": "Evet, cevap üretirken erişeceği kaynaklar seçilebilir; belgelerin güncelliği, erişim yetkileri ve kaynak gösterme biçimi proje başında belirlenir." },
+          "q2": { "title": "Mevcut yazılımlarımıza bağlanabilir mi?", "answer": "Uygun API veya veri erişimi varsa bağlantı tasarlanabilir; hangi verinin okunacağı ve hangi işlemlerin yapılacağı yetki kurallarıyla sınırlandırılır." },
+          "q3": { "title": "Hatalı yanıtlar nasıl ele alınır?", "answer": "Yanıtların dayandığı kaynaklar görünür kılınır, belirsiz sorularda yanıt vermeme veya insana yönlendirme kuralları kurulur ve gerçek kullanım örnekleriyle düzenli değerlendirme yapılır." }
+        }
+      },
+      "automation": {
+        "title": "İş akışı otomasyonu",
+        "description": "Belge işleme, veri aktarımı ve onay adımlarını mevcut sistemlerle birleştiren yazılım akışları.",
+        "lead": "Tekrarlanan işleri azaltmak için verinin nereden gelip nereye gittiğini ve hangi kararın insanda kalacağını birlikte tanımlıyoruz.",
+        "parts": {
+          "problem": {
+            "title": "Tekrar eden adımlar işi yavaşlatır",
+            "text": "Bir belgedeki bilgiyi başka sisteme aktarmak, gelen talebi sınıflandırmak veya aynı kontrol listesini her defasında elle yürütmek zaman alır; otomasyona başlamadan önce sürecin istisnalarını ve hata olduğunda kimin devreye gireceğini çıkarırız."
+          },
+          "approach": {
+            "title": "Akışı küçük parçalara böleriz",
+            "text": "Veri alma, doğrulama, karar, onay ve kayıt adımlarını ayrı ele alır; kurala dayalı işleri yazılımla, yoruma ihtiyaç duyan belge ve metin işlemlerini uygun olduğunda yapay zekâyla destekleriz."
+          },
+          "delivery": {
+            "title": "Kontrolü ekipte bırakırız",
+            "text": "Otomasyon mevcut panel, API, bildirim veya dış servislerle bağlanabilir; kritik işlemler için insan onayı, hata kaydı ve yeniden deneme yolu tanımlanır, böylece akışın ne yaptığı izlenebilir."
+          }
+        },
+        "questions": {
+          "q1": { "title": "Her adımda yapay zekâ gerekli mi?", "answer": "Hayır, kesin kuralları olan adımlar çoğu zaman geleneksel yazılımla daha açık ve öngörülebilir biçimde çözülür; yapay zekâyı yalnızca uygun belirsiz görevlerde değerlendiririz." },
+          "q2": { "title": "Mevcut CRM veya muhasebe sistemine bağlanabilir mi?", "answer": "Sistemin sunduğu API ve erişim izinlerine göre bağlantı planlanır; veri eşleme, yetki ve hata durumları entegrasyonun kapsamına dahil edilir." },
+          "q3": { "title": "İlk olarak hangi süreç seçilmeli?", "answer": "Sık tekrarlanan, adımları açıkça tarif edilebilen ve sonucu kontrol edilebilen tek bir süreçle başlamak uygulamayı değerlendirmeyi kolaylaştırır." }
+        }
+      }
+    }
+  },
+  "panel": {
+    "brand": "Tecktick labs",
+    "back": "Siteye dön",
+    "kicker": "İçerik yönetimi",
+    "title": "İçerik paneli",
+    "description": "Sitenin Türkçe ve İngilizce metinlerini düzenleyin. Yayınlanan değişiklikler yeni Netlify derlemesiyle görünür.",
+    "loginTitle": "Yönetici girişi",
+    "inviteTitle": "Yönetici hesabını tamamla",
+    "finishInvite": "Şifre oluştur ve devam et",
+    "email": "E-posta",
+    "password": "Şifre",
+    "login": "Giriş yap",
+    "logout": "Çıkış yap",
+    "loading": "İçerik yükleniyor…",
+    "noAccess": "Düzenleme yetkisi yok",
+    "noAccessHelp": "Netlify Identity hesabınıza editor rolü verilmesi gerekiyor.",
+    "sectionsLabel": "Bölümler",
+    "sections": {
+      "home": "Ana sayfa",
+      "services": "Hizmetler",
+      "products": "Ürünler",
+      "insights": "Çalışma notları",
+      "company": "Hakkımızda ve iletişim",
+      "shared": "Ortak alanlar"
+    },
+    "editorHint": "Bir alanı düzenleyin, ardından değişiklikleri yayınlayın.",
+    "language": "Düzenleme dili",
+    "publish_one": "1 değişikliği yayınla",
+    "publish_other": "{{count}} değişikliği yayınla",
+    "saving": "Kaydediliyor…",
+    "search": "Metinlerde veya alan adlarında ara",
+    "errors": {
+      "auth_failed": "Giriş başarısız. Bilgilerinizi veya Netlify Identity ayarını kontrol edin.",
+      "unauthorized": "Oturum sona erdi. Yeniden giriş yapın.",
+      "forbidden": "Bu hesapta düzenleme yetkisi yok.",
+      "not_configured": "Panelin sunucu bağlantısı henüz yapılandırılmadı.",
+      "content_changed": "İçerik başka bir yerde değişmiş. Sayfayı yenileyip yeniden deneyin.",
+      "invalid_changes": "Değişiklikleri kontrol edin; alanlar boş bırakılamaz ve tek seferde en fazla 50 alan yayınlanabilir.",
+      "source_unavailable": "İçerik deposuna ulaşılamadı.",
+      "publish_failed": "Değişiklikler yayınlanamadı.",
+      "request_failed": "İşlem tamamlanamadı. Biraz sonra yeniden deneyin."
+    },
+    "notices": { "published": "Değişiklikler kaydedildi. Yeni sürüm derlenince sitede görünecek." }
   },
   "consent": {
     "label": "Çerez tercihi",
